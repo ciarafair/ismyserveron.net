@@ -5,33 +5,33 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev --no-restart -c \"npm run start\"",
-    "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
+    "start": "wrangler pages dev --compatibility-date=2023-05-18 ./public",
     "typecheck": "tsc",
-		"lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 0 --fix --debug"
-		},
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 0 --fix --debug"
+  },
   "dependencies": {
     "@remix-run/cloudflare": "^1.18.1",
     "@remix-run/cloudflare-pages": "^1.18.1",
     "@remix-run/css-bundle": "^1.18.1",
     "@remix-run/react": "^1.18.1",
-    "isbot": "^3.6.8",
+    "isbot": "^3.6.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.19.0",
     "@remix-run/dev": "^1.18.1",
-    "@remix-run/eslint-config": "^1.18.1",
-    "@types/react": "^18.0.35",
-    "@types/react-dom": "^18.0.11",
+    "@remix-run/eslint-config": "^1.7.1",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
-    "eslint": "^8.38.0",
-    "eslint-plugin-react": "^7.32.2",
-    "typescript": "^5.0.4",
+    "eslint": "^8.44.0",
+    "eslint-plugin-react": "^7.25.3",
+    "typescript": "^5.1.6",
     "wrangler": "^3.1.1"
   },
   "engines": {
-    "node": ">=16.13.0"
+    "node": ">=18.16.1"
   }
 }
