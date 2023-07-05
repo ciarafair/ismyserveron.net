@@ -8,3 +8,4 @@ node_modules
 .dev.vars
 /public
 .vscode
+package-lock.json
