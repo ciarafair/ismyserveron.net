@@ -1,0 +1,17 @@
+:root {
+	--font1: system-ui, sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	background-color: black;
+}
+
+header {
+	background-color: #fff;
+	padding: 1rem;
+}
