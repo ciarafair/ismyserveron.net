@@ -6,6 +6,3 @@ node_modules
 /functions/\[\[path\]\].js.map
 /public/build
 .dev.vars
-/public
-.vscode
-package-lock.json

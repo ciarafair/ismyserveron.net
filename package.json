@@ -1,13 +1,4 @@
 {
-  "private": true,
-  "sideEffects": false,
-  "type": "module",
-  "scripts": {
-    "build": "remix build",
-    "dev": "remix dev --no-restart -c \"npm run start\"",
-    "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
-    "typecheck": "tsc"
-  },
   "dependencies": {
     "@remix-run/cloudflare": "^1.18.1",
     "@remix-run/cloudflare-pages": "^1.18.1",
@@ -29,5 +20,14 @@
   },
   "engines": {
     "node": ">=16.13.0"
-  }
+  },
+  "private": true,
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev --no-restart -c \"npm run start\"",
+    "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
+    "typecheck": "tsc"
+  },
+  "sideEffects": false,
+  "type": "module"
 }
