@@ -16,12 +16,23 @@ html {
 	color: white;
 }
 
-body {
-	flex-direction: row;
+article {
+	display: inline-flex;
+	flex-direction: column;
 	margin: 1rem;
 }
 
 section {
 	display: inline-flex;
+	flex-direction: row;
 	text-align: center;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	justify-content: baseline;
+	margin: 1rem;
 }

@@ -10,18 +10,16 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
 	return (
 		<div>
-			<body>
+			<article>
 				<section>
 					<img src="./resources/skeleton-l.gif" alt="skeleton left"></img>
 					<h1>Yes, my server is in fact running.</h1>
 					<img src="./resources/skeleton-r.gif" alt="skeleton right"></img>
 				</section>
-				<section>
-					<p>
-						THIS IS A BLOCK
-					</p>
-				</section>
-			</body>
+				<footer>
+					<img src="./resources/dancing_skeleton.gif" alt="dancing skeleton"></img>
+				</footer>
+			</article>
 		</div>
 	);
 }
