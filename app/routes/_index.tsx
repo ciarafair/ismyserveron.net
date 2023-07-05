@@ -1,3 +1,4 @@
+import React from "react";
 import type { V2_MetaFunction } from "@remix-run/cloudflare";
 
 export const meta: V2_MetaFunction = () => {
@@ -9,8 +10,17 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
 	return (
-		<div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-			<h1>Yes, my server is in fact running.</h1>
+		<div>
+			<div className="Container">
+				<section className="Block">
+					<h1>Yes, my server is in fact running.</h1>
+				</section>
+				<article className="Block">
+					<p>
+						THIS IS A BLOCK
+					</p>
+				</article>
+			</div>
 		</div>
 	);
 }
