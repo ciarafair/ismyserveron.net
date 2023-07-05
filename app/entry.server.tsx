@@ -4,6 +4,7 @@
  * For more information, see https://remix.run/file-conventions/entry.server
  */
 
+import React from "react";
 import type { AppLoadContext, EntryContext } from "@remix-run/cloudflare";
 import { RemixServer } from "@remix-run/react";
 import isbot from "isbot";
@@ -14,7 +15,7 @@ export default async function handleRequest(
 	responseStatusCode: number,
 	responseHeaders: Headers,
 	remixContext: EntryContext,
-	loadContext: AppLoadContext
+	_loadContext: AppLoadContext
 ) {
 	const body = await renderToReadableStream(
 		<RemixServer context={remixContext} url={request.url} />,
