@@ -1,0 +1,9 @@
+:root {
+	--font1: 'system-ui', sans-serif;
+}
+
+html {
+	font-family: var(--font1);
+	background-color: black;
+	color: white;
+}
