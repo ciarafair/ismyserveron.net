@@ -2,8 +2,26 @@
 	--font1: 'system-ui', sans-serif;
 }
 
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
 html {
+	display: flex;
 	font-family: var(--font1);
 	background-color: black;
 	color: white;
+}
+
+body {
+	flex-direction: row;
+	margin: 1rem;
+}
+
+section {
+	display: inline-flex;
+	text-align: center;
 }

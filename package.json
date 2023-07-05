@@ -26,6 +26,7 @@
 		"build": "remix build",
 		"dev": "remix dev --no-restart -c \"npm run start\"",
 		"start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
+		"stop": "lsof -i :8788",
 		"typecheck": "tsc",
 		"lint": "eslint --ext .ts,.tsx . --fix --max-warnings 0 --debug --fix"
 	},
