@@ -1,11 +1,8 @@
+.DS_Store
 node_modules
 
-/server/index.js
+/.cache
+/functions/\[\[path\]\].js
+/functions/\[\[path\]\].js.map
 /public/build
-preferences.arc
-sam.json
-sam.yaml
-.env
-
-/cypress/screenshots
-/cypress/videos
+.dev.vars

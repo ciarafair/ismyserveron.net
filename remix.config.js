@@ -1,34 +1,24 @@
-const path = require("path");
-
 /** @type {import('@remix-run/dev').AppConfig} */
-module.exports = {
-  cacheDirectory: "./node_modules/.cache/remix",
+export default {
+  devServerBroadcastDelay: 1000,
+  ignoredRouteFiles: ["**/.*"],
+  server: "./server.ts",
+  serverBuildPath: "functions/[[path]].js",
+  serverConditions: ["worker"],
+  serverDependenciesToBundle: "all",
+  serverMainFields: ["browser", "module", "main"],
+  serverMinify: true,
+  serverModuleFormat: "esm",
+  serverPlatform: "neutral",
+  // appDirectory: "app",
+  // assetsBuildDirectory: "public/build",
+  // publicPath: "/build/",
   future: {
+    v2_dev: true,
     v2_errorBoundary: true,
     v2_headers: true,
     v2_meta: true,
     v2_normalizeFormMethod: true,
     v2_routeConvention: true,
-  },
-  ignoredRouteFiles: ["**/.*", "**/*.test.{js,jsx,ts,tsx}"],
-  publicPath: "/_static/build/",
-  postcss: true,
-  server: "./server.ts",
-  serverBuildPath: "server/index.js",
-  serverModuleFormat: "cjs",
-  tailwind: true,
-  routes(defineRoutes) {
-    return defineRoutes((route) => {
-      if (process.env.NODE_ENV === "production") return;
-
-      console.log("⚠️  Test routes enabled.");
-
-      const appDir = path.join(__dirname, "app");
-
-      route(
-        "__tests/create-user",
-        path.relative(appDir, "cypress/support/test-routes/create-user.ts")
-      );
-    });
   },
 };
