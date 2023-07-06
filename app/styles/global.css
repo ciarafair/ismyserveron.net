@@ -1,5 +1,7 @@
 :root {
-	--font1: 'system-ui', sans-serif;
+	--font1: 'UnifrakturMaguntia', cursive; /* font for the title */
+	--fontsize1: 4.5rem; /* font size for the title */
+	--font2: 'system-ui', sans-serif; /* font for the text */
 }
 
 * {
@@ -16,23 +18,38 @@ html {
 	color: white;
 }
 
+h1 {
+	font-family: var(--font1);
+	font-size: var(--fontsize1);
+}
+
+p {
+	font-family: var(--font2);
+	font-size: 1.2rem;
+}
+
 article {
+	position: relative;
 	display: inline-flex;
 	flex-direction: column;
 	margin: 1rem;
+	width: 100%;
+	justify-content: center;
 }
 
 section {
+	width: 100%;
+	position: relative;
 	display: inline-flex;
 	flex-direction: row;
 	text-align: center;
 }
 
 footer {
-	position: fixed;
+	display: flex;
+	flex-direction: row;
 	bottom: 0;
-	left: 0;
+	position: fixed;
 	width: 100%;
-	justify-content: baseline;
-	margin: 1rem;
+	justify-content: center;
 }

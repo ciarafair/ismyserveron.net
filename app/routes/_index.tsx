@@ -10,16 +10,45 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
 	return (
 		<div>
+			<link rel="preconnect" href="https://fonts.googleapis.com"></link>
+			<link rel="preconnect" href="https://fonts.gstatic.com"></link>
+			<link
+				href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap"
+				rel="stylesheet"
+			></link>
 			<article>
 				<section>
-					<img src="./resources/skeleton-l.gif" alt="skeleton left"></img>
-					<h1>Yes, my server is in fact running.</h1>
-					<img src="./resources/skeleton-r.gif" alt="skeleton right"></img>
+					<img
+						id="leftSkeleton"
+						src="./resources/skeleton-l.gif"
+						alt="skeleton left"
+					></img>
+					<h1>Yes, my server is running.</h1>
+					<img
+						id="rightSkeleton"
+						src="./resources/skeleton-r.gif"
+						alt="skeleton right"
+					></img>
 				</section>
-				<footer>
-					<img src="./resources/dancing_skeleton.gif" alt="dancing skeleton"></img>
-				</footer>
+				<section>
+					<p>
+						I don&#39;t know about yours though, you should probably
+						go check.
+					</p>
+				</section>
 			</article>
+			<footer>
+				<img
+					id="footerImg"
+					src="./resources/dancing_skeleton.gif"
+					alt="dancing skeleton"
+				></img>
+				<img
+					id="footerImg"
+					src="./resources/dancing_skeleton.gif"
+					alt="dancing skeleton"
+				></img>
+			</footer>
 		</div>
 	);
 }
