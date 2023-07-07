@@ -10,7 +10,8 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
 	return (
 		<div id="page">
-			<div className="background"></div>
+			<div className="particle-container"></div>
+			<div className="background">d</div>
 			<article>
 				<h1>My server is running</h1>
 				<h2>
@@ -23,6 +24,7 @@ export default function Index() {
 			<footer>
 				<img id="footerImg" src="./resources/cooltext2.png" alt="footer"></img>
 			</footer>
+			<script src="../../functions/sparkle.js"></script>
 		</div>
 	);
 }

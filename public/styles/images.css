@@ -1,6 +1,6 @@
 img#footerImg {
 	width: 100%;
-	height: fit-content;
+	height: max-content;
 	bottom: 0;
 	position: fixed;
 	border: 2;
