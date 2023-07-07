@@ -1,0 +1,21 @@
+img#footerImg {
+	width: 100%;
+	height: fit-content;
+	bottom: 0;
+	position: fixed;
+	border: 2;
+}
+
+img#coolText1 {
+	height: fit-content;
+	width: 10%;
+	bottom: 0;
+	position: fixed;
+}
+
+img#coolText2 {
+	width: 10%;
+	height: fit-content;
+	bottom: 0;
+	position: fixed;
+}

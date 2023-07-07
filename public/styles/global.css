@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Monofett&family=Red+Hat+Mono:ital@1&family=UnifrakturCook:wght@700&display=swap");
+:root {
+	--font1: "Monofett", monospace;
+	--font2: "Red Hat Mono", monospace;
+	--fontsize: 3.5rem;
+}
+
+* {
+	box-sizing: content-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+	color: #0bf013;
+	background-color: black;
+}
+
+.background {
+	position: fixed;
+	background-repeat: repeat;
+	height: 100%;
+	width: 100%;
+	background-image: url("../resources/background.png");
+	opacity: 0.25;
+}
+
+h1 {
+	position: relative;
+	width: auto;
+	font-family: var(--font1);
+	font-size: var(--fontsize);
+	font-style: normal;
+	text-align: center;
+}
+
+h2 {
+	width: auto;
+	position: relative;
+	font-family: var(--font2);
+	font-size: var(--fontsize) / 2;
+	text-align: center;
+	border-width: 3px;
+}
+
+.underline-text {
+	background-image: url("../resources/slidbar.gif");
+	background-repeat: repeat-x;
+	background-position: bottom;
+	background-size: 100% 1px;
+	display: inline-block;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: auto;
+}
