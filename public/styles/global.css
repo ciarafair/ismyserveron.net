@@ -18,9 +18,8 @@ html {
 }
 
 body {
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
 		url("../assets/background.png");
-	background-color: rgba(255, 255, 255, 0.486);
 	background-repeat: repeat;
 	position: fixed;
 	height: 100%;
