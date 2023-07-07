@@ -34,7 +34,7 @@ export default function App() {
 				<meta property="og:url" content="https://IsMyServerOn.net" />
 
 				<Links />
-				<link rel="stylesheet " href="/styles/global.css"></link>
+				<link rel="stylesheet " href="/styles/index.css"></link>
 				<link rel="stylesheet " href="/styles/images.css"></link>
 				<link rel="icon" type="image/x-icon" href="/assets/fire.ico"></link>
 			</head>
