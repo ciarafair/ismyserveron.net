@@ -36,7 +36,7 @@ export default function App() {
 				<Links />
 				<link rel="stylesheet " href="/styles/global.css"></link>
 				<link rel="stylesheet " href="/styles/images.css"></link>
-				<link rel="icon" type="image/x-icon" href="/resources/fire.ico"></link>
+				<link rel="icon" type="image/x-icon" href="/assets/fire.ico"></link>
 			</head>
 			<body>
 				<Outlet />
