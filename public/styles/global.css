@@ -17,17 +17,17 @@ html {
 	background-color: black;
 }
 
-.background {
-	position: fixed;
+body {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+		url("../assets/background.png");
+	background-color: rgba(255, 255, 255, 0.486);
 	background-repeat: repeat;
+	position: fixed;
 	height: 100%;
 	width: 100%;
-	background-image: url("../resources/background.png");
-	opacity: 0.25;
 }
 
 h1 {
-	position: relative;
 	width: auto;
 	font-family: var(--font1);
 	font-size: var(--fontsize);
@@ -42,14 +42,6 @@ h2 {
 	font-size: var(--fontsize) / 2;
 	text-align: center;
 	border-width: 3px;
-}
-
-.underline-text {
-	background-image: url("../resources/slidbar.gif");
-	background-repeat: repeat-x;
-	background-position: bottom;
-	background-size: 100% 1px;
-	display: inline-block;
 }
 
 footer {

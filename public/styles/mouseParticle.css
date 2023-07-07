@@ -1,9 +1,0 @@
-.particle-container {
-	position: relative;
-}
-
-.particle-container .dot {
-	position: absolute;
-	border-radius: 50%;
-	background-color: hsl(60, 100%, 80%);
-}

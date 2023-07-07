@@ -19,3 +19,11 @@ img#coolText2 {
 	bottom: 0;
 	position: fixed;
 }
+
+.underline-text {
+	background-image: url("../assets/slidbar.gif");
+	background-repeat: repeat-x;
+	background-position: bottom;
+	background-size: 100% 1.75px;
+	display: inline-block;
+}
