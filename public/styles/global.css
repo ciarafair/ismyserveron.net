@@ -14,10 +14,6 @@
 
 html {
 	color: #0bf013;
-	background-color: black;
-}
-
-body {
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 1)),
 		url("../assets/background.png");
 	background-repeat: repeat;
