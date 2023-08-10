@@ -29,7 +29,7 @@ export default function App() {
 				/>
 				<meta
 					property="og:image"
-					content="https://IsMyServerOn.net/assets/fire.ico"
+					content="https://IsMyServerOn.net/assets/favicon.ico"
 				/>
 				<meta property="og:url" content="https://IsMyServerOn.net" />
 

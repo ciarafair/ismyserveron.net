@@ -11,16 +11,14 @@ export default function Index() {
 	return (
 		<div id="page">
 			<article>
-				<h1>My server is running</h1>
 				<h2>
 					<span className="underline-text">
-						I don&#39;t know about yours though, you should probably go check
-						that.
+						Yes. You wouldn&#39;t be seeing this page otherwise.
 					</span>
 				</h2>
 			</article>
 			<footer>
-				<img id="footerImg" src="./assets/cooltext2.png" alt="footer"></img>
+				<img id="footerImg" src="./assets/footer.png" alt="footer"></img>
 			</footer>
 		</div>
 	);
