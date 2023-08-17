@@ -1,35 +1,28 @@
 {
+	"name": "ismyserveron.net",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --host --debug",
+		"build": "vite build --debug",
+		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0 --debug",
+		"preview": "vite preview --host --debug"
+	},
 	"dependencies": {
-		"@remix-run/cloudflare": "^1.18.1",
-		"@remix-run/cloudflare-pages": "^1.18.1",
-		"@remix-run/css-bundle": "^1.18.1",
-		"@remix-run/react": "^1.18.1",
-		"isbot": "^3.6.8",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.10.0"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^3.19.0",
-		"@remix-run/dev": "^1.18.1",
-		"@remix-run/eslint-config": "^1.18.1",
-		"@types/react": "^18.0.35",
-		"@types/react-dom": "^18.0.11",
-		"eslint": "^8.38.0",
-		"typescript": "^5.0.4",
-		"wrangler": "^3.1.2"
-	},
-	"engines": {
-		"node": ">=16.13.0"
-	},
-	"private": true,
-	"scripts": {
-		"build": "remix build",
-		"dev": "remix dev --no-restart -c \"npm run start\"",
-		"start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
-		"stop": "lsof -i :8788",
-		"typecheck": "tsc",
-		"lint": "eslint --ext .ts,.tsx . --fix --max-warnings 0 --debug --fix"
-	},
-	"sideEffects": false,
-	"type": "module"
+		"@types/react": "^18.2.15",
+		"@types/react-dom": "^18.2.7",
+		"@vitejs/plugin-react-swc": "^3.3.2",
+		"eslint": "^8.47.0",
+		"eslint-plugin-editorconfig": "^4.0.3",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-refresh": "^0.4.3",
+		"vite": "^4.4.5"
+	}
 }

@@ -1,0 +1,46 @@
+{
+	"env": {
+		"browser": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:all",
+		"plugin:editorconfig/all"
+	],
+	"root": true,
+	"rules": {
+		"object-curly-spacing": "off",
+		"no-console": "off",
+		"no-tabs": "off",
+		"one-var": "off",
+		"editorconfig/charset": "error",
+		"editorconfig/eol-last": "error",
+		"editorconfig/indent": "error",
+		"editorconfig/linebreak-style": "error",
+		"editorconfig/no-trailing-spaces": "error"
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [
+					".js",
+					".jsx",
+					".ts",
+					".tsx"
+				],
+				"paths": [
+					"/app",
+					"/public"
+				]
+			}
+		}
+	},
+	"plugins": [
+		"editorconfig"
+	],
+	"parserOptions": {
+		"project": "./tsconfig.json",
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	}
+}
