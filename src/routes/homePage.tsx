@@ -4,10 +4,11 @@ const HomePageElement: React.FC = () => (
 	<>
 		<article>
 			<h1>
-				<span className="underline-text">
-					Is your server running? Better go catch it!
-				</span>
+				Is your server running?
 			</h1>
+			<h2>
+				Better go catch it then!
+			</h2>
 		</article>
 	</>
 );
