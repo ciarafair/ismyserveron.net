@@ -4,10 +4,10 @@ const HomePageElement: React.FC = () => (
 	<>
 		<article>
 			<h1>
-				Is your server running?
+				Is my server running?
 			</h1>
 			<h2>
-				Better go catch it then!
+				{`>`} IDK you should probably go check that...
 			</h2>
 		</article>
 	</>
