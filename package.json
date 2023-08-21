@@ -7,8 +7,7 @@
 		"dev": "vite --host --debug",
 		"build": "vite build --debug",
 		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0 --debug",
-		"preview": "vite preview --host --debug",
-		"publish": "npx wrangler pages publish dist"
+		"preview": "vite preview --host --debug"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
