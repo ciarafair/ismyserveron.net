@@ -1,3 +1,4 @@
+/* Website for reference: https: //galmuri.quiple.dev/#%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C */
 @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
 
 :root {
@@ -13,7 +14,6 @@
 	border: 0;
 	margin: 0;
 	overflow: hidden;
-	/* cursor: none; */
 }
 
 html {
