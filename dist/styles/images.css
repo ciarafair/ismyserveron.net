@@ -1,8 +1,0 @@
-.underline-text {
-	background-image: url("/assets/underline.gif");
-	background-repeat: repeat-x;
-	background-position: bottom;
-	background-size: 100% 1.75px;
-	display: inline-block;
-	-webkit-user-drag: none;
-}
