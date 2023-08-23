@@ -14,7 +14,7 @@ jobs:
       # Run a build step here if your project requires
 
       - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/pages-action@v1.5.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 39ac08cfa1dc2e8c3107573fd27e701e
