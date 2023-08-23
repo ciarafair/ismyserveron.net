@@ -7,3 +7,5 @@ node_modules
 /public/build
 .dev.vars
 dist
+package-lock.json
+.vscode
