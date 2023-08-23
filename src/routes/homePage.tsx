@@ -7,7 +7,7 @@ const HomePageElement: React.FC = () => (
 				Is my server running?
 			</h1>
 			<h2>
-				{`>`} IDK you should probably go check that...
+				{`>`} If you're seeing this then yes, it is up.
 			</h2>
 		</article>
 	</>
