@@ -15,7 +15,7 @@
 
 </div>
 
-<div align="center">
+<div align="justify">
 
 This is the source code for my personal website.
 
