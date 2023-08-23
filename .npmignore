@@ -1,0 +1,4 @@
+.editorconfig
+.github/
+.npmignore
+*.code-workspace
