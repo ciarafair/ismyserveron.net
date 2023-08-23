@@ -1,4 +1,5 @@
-```js
+<div align="center">
+```jss
 
  █████   █████                                   ████            █████    
 ░░███   ░░███                                   ░░███           ░░███     
@@ -11,4 +12,10 @@
 
 ```
 
+</div>
+
+<div align="center">
+
 This is the source code for my personal website.
+
+</div>
