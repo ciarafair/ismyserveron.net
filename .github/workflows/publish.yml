@@ -18,7 +18,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 39ac08cfa1dc2e8c3107573fd27e701e
-          projectName: ismyserveron.net
+          projectName: ismyserveron
           directory: /dist
           # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
