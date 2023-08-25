@@ -10,5 +10,15 @@
 	"exclude": [
 		"node_modules",
 		"**/node_modules/*"
-	]
+	],
+	"baseUrl": "/",
+	"compileOnSave": true,
+	"paths": {
+		"*": [
+			"/server/src",
+			"/server/public",
+			"/client/src",
+			"/client/public"
+		]
+	},
 }

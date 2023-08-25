@@ -5,7 +5,8 @@
 		"target": "ES6",
 		"lib": [
 			"ES6",
-			"dom"
+			"dom",
+			"WebWorker"
 		],
 		"sourceMap": true,
 		"allowJs": true,
@@ -19,13 +20,16 @@
 		"baseUrl": "/",
 		"paths": {
 			"*": [
-				"/src/*",
-				"/public/*"
+				"/server/src",
+				"/server/public",
+				"/client/src",
+				"/client/public"
 			]
 		},
 		"esModuleInterop": true
 	},
 	"exclude": [
 		"node_modules"
-	]
+	],
+	"compileOnSave": true,
 }

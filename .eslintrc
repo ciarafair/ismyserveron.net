@@ -4,20 +4,21 @@
 		"node": true
 	},
 	"extends": [
-		"eslint:all",
-		"plugin:editorconfig/all"
+		"eslint:all"
 	],
 	"root": true,
 	"rules": {
-		"object-curly-spacing": "off",
+		"function-call-argument-newline": "off",
+		"max-len": "off",
 		"no-console": "off",
 		"no-tabs": "off",
+		"no-underscore-dangle":"off",
+		"object-curly-spacing": "off",
 		"one-var": "off",
-		"editorconfig/charset": "error",
-		"editorconfig/eol-last": "error",
-		"editorconfig/indent": "error",
-		"editorconfig/linebreak-style": "error",
-		"editorconfig/no-trailing-spaces": "error"
+		"padded-blocks":"off",
+		"spaced-comment": "off",
+		"indent": ["error", "tab"],
+		"no-trailing-spaces": "error"
 	},
 	"settings": {
 		"import/resolver": {
@@ -27,16 +28,11 @@
 					".jsx",
 					".ts",
 					".tsx"
-				],
-				"paths": [
-					"/src",
-					"/public"
 				]
 			}
 		}
 	},
 	"plugins": [
-		"editorconfig"
 	],
 	"parserOptions": {
 		"project": "./tsconfig.json",

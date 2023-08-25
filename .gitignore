@@ -6,3 +6,5 @@ node_modules
 .dev.vars
 dist
 package-lock.json
+client/certs/*
+server/certs/*
