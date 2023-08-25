@@ -4,7 +4,6 @@ node_modules
 /functions/\[\[path\]\].js
 /functions/\[\[path\]\].js.map
 .dev.vars
-dist
 package-lock.json
 client/certs/*
 server/certs/*
