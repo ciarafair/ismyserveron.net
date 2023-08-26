@@ -15,7 +15,7 @@ const URL_MESSAGE = `Server started at http://${HOST}:${PORT}. Press CTRL-C to s
 const __filenameServer = fileURLToPath(import.meta.url);
 const __dirnameServer = dirname(__filenameServer);
 const homePath = (req, res) => {
-	res.sendFile(join(`${__dirnameServer}/routes/home.html`));
+	res.sendFile(join(`${__dirnameServer}/index.html`));
 };
 
 // eslint-disable-next-line new-cap
