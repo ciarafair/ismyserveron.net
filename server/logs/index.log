@@ -267,3 +267,4 @@
 {"level":"info","message":"Got a GET request at /test","timestamp":"2023-08-25 20:47:56"}
 {"level":"info","message":"Got a POST request at /test","timestamp":"2023-08-25 20:47:57"}
 {"level":"info","message":"Got a PUT request at /test","timestamp":"2023-08-25 20:47:57"}
+{"level":"info","message":"Server started at http://localhost:6868. Press CTRL-C to stop","timestamp":"2023-08-25 22:46:13"}

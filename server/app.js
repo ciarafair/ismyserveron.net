@@ -32,6 +32,8 @@ ExpressApp.use(express.static(`${__dirnameServer}/public`));
 
 // Request Method Docs: https://doc.oroinc.com/api/http-methods/
 
+// Nginx Guide: https://www.digitalocean.com/community/tutorials/how-to-host-a-website-using-cloudflare-and-nginx-on-ubuntu-22-04
+
 ExpressApp.get("/url", (req, res) => {
 	urlPost(req, res);
 });
