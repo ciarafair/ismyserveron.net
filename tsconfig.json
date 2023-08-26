@@ -18,14 +18,6 @@
 		"strictNullChecks": true,
 		"jsx": "react-jsx",
 		"baseUrl": "/",
-		"paths": {
-			"*": [
-				"/server/src",
-				"/server/public",
-				"/client/src",
-				"/client/public"
-			]
-		},
 		"esModuleInterop": true
 	},
 	"exclude": [
