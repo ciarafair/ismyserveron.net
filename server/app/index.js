@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 import urlPost from "./lib/api/urlRes.js";
 import winstonLogger from "./lib/winstonFunction.js";
 
-const PORT_NUM = 6868;
+const PORT_NUM = 8880;
 const PORT = process.env.PORT || PORT_NUM;
 const HOST = process.env.HOST || "localhost";
 const URL_MESSAGE = `Server started at http://${HOST}:${PORT}. Press CTRL-C to stop`;
