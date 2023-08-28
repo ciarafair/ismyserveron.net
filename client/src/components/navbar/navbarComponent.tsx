@@ -10,7 +10,7 @@ const NavbarComponent: React.FC = () => {
 				<a href="/test">
 					<button>Testing</button>
 				</a>
-				<a href="http://localhost:6868">
+				<a href="http://nginx.ismyserveron.net">
 					<button>Back-end</button>
 				</a>
 			</nav>
