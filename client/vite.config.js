@@ -3,11 +3,14 @@ import react from "@vitejs/plugin-react-swc";
 
 export default defineConfig({
 	"build": {
-		"assetsDir": "./public",
+		"assetsDir": "./assets",
+		"copyPublicDir": true,
 		"manifest": true,
-		"outDir": "./dist"
+		"outDir": "./dist",
+		"rollupOptions": {
+			"input": "./src/index.tsx"
+		}
 	},
-	"envDir": "./env",
 	"plugins": [react()],
 	"publicDir": "./public",
 	"root": "./",
