@@ -14,7 +14,7 @@ const GetUrl: React.FC = () => {
 		console.log('[Ping] Sending PUT to /url');
 		axios({
 			method: 'get',
-			url: 'https://backend2.ismyserveron.net/url',
+			url: 'http://backend1.ismyserveron.net/url',
 			headers: {
 				'Access-Control-Allow-Origin': '*',
 				'Content-Type': 'application/json'

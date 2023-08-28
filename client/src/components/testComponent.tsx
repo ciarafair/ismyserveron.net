@@ -62,7 +62,7 @@ const DeleteTestFunc: React.FC = () => {
 	const handlePing = (event: { preventDefault: () => void; }) => {
 		event.preventDefault();
 		console.log('[Ping] Sending DELETE ping to /test');
-		axios.delete('https://backend2.ismyserveron.net/test')
+		axios.delete('http://backend1.ismyserveron.net/test')
 		.then(response => {
 			console.log('[Ping] ' + response.data);
 		})
