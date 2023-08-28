@@ -14,7 +14,7 @@ const GetUrl: React.FC = () => {
 		console.log('[Ping] Sending PUT to /url');
 		axios({
 			method: 'get',
-			url: 'http://localhost:6868/url',
+			url: 'https://nginx.ismyserveron.net/url',
 			headers: {
 				'Access-Control-Allow-Origin': '*',
 				'Content-Type': 'application/json'
