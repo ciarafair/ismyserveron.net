@@ -5,8 +5,8 @@
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
-		"dev": "node index.js",
-		"start": "pm2 start app.js",
+		"dev": "node app/index.js",
+		"start": "sudo pm2 start app/index.js",
 		"lint": "eslint . --ext .js,.ts --fix"
 	},
 	"repository": {

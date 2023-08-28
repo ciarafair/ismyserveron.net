@@ -26,21 +26,37 @@ const transportConst = [
 	}),
 
 	new winston.transports.File({
-		"filename": "../../logs/index.log",
+		"filename": "../logs/index.log",
 		"format": fileFormat,
 		"level": "info"
 	}),
 
 	new winston.transports.File({
-		"filename": "../../logs/error.log",
+		"filename": "../logs/error.log",
 		"format": fileFormat,
 		"level": "error"
 	})
 ];
 
-const winstonLogger = winston.createLogger({
-	"level": "info",
+const loggerConfig = {
+	"levels": {
+		"debug": 5,
+		"error": 0,
+		"http": 3,
+		"info": 2,
+		"silly": 6,
+		"verbose": 4,
+		"warn": 1
+	},
+
 	"transports": transportConst
+
+};
+
+const winstonLogger = winston.createLogger({
+	"levels": loggerConfig.levels,
+	"transports": loggerConfig.transports
 });
+
 
 export default winstonLogger;
