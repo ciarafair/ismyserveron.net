@@ -6,7 +6,8 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "node app/index.js",
-		"start": "sudo pm2 start app/index.js",
+		"start": "pm2 start app/index.js -f",
+		"stop": "pm2 stop app/index.js",
 		"lint": "eslint . --ext .js,.ts --fix"
 	},
 	"repository": {
