@@ -12,6 +12,5 @@ const urlPost = (req, res) => {
 		res.status(FOUR_HUNDRED).send("Bad Request: Missing URL");
 	}
 };
-
 export default urlPost;
 

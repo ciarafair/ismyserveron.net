@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 
 export default defineConfig({
 	"build": {
-		"assetsDir": "./public/assets",
+		"assetsDir": "./public",
 		"manifest": true,
 		"outDir": "./dist"
 	},
