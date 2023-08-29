@@ -20,7 +20,16 @@ const ExpressRouter = express.Router();
 ExpressRouter.get("/", homePath);
 
 const ExpressApp = express();
+
 ExpressApp.use(cors());
+ExpressApp.options("*", cors());
+ExpressApp.use((req, res, next) => {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+});
+
 ExpressApp.set("port", process.env.PORT);
 ExpressApp.use("/", ExpressRouter);
 ExpressApp.use(express.json());
