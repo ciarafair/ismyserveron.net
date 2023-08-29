@@ -1,4 +1,4 @@
-import { dirname, join, path } from "path";
+import { dirname, join } from "path";
 import { testDelete, testGet, testPost, testPut } from "./lib/api/testRes.js";
 import cors from "cors";
 import dotenv from "dotenv";
