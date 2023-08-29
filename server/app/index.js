@@ -1,15 +1,13 @@
 import { dirname, join } from "path";
 import { testDelete, testGet, testPost, testPut } from "./lib/api/testRes.js";
 import cors from "cors";
+import dotenv from "dotenv";
 import express from "express";
 import { fileURLToPath } from "url";
 import urlPost from "./lib/api/urlRes.js";
 import winstonLogger from "./lib/winstonFunction.js";
 
-const PORT_NUM = 9001;
-const PORT = process.env.PORT || PORT_NUM;
-const HOST = process.env.HOST || "localhost";
-const URL_MESSAGE = `Server started at http://${HOST}:${PORT}. Press CTRL-C to stop`;
+dotenv.config();
 
 const __filenameServer = fileURLToPath(import.meta.url);
 const __dirnameServer = dirname(__filenameServer);
@@ -23,11 +21,11 @@ ExpressRouter.get("/", homePath);
 
 const ExpressApp = express();
 ExpressApp.use(cors());
-ExpressApp.set("port", PORT);
+ExpressApp.set("port", process.env.PORT);
 ExpressApp.use("/", ExpressRouter);
 ExpressApp.use(express.json());
 
-ExpressApp.get("/url", (req, res) => {
+ExpressApp.get("/api", (req, res) => {
 	urlPost(req, res);
 });
 
@@ -44,6 +42,7 @@ ExpressApp.put("/test", (req, res) => {
 	testPut(req, res);
 });
 
-ExpressApp.listen(PORT, () => {
+const URL_MESSAGE = `Server started at http://${process.env.HOST}:${process.env.PORT}. Press CTRL-C to stop`;
+ExpressApp.listen(process.env.PORT, () => {
 	winstonLogger.info(URL_MESSAGE);
 });

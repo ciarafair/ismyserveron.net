@@ -38,24 +38,8 @@ const transportConst = [
 	})
 ];
 
-const loggerConfig = {
-	"levels": {
-		"debug": 5,
-		"error": 0,
-		"http": 3,
-		"info": 2,
-		"silly": 6,
-		"verbose": 4,
-		"warn": 1
-	},
-
-	"transports": transportConst
-
-};
-
 const winstonLogger = winston.createLogger({
-	"levels": loggerConfig.levels,
-	"transports": loggerConfig.transports
+	"transports": transportConst
 });
 
 
