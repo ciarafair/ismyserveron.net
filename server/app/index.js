@@ -1,4 +1,4 @@
-import { dirname, join } from "path";
+import { dirname, join, path } from "path";
 import { testDelete, testGet, testPost, testPut } from "./lib/api/testRes.js";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -24,7 +24,8 @@ ExpressApp.use(cors());
 ExpressApp.set("port", process.env.PORT);
 ExpressApp.use("/", ExpressRouter);
 ExpressApp.use(express.json());
-ExpressApp.use("/static", express.static("../public"));
+ExpressApp.use("/public", express.static(path.join(__dirnameServer, "public")));
+
 
 ExpressApp.get("/api", (req, res) => {
 	urlPost(req, res);
