@@ -60,7 +60,7 @@ function DynamicLineChart(): JSX.Element {
 
 		const fetchData = async () => {
 			try {
-				console.log('[Ping] Sending GET to /test');
+				console.log('[Ping] Sending GET to /api');
 				const response = await axios.get('https://backend2.ismyserveron.net/api');
 				console.log('[Pong] ' + response.data);
 
