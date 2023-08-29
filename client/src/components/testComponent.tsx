@@ -15,7 +15,7 @@ const GetTestSec: React.FC = () => {
 
 	return (
 		<button onClick={handlePing} className='GetRequest'>
-			<input type="submit" value="Get" />
+			<input type="submit" value="Ping via GET" />
 		</button>
 	)
 }
