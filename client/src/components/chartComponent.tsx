@@ -19,29 +19,18 @@ function DynamicLineChart(): JSX.Element {
 	const [data, setData] = useState<DataPoint[]>([]);
 
 	useEffect(() => {
+		const startTimestamp = Date.now();
 		const interval = setInterval(() => {
 			axios
 				.get('https://backend2.ismyserveron.net/api')
 				.then((response) => {
-					const milliseconds = new Date().getMilliseconds().
-						toString().
-						slice(ZERO, EIGHT);
-					const seconds = new Date().getSeconds().
-						toString().
-						slice(ZERO, EIGHT);
-					const minutes = new Date().getMinutes().
-						toString().
-						slice(ZERO, EIGHT);
-					const hours = new Date().getHours().
-						toString().
-						slice(ZERO, EIGHT);
-					const currentTime = `${hours}:${minutes}:${seconds}.${milliseconds}`;
-					const pingValue = randomInteger(0, 100);
+					const endTimestamp = Date.now();
+					const pingValue = response.data.pingTimes
 
 					setData((prevData) => {
 						if (prevData.length >= 10) {
 							return [
-								...prevData.slice(1), // Remove the oldest data point
+								...prevData.slice(1),
 								{
 									Time: new Date().toLocaleTimeString(),
 									Ping: pingValue,
