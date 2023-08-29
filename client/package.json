@@ -6,7 +6,9 @@
 	"scripts": {
 		"dev": "vite --host --debug",
 		"build": "vite build --debug",
-		"preview": "vite preview --host --debug"
+		"preview": "vite preview --host --debug",
+		"start": "pm2 start npm --name client -- preview",
+		"stop": "pm2 stop client"
 	},
 	"dependencies": {
 		"axios": "^1.3.4",

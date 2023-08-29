@@ -10,7 +10,7 @@ const NavbarComponent: React.FC = () => {
 				<a href="/test">
 					<button>Testing</button>
 				</a>
-				<a href="http://backend1.ismyserveron.net">
+				<a href="https://backend2.ismyserveron.net">
 					<button>Back-end</button>
 				</a>
 			</nav>

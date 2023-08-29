@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react-swc";
 
 export default defineConfig({
 	"build": {
-		"assetsDir": "./assets",
 		"copyPublicDir": true,
 		"manifest": true,
 		"outDir": "./dist",
@@ -12,10 +11,14 @@ export default defineConfig({
 		}
 	},
 	"plugins": [react()],
+	"preview": {
+		"host": "localhost",
+		"port": 8002
+	},
 	"publicDir": "./public",
 	"root": "./",
 	"server": {
 		"host": "localhost",
-		"port": 7676
+		"port": 8001
 	}
 });
