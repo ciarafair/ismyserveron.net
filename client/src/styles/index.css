@@ -24,3 +24,31 @@ button {
 	width: 25%;
 	height: fit-content;
 }
+
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+
+.GetRequest {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	height: fit-content;
+	width: 15%;
+}
+
+.DynamicChart {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: center;
+	height: 95%;
+	width: 95%;
+}
+

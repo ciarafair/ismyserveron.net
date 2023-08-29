@@ -1,10 +1,9 @@
-import { testDelete, testGet, testPost, testPut } from "./lib/api/testRes.js";
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import { fileURLToPath } from "url";
 import path from "path";
-import urlPost from "./lib/api/urlRes.js";
+import { testGet } from "./lib/api/testRes.js";
 import winstonLogger from "./lib/winstonFunction.js";
 
 dotenv.config();
@@ -36,20 +35,7 @@ ExpressApp.use(express.json());
 ExpressApp.use(express.static(path.join(__dirnameServer, "public")));
 
 ExpressApp.get("/api", (req, res) => {
-	urlPost(req, res);
-});
-
-ExpressApp.delete("/api/test", (req, res) => {
-	testDelete(req, res);
-});
-ExpressApp.get("/api/test", (req, res) => {
 	testGet(req, res);
-});
-ExpressApp.post("/api/test", (req, res) => {
-	testPost(req, res);
-});
-ExpressApp.put("/api/test", (req, res) => {
-	testPut(req, res);
 });
 
 const URL_MESSAGE = `Server started at http://${process.env.HOST}:${process.env.PORT}. Press CTRL-C to stop`;

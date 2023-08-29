@@ -1,10 +1,12 @@
 import React from "react";
-import NavbarComponent from "../components/navbar/navbarComponent";
+import NavbarComponent from "../components/navbarComponent";
 
 const HomePage: React.FC = () => {
 	return (
 		<>
-			<NavbarComponent />
+			<nav>
+				<NavbarComponent />
+			</nav>
 			<h1>Client</h1>
 		</>
 	);
