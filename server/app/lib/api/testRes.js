@@ -6,7 +6,8 @@ const ONE = 1;
 const updateTime = () => {
 	const currentTime = new Date().
 		getTime().
-		valueOf();
+		valueOf().
+		toString();
 	return currentTime;
 };
 
