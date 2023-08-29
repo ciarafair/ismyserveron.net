@@ -1,18 +1,18 @@
-import { dirname, join } from "path";
 import { testDelete, testGet, testPost, testPut } from "./lib/api/testRes.js";
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import { fileURLToPath } from "url";
+import path from "path";
 import urlPost from "./lib/api/urlRes.js";
 import winstonLogger from "./lib/winstonFunction.js";
 
 dotenv.config();
 
 const __filenameServer = fileURLToPath(import.meta.url);
-const __dirnameServer = dirname(__filenameServer);
+const __dirnameServer = path.dirname(__filenameServer);
 const homePath = (req, res) => {
-	res.sendFile(join(__dirnameServer, "index.html"));
+	res.sendFile(path.join(__dirnameServer, "index.html"));
 };
 
 // eslint-disable-next-line new-cap
@@ -24,7 +24,7 @@ ExpressApp.use(cors());
 ExpressApp.set("port", process.env.PORT);
 ExpressApp.use("/", ExpressRouter);
 ExpressApp.use(express.json());
-ExpressApp.use("/public", express.static("../public"));
+ExpressApp.use(express.static(path.join(__dirnameServer, "public")));
 
 ExpressApp.get("/api", (req, res) => {
 	urlPost(req, res);
