@@ -4,7 +4,7 @@ const PostTestFunc: React.FC = () => {
 	const handlePing = (event: { preventDefault: () => void; }) => {
 		event.preventDefault();
 		console.log('[Ping] Sending POST to /test');
-		axios.post('https://backend2.ismyserveron.net/test', {
+		axios.post('https://backend2.ismyserveron.net/api/test', {
 			"data": {
 				"test": "test"
 				},
@@ -35,7 +35,7 @@ const GetTestFunc: React.FC = () => {
 	const handlePing = (event: { preventDefault: () => void; }) => {
 		event.preventDefault();
 		console.log('[Ping] Sending GET to /test');
-		axios.get('https://backend2.ismyserveron.net/test')
+		axios.get('https://backend2.ismyserveron.net/api/test')
 		.then(response => {
 			console.log('[Pong] ' + response.data);
 		})
@@ -54,7 +54,7 @@ const PutTestFunc: React.FC = () => {
 	const handlePing = (event: { preventDefault: () => void; }) => {
 		event.preventDefault();
 		console.log('[Ping] Sending PUT to /test');
-		axios.put('https://backend2.ismyserveron.net/test')
+		axios.put('https://backend2.ismyserveron.net/api/test')
 		.then(response => {
 			console.log('[Pong] ' + response.data);
 		})
@@ -73,7 +73,7 @@ const DeleteTestFunc: React.FC = () => {
 	const handlePing = (event: { preventDefault: () => void; }) => {
 		event.preventDefault();
 		console.log('[Ping] Sending DELETE ping to /test');
-		axios.delete('https://backend2.ismyserveron.net/test')
+		axios.delete('https://backend2.ismyserveron.net/api/test')
 		.then(response => {
 			console.log('[Ping] ' + response.data);
 		})

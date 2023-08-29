@@ -31,16 +31,16 @@ ExpressApp.get("/api", (req, res) => {
 	urlPost(req, res);
 });
 
-ExpressApp.delete("/test", (req, res) => {
+ExpressApp.delete("/api/test", (req, res) => {
 	testDelete(req, res);
 });
-ExpressApp.get("/test", (req, res) => {
+ExpressApp.get("/api/test", (req, res) => {
 	testGet(req, res);
 });
-ExpressApp.post("/test", (req, res) => {
+ExpressApp.post("/api/test", (req, res) => {
 	testPost(req, res);
 });
-ExpressApp.put("/test", (req, res) => {
+ExpressApp.put("/api/test", (req, res) => {
 	testPut(req, res);
 });
 
