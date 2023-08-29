@@ -16,6 +16,7 @@ const updateTime = () => {
 		toString().
 		slice(ZERO, EIGHT);
 	const hours = new Date().getHours().
+		toString().
 		slice(ZERO, EIGHT);
 	const currentTime = `${hours}:${minutes}:${seconds}.${milliseconds}`;
 	return currentTime;
