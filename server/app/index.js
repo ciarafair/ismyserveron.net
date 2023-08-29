@@ -24,8 +24,7 @@ ExpressApp.use(cors());
 ExpressApp.set("port", process.env.PORT);
 ExpressApp.use("/", ExpressRouter);
 ExpressApp.use(express.json());
-ExpressApp.use("/public", express.static(path.join(__dirnameServer, "public")));
-
+ExpressApp.use("/public", express.static("../public"));
 
 ExpressApp.get("/api", (req, res) => {
 	urlPost(req, res);
