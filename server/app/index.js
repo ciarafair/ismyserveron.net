@@ -24,7 +24,7 @@ ExpressApp.use(cors());
 ExpressApp.set("port", process.env.PORT);
 ExpressApp.use("/", ExpressRouter);
 ExpressApp.use(express.json());
-ExpressApp.use(express.static(path.join(__dirname, "./favicon.ico")));
+ExpressApp.use(express.static("./favicon.ico"));
 
 ExpressApp.get("/api", (req, res) => {
 	urlPost(req, res);
