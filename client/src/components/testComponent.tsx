@@ -3,8 +3,8 @@ import axios from 'axios';
 const GetTestSec: React.FC = () => {
 	const handlePing = (event: { preventDefault: () => void; }) => {
 		event.preventDefault();
-		console.log('[Ping] Sending GET to /test');
-		axios.get('https://backend2.ismyserveron.net/api/test')
+		console.log('[Ping] Sending GET to /api');
+		axios.get('https://backend2.ismyserveron.net/api')
 		.then(response => {
 			console.log('[Pong] ' + response.data);
 		})
