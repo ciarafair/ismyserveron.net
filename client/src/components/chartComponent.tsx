@@ -61,7 +61,7 @@ function DynamicLineChart(): JSX.Element {
 		const fetchData = async () => {
 			try {
 				console.log('[Ping] Sending GET to /test');
-				const response = await axios.get('http://localhost:8001/api');
+				const response = await axios.get('https://backend2.ismyserveron.net/api');
 				console.log('[Pong] ' + response.data);
 
 				const dataArray = Object.values(response.data);
