@@ -1,0 +1,11 @@
+html {
+	outline: 2.5px solid red;
+}
+
+section {
+	outline: 2.5px dotted blue;
+}
+
+nav {
+	outline: 2.5px solid yellow;
+}
