@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "parcel build",
-    "start": "parcel serve",
+    "start": "parcel serve --no-hmr",
     "stop": "pm2 stop client",
     "serve": "pm2 start npm --name client -- start"
   },

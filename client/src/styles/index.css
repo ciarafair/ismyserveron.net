@@ -1,55 +1,36 @@
 * {
-	flex: auto;
 	margin: 0;
 	padding: 0;
 	border: 0;
 	margin: 0;
-	overflow: hidden;
-	font: bold 12px/30px Georgia, serif;
-}
-
-html {
-	height: 100%;
-	width: 100%;
 }
 
 button {
 	padding: 0.5rem;
 	margin: 0.5rem;
-	border: none;
 	color: black;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
 	width: 25%;
 	height: fit-content;
 }
 
 section {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	height: 100%;
-	width: 100%;
-}
-
-.GetRequest {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	position: relative;
-	height: fit-content;
-	width: 15%;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	padding: 2.5rem;
 }
 
-.DynamicChart {
+header {
+	position: relative;
 	display: flex;
-	justify-content: center;
+	flex-direction: row;
 	align-items: center;
-	justify-content: center;
-	height: 95%;
-	width: 95%;
+	justify-content: space-between;
+	width: 100%;
 }
 

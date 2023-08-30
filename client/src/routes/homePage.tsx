@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarComponent from "../components/navbarComponent";
+import NavbarComponent from "../components/navBar";
 
 const HomePage: React.FC = () => {
 	return (
@@ -7,7 +7,9 @@ const HomePage: React.FC = () => {
 			<nav>
 				<NavbarComponent />
 			</nav>
-			<h1>Client</h1>
+			<h1>
+				Client
+			</h1>
 		</>
 	);
 };

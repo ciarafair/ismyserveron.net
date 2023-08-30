@@ -1,14 +1,12 @@
 nav {
 	display: flex;
-	align-self: center;
-	justify-content: space-between;
+	flex-direction: row;
 	align-items: center;
-	width: 100%;
 }
 
 a {
-	font-size: 16px;
+	width: 100%;
 	display: flex;
-	border: none;
 	text-decoration: none;
+	justify-content: center;
 }
