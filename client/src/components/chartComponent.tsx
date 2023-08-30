@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, AreaChart, Area } from 'recharts';
 
 const ZERO = 0;
 const EIGHT = 8;
@@ -57,13 +57,24 @@ function DynamicLineChart(): JSX.Element {
 
 	return (
 		<section className='DynamicChart'>
-			<LineChart width={1500} height={800} data={data}>
-				<Line type='monotone' isAnimationActive={false} dataKey='Ping' stroke='#8884d8' />
-				<CartesianGrid stroke='#ccc' />
-				<XAxis dataKey='Time' />
+			<AreaChart
+				width={1500}
+				height={800}
+				data={data}
+				syncId="anyId"
+				margin={{
+				top: 10,
+				right: 30,
+				left: 0,
+				bottom: 0,
+				}}
+			>
+				<CartesianGrid strokeDasharray="3 3" />
+				<XAxis dataKey="Time" />
 				<YAxis />
 				<Tooltip />
-			</LineChart>
+				<Area type="monotone" dataKey="Ping" stroke="#82ca9d" fill="#82ca9d" />
+			</AreaChart>
 		</section>
 	);
 }
