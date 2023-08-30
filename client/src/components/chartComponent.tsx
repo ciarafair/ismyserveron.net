@@ -16,7 +16,10 @@ function randomInteger(min: number, max: number): number {
 }
 
 function DynamicLineChart(): JSX.Element {
-	const [data, setData] = useState<DataPoint[]>([]);
+	const [data, setData] = useState<DataPoint[]>(() => {
+		const storedData = localStorage.getItem('chartData');
+		return storedData ? JSON.parse(storedData) : [];
+	});
 
 	useEffect(() => {
 		const startTimestamp = Date.now();
@@ -27,24 +30,15 @@ function DynamicLineChart(): JSX.Element {
 					const endTimestamp = Date.now();
 					const pingValue = response.data.pingTimes
 
+					const newDataPoint = {
+						Time: new Date().toLocaleTimeString(),
+						Ping: pingValue,
+					};
+
 					setData((prevData) => {
-						if (prevData.length >= 10) {
-							return [
-								...prevData.slice(1),
-								{
-									Time: new Date().toLocaleTimeString(),
-									Ping: pingValue,
-								},
-							];
-						} else {
-							return [
-								...prevData,
-								{
-									Time: new Date().toLocaleTimeString(),
-									Ping: pingValue,
-								},
-							];
-						}
+						const updatedData = prevData.length >= 10 ? [...prevData.slice(1), newDataPoint] : [...prevData, newDataPoint];
+						localStorage.setItem('chartData', JSON.stringify(updatedData));
+						return updatedData;
 					});
 				})
 				.catch((error) => {
