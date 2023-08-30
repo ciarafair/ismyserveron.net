@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "node app/index.js",
-		"start": "sudo pm2 start app/index.js --name server",
+		"start": "pm2 start app/index.js --name server",
 		"stop": "pm2 stop server",
 		"lint": "eslint . --ext .js,.ts --fix"
 	},
