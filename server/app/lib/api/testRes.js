@@ -39,7 +39,7 @@ const extractTimeFromPingOutput = (output) => {
 
 const pingServer = () => {
 	try {
-		const output = execSync("ping -c 1 -v ismyserveron.net -S").toString();
+		const output = execSync("ping -c 1 -v ismyserveron.net").toString();
 		const pingTimes = extractTimeFromPingOutput(output);
 		return {
 			currentTime,
