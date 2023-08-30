@@ -5,3 +5,5 @@ certs
 dist
 logs
 .parcel-cache
+package-lock.json
+yarn.lock
