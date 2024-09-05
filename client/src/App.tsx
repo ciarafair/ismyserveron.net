@@ -1,10 +1,15 @@
-import './css/App.css'
+import { Route, Routes } from 'react-router-dom';
+import Home from './typescript/routes/Home';
 
 function App() {
 
   return (
     <>
-			<p>This is the main app.</p>
+			<div className="app">
+        <Routes>
+          <Route path='/' element={<Home/>} />
+        </Routes>
+        </div>
     </>
   )
 }

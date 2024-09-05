@@ -1,0 +1,9 @@
+
+@font-face {
+	font-family: 'Linuxson';
+	font-display: swap;
+	font-weight: 50;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('linuxson.woff') format('woff'), url('linuxson.ttf') format('opentype');
+}

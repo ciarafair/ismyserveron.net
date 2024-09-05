@@ -1,68 +1,116 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url(/fonts/iosevka/iosevka.css);
+@import url(/fonts/linuxson/linuxson.css);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+html {
+  max-width: 1280px;
+	max-height: 1080px;
+	width: 100%;
+  text-align: center;
+	background-color: #1e1e1e;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background-size: 75px 75px;
+  background-image:
+    linear-gradient(to right, #383b3d 1px, transparent 1px),
+    linear-gradient(to bottom, #383b3d 1px, transparent 1px);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.overlay {
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,  #1e1e1e 75%, #1e1e1e 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
 }
-a:hover {
-  color: #535bf2;
+
+#navbar {
+	width: 100vw;
+	height: 25vh;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	overflow: hidden;
+	width: 100vw;
+	height: 75vh;
+	display: flex;
+	justify-content: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.heading {
+	font-family: Linuxson;
+	font-weight: 100;
+	font-size: 5vw;
+	color: #D4D4D4;
+	text-align: center;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.subheading {
+	font-family: Iosevka Web;
+	font-weight: 200;
+	font-size: 1.5vw;
+	color: #3794ff;
+	text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.code {
+	margin-top: -75px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: center;
+
+}
+
+@keyframes caretAnim {
+  0% {
+    color: transparent;
   }
-  a:hover {
-    color: #747bff;
+  50% {
+    color: #3794ff;
   }
-  button {
-    background-color: #f9f9f9;
+  100% {
+    color: transparent;
   }
+}
+
+.caret {
+	font-family: Iosevka Web;
+	font-weight: 200;
+	font-size: 1.5vw;
+	color: #3794ff;
+	text-align: center;
+	animation: caretAnim 500ms steps(2, end) 0s infinite;
+}
+
+@keyframes typingEffect {
+	0% {
+		border-width: 2px;
+		height: 1.5em;
+	}
+	5% {
+		width: 0ch;
+		border-width: 2px;
+		height: 1.5em;
+	}
+	93% {
+		border-width: 2px;
+		height: 1.5em;
+	}
+	100% {
+		width: 15ch;
+		border-width: 0px;
+		height: 1.5em;
+	}
+}
+
+.command {
+	overflow: hidden;
+	width: 0ch;
+	color: #D4D4D4;
+	background: none;
+	animation: typingEffect 3.5s steps(15, end) forwards 1000ms;
+	white-space: nowrap;
 }
