@@ -112,6 +112,6 @@ body {
 	width: 0ch;
 	color: #D4D4D4;
 	background: none;
-	animation: typingEffect 2.5s steps(15, end) forwards 1000ms;
+	animation: typingEffect 1.5s steps(15, end) forwards 1s;
 	white-space: nowrap;
 }
