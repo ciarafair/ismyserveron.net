@@ -1,27 +1,7 @@
 {
-	"compilerOptions": {
-		"outDir": "public/dist",
-		"module": "ESNext",
-		"target": "ES6",
-		"lib": [
-			"ES6",
-			"dom",
-			"WebWorker"
-		],
-		"sourceMap": true,
-		"allowJs": true,
-		"moduleResolution": "node",
-		"rootDir": "./",
-		"noImplicitReturns": true,
-		"noImplicitThis": true,
-		"noImplicitAny": true,
-		"strictNullChecks": true,
-		"jsx": "react-jsx",
-		"baseUrl": "/",
-		"esModuleInterop": true
-	},
-	"exclude": [
-		"node_modules"
-	],
-	"compileOnSave": true,
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }
