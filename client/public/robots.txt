@@ -1,0 +1,3 @@
+# NO NERDY ROBOTS ALLOWED!!
+User-agent: *
+Disallow: /
