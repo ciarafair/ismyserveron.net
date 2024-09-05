@@ -41,7 +41,7 @@ body {
 .heading {
 	font-family: Linuxson;
 	font-weight: 100;
-	font-size: 5vw;
+	font-size: 6.5vh;
 	color: #D4D4D4;
 	text-align: center;
 }
@@ -49,18 +49,19 @@ body {
 .subheading {
 	font-family: Iosevka Web;
 	font-weight: 200;
-	font-size: 1.5vw;
+	font-size: 3vh;
 	color: #3794ff;
 	text-align: center;
 }
 
 .code {
-	margin-top: -75px;
+	margin-top: -1.75vw;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
 	justify-content: center;
+	text-align: left;
 
 }
 
@@ -79,7 +80,7 @@ body {
 .caret {
 	font-family: Iosevka Web;
 	font-weight: 200;
-	font-size: 1.5vw;
+	font-size: 3vh;
 	color: #3794ff;
 	text-align: center;
 	animation: caretAnim 500ms steps(2, end) 0s infinite;
@@ -111,6 +112,6 @@ body {
 	width: 0ch;
 	color: #D4D4D4;
 	background: none;
-	animation: typingEffect 3.5s steps(15, end) forwards 1000ms;
+	animation: typingEffect 2.5s steps(15, end) forwards 1000ms;
 	white-space: nowrap;
 }
