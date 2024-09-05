@@ -8,7 +8,6 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-		"delete_deployments": "node ./src/javascript/deleteDeployments.cjs"
   },
   "dependencies": {
     "axios": "^1.7.7",
