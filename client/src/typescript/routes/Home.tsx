@@ -5,10 +5,11 @@ import DeveloperCommand from '../components/developerCommand'
 const possibleStrings: Array<string> = [
 	"Why are you asking me? I have no clue.",
 	"It might be, you should probably go check that.",
-	"I eated it.", "Have you tried turning it on and off again?",
-	"start maybe.exe",
-	"Reply hazy, try again",
-	"Better not tell you now"
+	"I eated it.",
+	"Have you tried turning it on and off again?",
+	"start maybe.exe.",
+	"Reply hazy, try again.",
+	"Better not tell you now."
 ]
 
 const chosenString: string = possibleStrings[Math.floor(Math.random()*possibleStrings.length)]
