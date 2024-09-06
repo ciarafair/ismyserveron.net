@@ -9,7 +9,9 @@ const possibleStrings: Array<string> = [
 	"Have you tried turning it on and off again?",
 	"start maybe.exe.",
 	"Reply hazy, try again.",
-	"Better not tell you now."
+	"Better not tell you now.",
+	"If it is you better go catch it!",
+	"Yo momma!"
 ]
 
 const chosenString: string = possibleStrings[Math.floor(Math.random()*possibleStrings.length)]
