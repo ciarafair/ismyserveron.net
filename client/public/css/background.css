@@ -1,0 +1,12 @@
+html {
+  max-width: 1280px;
+	max-height: 1080px;
+	width: 100%;
+  text-align: center;
+	background-color: #1e1e1e;
+
+	background-size: 75px 75px;
+  background-image:
+    linear-gradient(to right, #383b3d 1px, transparent 1px),
+    linear-gradient(to bottom, #383b3d 1px, transparent 1px);
+}

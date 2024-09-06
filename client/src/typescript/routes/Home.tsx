@@ -36,7 +36,7 @@ const Home = () => {
 		</>
 	)
 }
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', function() {
 	setElementAttribute()
 });
 
