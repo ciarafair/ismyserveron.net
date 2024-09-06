@@ -7,7 +7,7 @@ const possibleStrings: Array<string> = [
 	"It might be, you should probably go check that.",
 	"Sorry, I eated it.",
 	"Have you tried turning it on and off again?",
-	"start maybe.exe.",
+	"start ./maybe.exe",
 	"If it is you better go catch it!",
 	'echo "Yo momma!"',
 ];
@@ -43,6 +43,7 @@ const Home = () => {
 		</>
 	);
 };
+
 window.addEventListener("DOMContentLoaded", function () {
 	setElementAttribute();
 });

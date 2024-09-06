@@ -24,3 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.0] - 2024-09-24
 
 Complete revamp. Deleted entire thing.
+
+## [0.0.1] - 2024-09-24
+
+Created a screen that displays a randomized message that gets typed out by a dev.
