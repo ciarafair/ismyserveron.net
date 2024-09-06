@@ -1,6 +1,11 @@
 @import url(/fonts/iosevka/iosevka.css);
 @import url(/fonts/linuxson/linuxson.css);
 
+:root {
+	--animationSteps: 0;
+	--animationTime: 0;
+}
+
 html {
   max-width: 1280px;
 	max-height: 1080px;
@@ -31,9 +36,9 @@ html {
 }
 
 body {
-	-webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+	-webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 	overflow: hidden;
 	width: 100vw;
 	height: 75vh;
@@ -104,7 +109,7 @@ body {
 		height: 1.5em;
 	}
 	100% {
-		width: 15ch;
+		width: calc(1ch * var(--animationSteps));
 		border-width: 0px;
 		height: 1.5em;
 	}
@@ -115,6 +120,14 @@ body {
 	width: 0ch;
 	color: #D4D4D4;
 	background: none;
-	animation: typingEffect 1.5s steps(15, end) forwards 1s;
+	white-space: nowrap;
+}
+
+.command.active {
+	animation: typingEffect steps(var(--animationSteps), end) forwards calc(var(--animationTime) * 1ms);
+	overflow: hidden;
+	width: 0ch;
+	color: #D4D4D4;
+	background: none;
 	white-space: nowrap;
 }
