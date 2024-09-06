@@ -11,7 +11,7 @@ export default function DeveloperCommand({
 			<div className='subheading'>
 				<div className='code'>
 					<p className='subheading'>
-						C&#58;&#92;Users&#92;developer&gt;&nbsp;
+						dev&#64;website&#58;&#47;homepage&#36;&#160;
 					</p>
 					<p className='command'>{commandString}</p>
 					<p className='caret'>&#9474;</p>

@@ -4,12 +4,13 @@ import DeveloperCommand from "../components/developerCommand";
 
 const possibleStrings: Array<string> = [
 	"Why are you asking me? I have no clue.",
-	"It might be, you should probably go check that.",
+	"Maybe, you should go check that.",
 	"Sorry, I eated it.",
-	"Have you tried turning it on and off again?",
-	"start ./maybe.exe",
+	"Have you turned it on and off again?",
+	"./maybe.exe",
 	"If it is you better go catch it!",
-	'echo "Yo momma!"',
+	"echo 'Yo momma!'",
+	"sudo apt-get install idk",
 ];
 
 const chosenString: string =
