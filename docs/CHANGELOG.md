@@ -32,3 +32,7 @@ Created a screen that displays a randomized message that gets typed out by a dev
 ## [0.0.2] - 2024-09-24
 
 Changed prompt, added extra quotes
+
+## [0.0.3] - 2024-09-24
+
+Defined mobile-views.
