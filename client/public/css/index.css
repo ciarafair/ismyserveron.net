@@ -1,3 +1,39 @@
+html {
+	position: absolute;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
+@media (min-width: 100px) {
+	html {
+		font-size: 8px;
+	}
+}
+
+@media (min-width: 250px) {
+	html {
+		font-size: 15px;
+	}
+}
+
+@media (min-width: 700px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 1000px) {
+	html {
+		font-size: 25px;
+	}
+}
+
+@media (min-width: 1720px) {
+	html {
+		font-size: 50px;
+	}
+}
+
 :root {
 	--animationSteps: 0;
 	--animationTime: 0;
@@ -33,14 +69,14 @@ body {
 .heading {
 	font-family: Linuxson;
 	font-weight: 100;
-	font-size: 6.5vh;
+	font-size: 3rem;
 	color: #D4D4D4;
 	text-align: center;
 }
 
 .code {
 	font-family: Iosevka Web;
-	font-size: calc(3vh * 5vw);
+	font-size: 0.75em;
 	font-weight: 200;
 
 	margin-top: -1.75vw;
@@ -65,15 +101,6 @@ body {
   }
 }
 
-.prompt {
-	color: #3794ff;
-}
-
-.caret {
-	color: #3794ff;
-	animation: caretAnim 500ms steps(2, end) 0s infinite;
-}
-
 @keyframes typingEffect {
 	0% {
 		border-width: 2px;
@@ -93,6 +120,15 @@ body {
 		border-width: 0px;
 		height: 1.5em;
 	}
+}
+
+.prompt {
+	color: #3794ff;
+}
+
+.caret {
+	color: #3794ff;
+	animation: caretAnim 500ms steps(2, end) 0s infinite;
 }
 
 .command {
