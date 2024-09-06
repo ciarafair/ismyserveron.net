@@ -38,15 +38,11 @@ body {
 	text-align: center;
 }
 
-.subheading {
-	font-family: Iosevka Web;
-	font-weight: 200;
-	font-size: 3vh;
-	color: #3794ff;
-	text-align: center;
-}
-
 .code {
+	font-family: Iosevka Web;
+	font-size: calc(3vh * 5vw);
+	font-weight: 200;
+
 	margin-top: -1.75vw;
 	width: 100%;
 	display: flex;
@@ -69,12 +65,12 @@ body {
   }
 }
 
-.caret {
-	font-family: Iosevka Web;
-	font-weight: 200;
-	font-size: 3vh;
+.prompt {
 	color: #3794ff;
-	text-align: center;
+}
+
+.caret {
+	color: #3794ff;
 	animation: caretAnim 500ms steps(2, end) 0s infinite;
 }
 

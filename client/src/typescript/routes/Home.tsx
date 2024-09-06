@@ -1,6 +1,6 @@
 // @ts-expect-error import react
 import * as React from "react";
-import DeveloperCommand from "../components/developerCommand";
+import Subheading from "../components/Subheading";
 
 const possibleStrings: Array<string> = [
 	"Why are you asking me? I have no clue.",
@@ -40,7 +40,7 @@ const Home = () => {
 	return (
 		<>
 			<h1 className='heading'>Is my server online?</h1>
-			<DeveloperCommand commandString={chosenString} />
+			<Subheading commandString={chosenString} />
 		</>
 	);
 };
