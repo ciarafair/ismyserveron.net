@@ -1,7 +1,8 @@
+import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './typescript/routes/Home'
 
-function App() {
+function App(): React.ReactElement {
 	return (
 		<>
 			<div className="app">

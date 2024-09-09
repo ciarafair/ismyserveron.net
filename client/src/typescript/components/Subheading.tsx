@@ -1,11 +1,10 @@
-// @ts-expect-error annoying null error
-import * as React from 'react'
+import React from 'react'
 
-export default function Subheading({
+function Subheading({
 	commandString,
 }: {
 	commandString: string
-}) {
+}): React.ReactElement {
 	return (
 		<>
 			<div className="code">
@@ -18,3 +17,5 @@ export default function Subheading({
 		</>
 	)
 }
+
+export default Subheading
