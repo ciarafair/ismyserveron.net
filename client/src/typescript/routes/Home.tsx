@@ -18,10 +18,8 @@ const chosenString: string =
 function setElementAttribute(): void {
 	// @ts-expect-error annoying null error
 	const root: Element = document.body.querySelector('#root')
-	//console.log("Found root element: ", root)
 	// @ts-expect-error annoying null error
 	const selection: Element = root.querySelector('.command')
-	//console.log("Found selection: ", selection)
 	if (selection != null) {
 		document.documentElement.style.setProperty(
 			'--animationSteps',
