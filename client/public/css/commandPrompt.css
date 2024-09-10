@@ -33,11 +33,17 @@
 
 .prompt {
 	color: var(--blue);
-}
+/*	text-shadow:
+		0px 0px 5px,
+		0px 0px 10px; */
+	}
 
 .caret {
 	color: var(--blue);
 	animation: caretAnim 500ms steps(2, end) 0s infinite;
+/*	text-shadow:
+	0px 0px 5px,
+	0px 0px 10px; */
 }
 
 .command {
@@ -46,6 +52,9 @@
 	color: var(--white);
 	background: none;
 	white-space: nowrap;
+/*	text-shadow:
+		0px 0px 5px,
+		0px 0px 10px; */
 }
 
 .command.active {
