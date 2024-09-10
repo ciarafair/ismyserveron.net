@@ -1,5 +1,6 @@
 import React from 'react'
 import Subheading from '../components/Subheading'
+import Background from '../components/Background'
 
 const possibleStrings: Array<string> = [
 	'Why are you asking me? I have no clue.',
@@ -36,6 +37,7 @@ function setElementAttribute(): void {
 function Home(): React.ReactElement {
 	return (
 		<>
+			<Background />
 			<h1 className="heading">Is my server online?</h1>
 			<Subheading commandString={chosenString} />
 		</>

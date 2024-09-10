@@ -4,55 +4,22 @@ html {
 	min-height: 100vh;
 }
 
-@media (min-width: 100px) {
-	html {
-		font-size: 8px;
-	}
-}
-
-@media (min-width: 250px) {
-	html {
-		font-size: 15px;
-	}
-}
-
-@media (min-width: 700px) {
-	html {
-		font-size: 20px;
-	}
-}
-
-@media (min-width: 1000px) {
-	html {
-		font-size: 25px;
-	}
-}
-
-@media (min-width: 1720px) {
-	html {
-		font-size: 50px;
-	}
-}
-
 :root {
+	/* Steps for command prompt animation */
 	--animationSteps: 0;
 	--animationTime: 0;
-}
 
-.overlay {
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,  #1e1e1e 75%, #1e1e1e 100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-#navbar {
-	width: 100vw;
-	height: 25vh;
+	/* Defining colours */
+	--red: #D16969;
+	--orange: #CE9178;
+	--yellow: #D7BA7D;
+	--green: #B5CEA8;
+	--blue: #3794ff;
+	--indigo: #646695;
+	--violet: #C586C0;
+	--white: #D4D4D4;
+	--grey: #292929;
+	--black: #1e1e1e;
 }
 
 body {
@@ -70,7 +37,7 @@ body {
 	font-family: Linuxson;
 	font-weight: 100;
 	font-size: 3rem;
-	color: #D4D4D4;
+	color: var(--white);
 	text-align: center;
 }
 
@@ -87,63 +54,4 @@ body {
 	justify-content: center;
 	text-align: left;
 
-}
-
-@keyframes caretAnim {
-  0% {
-    color: transparent;
-  }
-  50% {
-    color: #3794ff;
-  }
-  100% {
-    color: transparent;
-  }
-}
-
-@keyframes typingEffect {
-	0% {
-		border-width: 2px;
-		height: 1.5em;
-	}
-	5% {
-		width: 0ch;
-		border-width: 2px;
-		height: 1.5em;
-	}
-	93% {
-		border-width: 2px;
-		height: 1.5em;
-	}
-	100% {
-		width: calc(1ch * var(--animationSteps));
-		border-width: 0px;
-		height: 1.5em;
-	}
-}
-
-.prompt {
-	color: #3794ff;
-}
-
-.caret {
-	color: #3794ff;
-	animation: caretAnim 500ms steps(2, end) 0s infinite;
-}
-
-.command {
-	overflow: hidden;
-	width: 0ch;
-	color: #D4D4D4;
-	background: none;
-	white-space: nowrap;
-}
-
-.command.active {
-	animation: typingEffect steps(var(--animationSteps), end) forwards calc(var(--animationTime) * 1ms);
-	overflow: hidden;
-	width: 0ch;
-	color: #D4D4D4;
-	background: none;
-	white-space: nowrap;
 }
