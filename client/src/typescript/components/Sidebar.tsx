@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import applyTextBorder from '../AsciiBorders.ts'
 
 //TODO: Remove buttons for pages that are currently in use.
 
@@ -72,13 +73,19 @@ function Sidebar(): React.ReactElement {
 			<nav>
 				<MenuIcon />
 				<div className='menu'>
-					<ResumeButton />
-					<AboutMeButton />
-					<HomeButton />
+					<div className='ascii-box' id='menu1' >
+						<ResumeButton />
+						<AboutMeButton />
+						<HomeButton />
+					</div>
 				</div>
 			</nav>
 		</>
 	)
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+	applyTextBorder('#menu1.ascii-box', '#D4D4D4', '╒═╕│ │╘═╛')
+});
 
 export default Sidebar
