@@ -11,14 +11,14 @@ html {
 	--animationTime: 0;
 
 	/* Defining colours */
-	--red: #D16969;
-	--orange: #CE9178;
-	--yellow: #D7BA7D;
-	--green: #B5CEA8;
+	--red: #d16969;
+	--orange: #ce9178;
+	--yellow: #d7ba7d;
+	--green: #b5cea8;
 	--blue: #3794ff;
 	--indigo: #646695;
-	--violet: #C586C0;
-	--white: #D4D4D4;
+	--violet: #c586c0;
+	--white: #d4d4d4;
 	--grey: #292929;
 	--black: #1e1e1e;
 	z-index: 1;
@@ -40,7 +40,7 @@ main {
 	z-index: 1;
 }
 
-.info{
+.info {
 	font-family: 'Web437 DOS/V re. ANK30';
 	font-weight: 100;
 	font-size: 1rem;
@@ -48,8 +48,9 @@ main {
 	color: var(--white);
 	max-width: 100%;
 	z-index: 1;
+	padding-left: 5%;
+	padding-right: 5%;
 }
-
 
 a:link {
 	text-decoration: none;
@@ -76,6 +77,7 @@ a:active {
 	align-items: center;
 	pointer-events: none;
 	z-index: 1;
+	width:100%
 }
 
 .flex-row#commandLine {
