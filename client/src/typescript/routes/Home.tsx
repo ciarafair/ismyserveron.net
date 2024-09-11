@@ -1,7 +1,7 @@
 import React from 'react'
-import Background from '../components/Background'
-import Sidebar from '../components/Sidebar'
-import CommandLine from '../components/commandLine'
+import Background from '../components/Background.tsx'
+import Sidebar from '../components/Sidebar.tsx'
+import CommandLine from '../components/CommandLine.tsx'
 
 function Home(): React.ReactElement {
 	return (
