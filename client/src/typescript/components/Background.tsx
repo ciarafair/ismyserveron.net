@@ -2,6 +2,8 @@ import React from 'react'
 import squareDesign from '/assets/squareDesign.svg'
 import circleDesign from '/assets/circleDesign.svg'
 
+//TODO: Use background similar to this: https://jsfiddle.net/fleb/hzj7y2u4/
+
 function Background(): React.ReactElement {
 	return (
 		<>

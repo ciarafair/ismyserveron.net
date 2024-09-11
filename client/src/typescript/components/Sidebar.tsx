@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+//TODO: Remove buttons for pages that are currently in use.
+
 function FindSelection(): Element {
 	const body: Element = document.body
 	const selection: Element = body.querySelector('.menu')
