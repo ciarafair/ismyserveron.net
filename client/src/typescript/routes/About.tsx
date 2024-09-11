@@ -14,7 +14,7 @@ function About(): React.ReactElement {
 				<div className='flex-row'>
 					<div className='ascii-box' id='box3' >
 						<p className='info'>
-							Hi! My name is <a id='name'>Ciaran Fairbairn</a>. I&#39;m Canadian Australian, <br/>I do programming and UI/UX design in my free time.
+							Hi! My name is <a id='name'>Ciaran Fairbairn</a>.<br/>I&#39;m Canadian Australian, and do programming & UI/UX design in my free time.
 						</p>
 					</div>
 				</div>
