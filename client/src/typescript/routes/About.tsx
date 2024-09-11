@@ -3,18 +3,16 @@ import Background from '../components/Background'
 import Sidebar from '../components/Sidebar'
 import CommandLine from '../components/commandLine'
 
-function Home(): React.ReactElement {
+function About(): React.ReactElement {
 	return (
 		<>
 			<Background />
 			<Sidebar />
 			<main>
-				<div className="flex-row">
-					<CommandLine />
-				</div>
-				<div className="flex-row">
+				<CommandLine />
+				<div className='flex-row'>
 					<p className='info'>
-						Hello world! This website serves as a portfolio for my work.
+						Hi! My name is <a id='name'>Ciaran Fairbairn</a>. I&#39;m Canadian Australian, I do programming and UI/UX design in my free time.
 					</p>
 				</div>
 			</main>
@@ -23,5 +21,4 @@ function Home(): React.ReactElement {
 	)
 }
 
-
-export default Home
+export default About

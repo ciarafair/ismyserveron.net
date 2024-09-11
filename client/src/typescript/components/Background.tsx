@@ -7,8 +7,8 @@ function Background(): React.ReactElement {
 		<>
 			<div className='grid'/>
 			<div className="overlay" />
-			<img className="top-right" src={squareDesign} alt='squareDesign' />
-			<img className="bottom-left" src={circleDesign} alt='circleDesign' />
+			<img className="top-right" src={squareDesign} alt='Square design' />
+			<img className="bottom-left" src={circleDesign} alt='Circle design' />
 		</>
 	)
 }

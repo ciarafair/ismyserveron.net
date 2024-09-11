@@ -1,0 +1,105 @@
+nav {
+	width: 50vw;
+	height: 100vh;
+	position: absolute;
+	z-index: 2;
+}
+
+.link {
+	text-align: center;
+	text-align: center;
+	z-index: 1;
+}
+
+.link {
+	font-family: 'Web437 Nix8810 M16';
+	font-weight: 100;
+	font-size: 0.5rem;
+	color: var(--white);
+	background-color: var(--red);
+	text-decoration: none;
+	line-height: 125%;
+	box-shadow: 1ch 0.45em 0 0 black;
+	width: 75%;
+	z-index: 1;
+}
+
+.SidebarButton {
+	justify-content: center;
+	align-content: center;
+	display: flex;
+	width: 100%;
+	pointer-events:all;
+	border: 75%;
+	z-index: 10;
+}
+
+.link:hover::before {
+	content: '> ';
+}
+
+.menu {
+	width: 0px;
+	overflow: hidden;
+	width: 0px;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	pointer-events: none;
+	z-index: 1;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+		visibility: visible;
+		width: 25%;
+	}
+	99% {
+		width: 25%;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+		width: 0%;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+		width: 25%;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+		width: 25%;
+	}
+}
+
+.menu.disabled {
+	visibility: hidden;
+	overflow: hidden;
+	width: 0px;
+	opacity: 0;
+	animation-name: fadeOut;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.menu.enabled {
+	visibility: visible;
+	overflow: hidden;
+	width:25%;
+	opacity: 1;
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	pointer-events: none;
+	z-index: 1;
+}
