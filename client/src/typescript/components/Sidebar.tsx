@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 function FindSelection(): Element {
 	const body: Element = document.body
-	// @ts-expect-error annoying null error
 	const selection: Element = body.querySelector('.menu')
 	return selection
 }
