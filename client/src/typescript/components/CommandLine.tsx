@@ -30,7 +30,6 @@ const chosenString = chooseString()
 
 function setElementAttribute(): void {
 	const body: Element = document.body
-	// @ts-expect-error annoying null error
 	const selection: Element = body.querySelector('.command')
 	if (selection != null) {
 		console.log("Found element for command: ", selection)

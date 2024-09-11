@@ -10,3 +10,11 @@
 #box1 {
 	background-color: var(--indigo);
 }
+
+#box2 {
+	background-color: var(--red);
+}
+
+#box3 {
+	background-color: var(--indigo);
+}

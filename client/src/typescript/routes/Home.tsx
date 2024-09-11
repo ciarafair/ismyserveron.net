@@ -4,7 +4,6 @@ import Sidebar from '../components/Sidebar.tsx'
 import CommandLine from '../components/CommandLine.tsx'
 import applyTextBorder from '../AsciiBorders.ts'
 
-
 function Home(): React.ReactElement {
 	return (
 		<>

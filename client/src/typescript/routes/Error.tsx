@@ -2,6 +2,7 @@ import React from 'react'
 import Background from '../components/Background.tsx'
 import Sidebar from '../components/Sidebar.tsx'
 import CommandLine from '../components/CommandLine.tsx'
+import applyTextBorder from '../AsciiBorders.ts'
 
 function Error(): React.ReactElement {
 	return (
@@ -12,7 +13,9 @@ function Error(): React.ReactElement {
 					<CommandLine />
 				</div>
 				<div className='flex-row'>
-					<p className="info">Error 404. Not found.</p>
+					<div className='ascii-box' id='box2' >
+						<p className="info">Error 404. Not found.</p>
+					</div>
 				</div>
 			</main>
 			<Sidebar />
@@ -20,5 +23,9 @@ function Error(): React.ReactElement {
 		</>
 	)
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+	applyTextBorder('#box2.ascii-box', '#D4D4D4', '╔═╗║ ║╚═╝')
+});
 
 export default Error
