@@ -1,5 +1,8 @@
 import $ from 'jquery';
 
+
+// Script based on script from https://jsfiddle.net/fleb/hzj7y2u4/
+
 const body: Element = document.body
 
 function applyAsciiBorder(selector: string, color: string, text: string) {
