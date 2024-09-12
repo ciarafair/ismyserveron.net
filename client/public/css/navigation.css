@@ -37,6 +37,18 @@ nav {
 	content: '■';
 }
 
+.link:target::before {
+	content: '■';
+}
+
+.link:focus::before {
+	content: '■';
+}
+
+.link:active::before {
+	content: '■';
+}
+
 .menuIcon {
 	padding-left: 2.5%;
 }
