@@ -17,7 +17,7 @@ function chooseString(): string {
 		console.log('Found path! Using about page.')
 		return chosenString
 	} else if (pathname == '/error') {
-		chosenString = 'cat ./errors.txt'
+		chosenString = 'cat ./404.txt'
 		console.log('Found path! Using error page.')
 		return chosenString
 	}
