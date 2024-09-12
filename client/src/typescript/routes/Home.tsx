@@ -3,6 +3,8 @@ import Background from '../components/Background.tsx'
 import Sidebar from '../components/Sidebar.tsx'
 import applyTextBorder from '../AsciiBorders.ts'
 
+//TODO: implement arrow keys https://stackoverflow.com/questions/42036865/react-how-to-navigate-through-list-by-arrow-keys
+
 function Home(): React.ReactElement {
 	return (
 		<>
