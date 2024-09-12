@@ -1,8 +1,8 @@
 nav {
-	width: 50vw;
-	height: 100vh;
+	width: 50%;
 	position: absolute;
 	z-index: 2;
+	margin-left: 0.5rem;
 }
 
 .link {
@@ -16,11 +16,32 @@ nav {
 	font-weight: 100;
 	font-size: 0.5rem;
 	color: var(--white);
-	background-color: var(--red);
 	text-decoration: none;
-	box-shadow: 1ch 0.45em 0 0 black;
-	width: 75%;
+	width: 100%;
 	z-index: 1;
+	text-align: left;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.link:nth-child(1) {
+	margin-top: 15%;
+}
+
+.link:hover {
+	background-color: var(--red);
+}
+
+.link:target {
+	background-color: var(--red);
+}
+
+.link:focus {
+	background-color: var(--red);
+}
+
+.link:active {
+	background-color: var(--red);
 }
 
 .SidebarButton {
@@ -33,88 +54,14 @@ nav {
 	z-index: 10;
 }
 
-.link:hover::before {
-	content: '► ';
-}
-
-.link:target::before {
-	content: '► ';
-}
-
-.link:focus::before {
-	content: '► ';
-}
-
-.link:active::before {
-	content: '► ';
-}
-
-.menuIcon {
-	padding-left: 2.5%;
-}
-
 .menu {
-	width: 0px;
 	overflow: hidden;
-	width: 0px;
-	opacity: 0;
+	width: 25%;
+	opacity: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
-	pointer-events: none;
-	z-index: 1;
-}
-
-@keyframes fadeOut {
-	0% {
-		opacity: 1;
-		visibility: visible;
-		width: 25%;
-	}
-	99% {
-		width: 25%;
-	}
-	100% {
-		opacity: 0;
-		visibility: hidden;
-		width: 0%;
-	}
-}
-
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-		visibility: hidden;
-		width: 25%;
-	}
-	100% {
-		opacity: 1;
-		visibility: visible;
-		width: 25%;
-	}
-}
-
-.menu.disabled {
-	visibility: hidden;
-	overflow: hidden;
-	width: 0px;
-	opacity: 0;
-	animation-name: fadeOut;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	pointer-events: none;
-	z-index: 1;
-}
-
-.menu.enabled {
-	visibility: visible;
-	overflow: hidden;
-	width:25%;
-	opacity: 1;
-	animation-name: fadeIn;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
 	pointer-events: none;
 	z-index: 1;
 }
