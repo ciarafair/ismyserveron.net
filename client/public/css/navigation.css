@@ -34,19 +34,19 @@ nav {
 }
 
 .link:hover::before {
-	content: '■';
+	content: '► ';
 }
 
 .link:target::before {
-	content: '■';
+	content: '► ';
 }
 
 .link:focus::before {
-	content: '■';
+	content: '► ';
 }
 
 .link:active::before {
-	content: '■';
+	content: '► ';
 }
 
 .menuIcon {
