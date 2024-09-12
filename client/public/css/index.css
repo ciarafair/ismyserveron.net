@@ -46,6 +46,17 @@ main {
 	margin-top: -0.75rem;
 }
 
+.copyright {
+	font-family: 'AcPlus IBM BIOS-2y';
+	font-weight: 100;
+	font-size: 0.25rem;
+	color: var(--white);
+	z-index: 1;
+	position: absolute;
+	left: 1.5%;
+	bottom: 2.5%;
+}
+
 .info {
 	font-family: 'Web437 DOS/V re. ANK30';
 	font-weight: 100;

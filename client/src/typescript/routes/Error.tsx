@@ -22,6 +22,7 @@ function Error(): React.ReactElement {
 				</div>
 			</main>
 			<Sidebar />
+			<p className='copyright'>© Ciaran Fairbairn</p>
 			<div className='crt' />
 		</>
 	)

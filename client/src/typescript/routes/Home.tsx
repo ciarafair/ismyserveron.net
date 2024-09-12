@@ -21,6 +21,7 @@ function Home(): React.ReactElement {
 					</div>
 				</div>
 			</main>
+			<p className='copyright'>© Ciaran Fairbairn</p>
 			<div className='crt' />
 		</>
 	)
