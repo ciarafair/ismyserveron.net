@@ -27,10 +27,13 @@ function MenuIcon(): React.ReactElement {
 	return (
 		<>
 			<div className="menuIcon">
-				<input className="menuIconCheckbox" type="checkbox" onChange={validate} />
-				<div>
-					<span></span>
-					<span></span>
+				<label>
+					<input className="menuIconCheckbox" type="checkbox" onChange={validate}/>
+					<span className="label"></span>
+					</label>
+				<div className='menuIconDiv'>
+					<span className='menuIconSpan'></span>
+					<span className='menuIconSpan'></span>
 				</div>
 			</div>
 		</>
@@ -41,7 +44,7 @@ function AboutMeButton(): React.ReactElement {
 	return(
 		<a className='SidebarButton' href='/about'>
 			<p className='link'>
-				About me
+				About
 			</p>
 		</a>
 	)
@@ -74,6 +77,9 @@ function Sidebar(): React.ReactElement {
 				<MenuIcon />
 				<div className='menu'>
 					<div className='ascii-box' id='menu1' >
+						<p className='title' id='menu1'>
+							Menu
+						</p>
 						<ResumeButton />
 						<AboutMeButton />
 						<HomeButton />

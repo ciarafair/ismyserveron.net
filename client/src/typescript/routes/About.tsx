@@ -12,7 +12,7 @@ function About(): React.ReactElement {
 			<main>
 				<CommandLine />
 				<div className='flex-row'>
-					<div className='ascii-box' id='box3' >
+					<div className='ascii-box no-title' id='box3' >
 						<p className='info'>
 							Hi! My name is <a id='name'>Ciaran Fairbairn</a>.<br/>I&#39;m Canadian Australian, and do programming & UI/UX design in my free time.
 						</p>

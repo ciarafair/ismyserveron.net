@@ -40,6 +40,12 @@ main {
 	z-index: 1;
 }
 
+.title {
+	position: absolute;
+	color: var(--white);
+	margin-top: -0.75rem;
+}
+
 .info {
 	font-family: 'Web437 DOS/V re. ANK30';
 	font-weight: 100;
@@ -77,10 +83,31 @@ a:active {
 	align-items: center;
 	pointer-events: none;
 	z-index: 1;
-	width:100%
+	width:100%;
+	text-align: center;
 }
 
 .flex-row#commandLine {
 	padding-top: 10%;
 	z-index: 1;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.label::before {
+	font-family: 'Web437 Nix8810 M16';
+  font-weight: 100;
+	font-size: 0.75rem;
+	content: "!";
+	color: var(--white);
+}
+
+input[type=checkbox]:checked + .label::before {
+	font-family: 'Web437 Nix8810 M16';
+	font-weight: 100;
+	font-size: 0.75rem;
+  content: "x";
+	color: var(--white);
 }

@@ -14,7 +14,7 @@ function Home(): React.ReactElement {
 					<CommandLine />
 				</div>
 				<div className='flex-row'>
-					<div className='ascii-box' id='box1' >
+					<div className='ascii-box no-title' id='box1' >
 						<p className='info'>
 							Hello world! This website serves as a portfolio for my work.
 						</p>

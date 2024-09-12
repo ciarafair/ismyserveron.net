@@ -29,9 +29,9 @@ function applyAsciiBorder(selector: string, color: string, text: string) {
 	const context: CanvasRenderingContext2D = canvas.getContext("2d");
 	context.font = `${fontSize}px ${fontFamily}`;
 	context.fillStyle = color
-  context.fillText(lines[0], 0, fontSize+vpad);
-  context.fillText(lines[1], 0, fontSize+vpad+containerHight);
-  context.fillText(lines[2], 0, fontSize+vpad+containerHight*2);
+  context.fillText(lines[0], 0, fontSize + vpad);
+  context.fillText(lines[1], 0, fontSize + vpad + containerHight);
+  context.fillText(lines[2], 0, fontSize + vpad + containerHight*2);
 
 	const url: string = canvas.toDataURL()
 

@@ -14,7 +14,10 @@ function Error(): React.ReactElement {
 				</div>
 				<div className='flex-row'>
 					<div className='ascii-box' id='box2' >
-						<p className="info">Error 404. Not found.</p>
+						<p className='title' id='box2'>
+							404.txt
+						</p>
+						<p className="info">Page not found.</p>
 					</div>
 				</div>
 			</main>
