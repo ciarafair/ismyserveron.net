@@ -29,10 +29,7 @@ function Home(): React.ReactElement {
 						<div className='flex-row'>
 							<div className='ascii-box' id='home-box3' >
 									<p className='info' id='controls'>
-										↕: Select Item
-									</p>
-									<p className='info' id='controls'>
-										↔: Select Item
+									↑↓←→: Select Item
 									</p>
 									<p className='info' id='controls'>
 										Enter: Select
@@ -42,6 +39,9 @@ function Home(): React.ReactElement {
 									</p>
 									<p className='info' id='controls'>
 										F1: Help
+									</p>
+									<p className='info' id='controls'>
+										F6: Defaults
 									</p>
 								</div>
 						</div>
