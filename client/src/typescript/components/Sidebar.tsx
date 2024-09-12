@@ -52,9 +52,9 @@ function AboutMeButton(): React.ReactElement {
 
 function ResumeButton(): React.ReactElement {
 	return(
-		<a className='SidebarButton' href='/error'>
+		<a className='SidebarButton' href='/assets/resume.pdf'>
 			<p className='link'>
-				Resume
+				Résumé
 			</p>
 		</a>
 	)
