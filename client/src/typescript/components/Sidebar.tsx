@@ -32,6 +32,10 @@ function disableCurrentPage(): undefined {
 		id = '#pathAbout'
 	}
 
+	else if (window.location.pathname =='/error') {
+		id = '#pathError'
+	}
+
 	const element: Element = document.body.querySelector(id)
 	if (element != null) {
 		element.classList.add('inactive')
@@ -51,7 +55,7 @@ function pageTabIndex(page: string): number {
 		console.log(`Setting index number to ${number}`)
 		number = number + 1
 		return number - 1
-	} else if (page == '/projects') {
+	} else if (page == '/error') {
 		if (window.location.pathname == page) {return -1}
 		console.log(`Setting index number to ${number}`)
 		number = number + 1
@@ -77,7 +81,7 @@ function ResumeButton(): React.ReactElement {
 }
 
 function ProjectsButton(): React.ReactElement {
-	const link: string = '/projects'
+	const link: string = '/error'
 	return(
 		<a className='SidebarButton' href={link}>
 			<p className='link' tabIndex={pageTabIndex(link)}>
