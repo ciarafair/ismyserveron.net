@@ -136,7 +136,7 @@ function Sidebar(): React.ReactElement {
 						<div id='pathAbout'>
 							<AboutMeButton />
 						</div>
-						<div id='pathProjects'>
+						<div id='pathError'>
 							<ProjectsButton />
 						</div>
 						<div id='pathHome'>
