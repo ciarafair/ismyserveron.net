@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App.tsx'
 
-const rootElement: HTMLElement = document.getElementById('root')
+const rootElement: Element = document.getElementById('root')
 
 ReactDOM.createRoot(rootElement).render(
-	<React.StrictMode>
 		<BrowserRouter>
 			<App />
 		</BrowserRouter>
-	</React.StrictMode>
 )

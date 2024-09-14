@@ -1,40 +1,24 @@
 import React from 'react'
 import applyTextBorder from '../AsciiBorders.ts'
+import $ from 'jquery';
 
+let indexNumber = 0
 const handleKeyPress = (e: KeyboardEvent) => {
-	const focusableElements = document.querySelectorAll('#menu1 [tabindex]'); // Select elements with tabindex
-	const currentFocusedElement = document.activeElement as HTMLElement;
-	let index = Array.from(focusableElements).indexOf(currentFocusedElement);
-	console.log(index)
-	if (index < 0) {
-		if (e.key === 'ArrowUp') {
-			index = (index + 1) % focusableElements.length;
-			(focusableElements[index] as HTMLElement).focus();
-		} else if (e.key === 'ArrowDown') {
-			index = (index + focusableElements.length) % focusableElements.length;
-			(focusableElements[index] as HTMLElement).focus();
-		} else if (e.key === 'ArrowRight') {
-			index = (index + focusableElements.length) % focusableElements.length;
-			(focusableElements[index] as HTMLElement).focus();
-		} else if (e.key === 'ArrowLeft') {
-			index = (index + 1) % focusableElements.length;
-			(focusableElements[index] as HTMLElement).focus();
-		}
-	} else {
-		if (e.key === 'ArrowUp') {
-			index = (index + 1) % focusableElements.length;
-			(focusableElements[index] as HTMLElement).focus();
-		} else if (e.key === 'ArrowDown') {
-			index = (index - 1 + focusableElements.length) % focusableElements.length;
-			(focusableElements[index] as HTMLElement).focus();
-		} else if (e.key === 'ArrowRight') {
-			index = (index - 1 + focusableElements.length) % focusableElements.length;
-			(focusableElements[index] as HTMLElement).focus();
-		} else if (e.key === 'ArrowLeft') {
-			index = (index + 1) % focusableElements.length;
-			(focusableElements[index] as HTMLElement).focus();
-		}
+	const focusableElements = Array.from(
+		document.querySelectorAll('.menu .link[tabindex]')
+	).filter((element) => !(element as HTMLElement).classList.contains('inactive'));
+
+	if (e.key === 'ArrowUp') {
+		if (indexNumber > 0) {indexNumber = indexNumber - 1}
+		const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`); // Select <p> elements with tabindex
+		selectedElement.trigger("focus")
+	} else if (e.key === 'ArrowDown') {
+		if (indexNumber < focusableElements.length - 2) {indexNumber = indexNumber + 1}
+		const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`); // Select <p> elements with tabindex
+		console.log(selectedElement)
+		selectedElement.trigger("focus")
 	}
+	console.log(indexNumber)
 };
 
 function disableCurrentPage(): undefined {
@@ -55,20 +39,60 @@ function disableCurrentPage(): undefined {
 	}
 }
 
+let number = 0
+function pageTabIndex(page: string): number {
+	if (page == '/assets/resume.pdf') {
+		if (window.location.pathname == page) {return -1}
+		number = number + 1
+		console.log(`Setting index number to ${number}`)
+		return number - 1
+	} else if (page == '/about') {
+		if (window.location.pathname == page) {return -1}
+		console.log(`Setting index number to ${number}`)
+		number = number + 1
+		return number - 1
+	} else if (page == '/projects') {
+		if (window.location.pathname == page) {return -1}
+		console.log(`Setting index number to ${number}`)
+		number = number + 1
+		return number - 1
+	} else if (page == '/') {
+		if (window.location.pathname == page) {return -1}
+		console.log(`Setting index number to ${number}`)
+		number = number + 1
+		return number - 1
+	}
+	return -1
+}
+
 function ResumeButton(): React.ReactElement {
+	const link: string = '/assets/resume.pdf'
 	return(
-		<a className='SidebarButton' href='/assets/resume.pdf'>
-			<p className='link' tabIndex={0}>
+		<a className='SidebarButton' href={link}>
+			<p className='link' tabIndex={pageTabIndex(link)}>
 				&#32;Résumé
 			</p>
 		</a>
 	)
 }
 
-function AboutMeButton(): React.ReactElement {
+function ProjectsButton(): React.ReactElement {
+	const link: string = '/projects'
 	return(
-		<a className='SidebarButton' href='/about'>
-			<p className='link' tabIndex={1}>
+		<a className='SidebarButton' href={link}>
+			<p className='link' tabIndex={pageTabIndex(link)}>
+				&#32;Projects
+			</p>
+		</a>
+	)
+}
+
+
+function AboutMeButton(): React.ReactElement {
+	const link: string = '/about'
+	return(
+		<a className='SidebarButton' href={link}>
+			<p className='link' tabIndex={pageTabIndex(link)}>
 				&#32;About
 			</p>
 		</a>
@@ -76,9 +100,10 @@ function AboutMeButton(): React.ReactElement {
 }
 
 function HomeButton(): React.ReactElement {
+	const link: string = '/'
 	return(
-		<a className='SidebarButton' href='/'>
-			<p className='link' tabIndex={2}>
+		<a className='SidebarButton' href={link}>
+			<p className='link' tabIndex={pageTabIndex(link)}>
 				Home
 			</p>
 		</a>
@@ -106,6 +131,9 @@ function Sidebar(): React.ReactElement {
 						</div>
 						<div id='pathAbout'>
 							<AboutMeButton />
+						</div>
+						<div id='pathProjects'>
+							<ProjectsButton />
 						</div>
 						<div id='pathHome'>
 							<HomeButton />
