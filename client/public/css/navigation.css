@@ -24,6 +24,11 @@ nav {
 	margin-bottom: 5%;
 }
 
+.menu [tabindex]:focus {
+	background-color: var(--red);
+	outline: none; /* Optionally remove the default outline */
+}
+
 .link:nth-child(1) {
 	margin-top: 15%;
 }

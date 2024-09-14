@@ -1,6 +1,30 @@
 import React from 'react'
 import applyTextBorder from '../AsciiBorders.ts'
 
+const handleKeyPress = (e: KeyboardEvent) => {
+	const focusableElements = document.querySelectorAll('#menu1 [tabindex]'); // Select elements with tabindex
+	const currentFocusedElement = document.activeElement as HTMLElement;
+	let index = Array.from(focusableElements).indexOf(currentFocusedElement);
+
+	if (e.key === 'ArrowDown') {
+		// Move focus to the next element
+		index = (index + 1) % focusableElements.length;
+		(focusableElements[index] as HTMLElement).focus();
+	} else if (e.key === 'ArrowUp') {
+		// Move focus to the previous element
+		index = (index - 1 + focusableElements.length) % focusableElements.length;
+		(focusableElements[index] as HTMLElement).focus();
+	} else if (e.key === 'ArrowRight') {
+		// Move focus to the previous element
+		index = (index - 1 + focusableElements.length) % focusableElements.length;
+		(focusableElements[index] as HTMLElement).focus();
+	} else if (e.key === 'ArrowLeft') {
+		// Move focus to the next element
+		index = (index + 1) % focusableElements.length;
+		(focusableElements[index] as HTMLElement).focus();
+	}
+};
+
 function disableCurrentPage(): undefined {
 	let id: string = ''
 
@@ -19,21 +43,21 @@ function disableCurrentPage(): undefined {
 	}
 }
 
-function AboutMeButton(): React.ReactElement {
+function ResumeButton(): React.ReactElement {
 	return(
-		<a className='SidebarButton' id='pathAbout' href='/about'>
-			<p className='link'>
-				&#32;About
+		<a className='SidebarButton' href='/assets/resume.pdf'>
+			<p className='link' tabIndex={0}>
+				&#32;Résumé
 			</p>
 		</a>
 	)
 }
 
-function ResumeButton(): React.ReactElement {
+function AboutMeButton(): React.ReactElement {
 	return(
-		<a className='SidebarButton' id='pathResume' href='/assets/resume.pdf'>
-			<p className='link'>
-				&#32;Résumé
+		<a className='SidebarButton' href='/about'>
+			<p className='link' tabIndex={1}>
+				&#32;About
 			</p>
 		</a>
 	)
@@ -41,8 +65,8 @@ function ResumeButton(): React.ReactElement {
 
 function HomeButton(): React.ReactElement {
 	return(
-		<a className='SidebarButton' id='pathHome' href='/'>
-			<p className='link'>
+		<a className='SidebarButton' href='/'>
+			<p className='link' tabIndex={2}>
 				Home
 			</p>
 		</a>
@@ -50,6 +74,13 @@ function HomeButton(): React.ReactElement {
 }
 
 function Sidebar(): React.ReactElement {
+	React.useEffect(() => {
+    document.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, []);
 	return (
 		<>
 			<nav>
@@ -58,9 +89,15 @@ function Sidebar(): React.ReactElement {
 						<p className='title' id='menu1'>
 							Menu
 						</p>
-						<ResumeButton />
-						<AboutMeButton />
-						<HomeButton />
+						<div id='pathResume'>
+							<ResumeButton />
+						</div>
+						<div id='pathAbout'>
+							<AboutMeButton />
+						</div>
+						<div id='pathHome'>
+							<HomeButton />
+						</div>
 					</div>
 				</div>
 			</nav>
