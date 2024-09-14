@@ -29,7 +29,7 @@ function Home(): React.ReactElement {
 						<div className='flex-row'>
 							<div className='ascii-box' id='home-box3' >
 									<p className='info' id='controls'>
-									↑↓←→: Select Item
+									↑↓←→: Focus Item
 									</p>
 									<p className='info' id='controls'>
 										Enter: Select
