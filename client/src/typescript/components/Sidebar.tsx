@@ -1,9 +1,6 @@
 import React from 'react'
 import applyTextBorder from '../AsciiBorders.ts'
 
-//TODO: Remove buttons for pages that are currently in use.
-
-
 function disableCurrentPage(): undefined {
 	let id: string = ''
 
