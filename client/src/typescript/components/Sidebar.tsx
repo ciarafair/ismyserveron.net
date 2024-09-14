@@ -5,23 +5,35 @@ const handleKeyPress = (e: KeyboardEvent) => {
 	const focusableElements = document.querySelectorAll('#menu1 [tabindex]'); // Select elements with tabindex
 	const currentFocusedElement = document.activeElement as HTMLElement;
 	let index = Array.from(focusableElements).indexOf(currentFocusedElement);
-
-	if (e.key === 'ArrowDown') {
-		// Move focus to the next element
-		index = (index + 1) % focusableElements.length;
-		(focusableElements[index] as HTMLElement).focus();
-	} else if (e.key === 'ArrowUp') {
-		// Move focus to the previous element
-		index = (index - 1 + focusableElements.length) % focusableElements.length;
-		(focusableElements[index] as HTMLElement).focus();
-	} else if (e.key === 'ArrowRight') {
-		// Move focus to the previous element
-		index = (index - 1 + focusableElements.length) % focusableElements.length;
-		(focusableElements[index] as HTMLElement).focus();
-	} else if (e.key === 'ArrowLeft') {
-		// Move focus to the next element
-		index = (index + 1) % focusableElements.length;
-		(focusableElements[index] as HTMLElement).focus();
+	console.log(index)
+	if (index < 0) {
+		if (e.key === 'ArrowUp') {
+			index = (index + 1) % focusableElements.length;
+			(focusableElements[index] as HTMLElement).focus();
+		} else if (e.key === 'ArrowDown') {
+			index = (index + focusableElements.length) % focusableElements.length;
+			(focusableElements[index] as HTMLElement).focus();
+		} else if (e.key === 'ArrowRight') {
+			index = (index + focusableElements.length) % focusableElements.length;
+			(focusableElements[index] as HTMLElement).focus();
+		} else if (e.key === 'ArrowLeft') {
+			index = (index + 1) % focusableElements.length;
+			(focusableElements[index] as HTMLElement).focus();
+		}
+	} else {
+		if (e.key === 'ArrowUp') {
+			index = (index + 1) % focusableElements.length;
+			(focusableElements[index] as HTMLElement).focus();
+		} else if (e.key === 'ArrowDown') {
+			index = (index - 1 + focusableElements.length) % focusableElements.length;
+			(focusableElements[index] as HTMLElement).focus();
+		} else if (e.key === 'ArrowRight') {
+			index = (index - 1 + focusableElements.length) % focusableElements.length;
+			(focusableElements[index] as HTMLElement).focus();
+		} else if (e.key === 'ArrowLeft') {
+			index = (index + 1) % focusableElements.length;
+			(focusableElements[index] as HTMLElement).focus();
+		}
 	}
 };
 
