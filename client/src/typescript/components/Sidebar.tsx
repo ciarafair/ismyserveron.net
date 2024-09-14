@@ -2,7 +2,7 @@ import React from 'react'
 import applyTextBorder from '../AsciiBorders.ts'
 import $ from 'jquery';
 
-let indexNumber = 0
+let indexNumber = -1
 const handleKeyPress = (e: KeyboardEvent) => {
 	const focusableElements = Array.from(
 		document.querySelectorAll('.menu .link[tabindex]')
