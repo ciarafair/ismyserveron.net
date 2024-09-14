@@ -9,14 +9,23 @@ const handleKeyPress = (e: KeyboardEvent) => {
 	).filter((element) => !(element as HTMLElement).classList.contains('inactive'));
 
 	if (e.key === 'ArrowUp') {
-		if (indexNumber > 0) {indexNumber = indexNumber - 1}
-		const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`); // Select <p> elements with tabindex
-		selectedElement.trigger("focus")
+		if (indexNumber < 0) {
+			indexNumber = indexNumber + 1
+			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`); // Select <p> elements with tabindex
+			selectedElement.trigger("focus")
+		}
+		if (indexNumber > 0) {
+			indexNumber = indexNumber - 1
+			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`); // Select <p> elements with tabindex
+			selectedElement.trigger("focus")
+		}
 	} else if (e.key === 'ArrowDown') {
-		if (indexNumber < focusableElements.length - 2) {indexNumber = indexNumber + 1}
-		const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`); // Select <p> elements with tabindex
-		console.log(selectedElement)
-		selectedElement.trigger("focus")
+		if (indexNumber < focusableElements.length - 2) {
+			indexNumber = indexNumber + 1
+			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`); // Select <p> elements with tabindex
+			console.log(selectedElement)
+			selectedElement.trigger("focus")
+		}
 	}
 	console.log(indexNumber)
 };
