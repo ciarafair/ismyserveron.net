@@ -15,11 +15,10 @@ function disableCurrentPage(): undefined {
 		id = '#pathAbout'
 	}
 
-	console.log(`Selecting ID of ${id}`)
 	const element: Element = document.body.querySelector(id)
 	if (element != null) {
 		element.classList.add('inactive')
-		console.log(`Disabling element ${element}`)
+		console.log(`Disabling element with an ID of #${element.id}`)
 	}
 }
 
