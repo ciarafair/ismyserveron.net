@@ -11,23 +11,21 @@ const handleKeyPress = (e: KeyboardEvent) => {
 	if (e.key === 'ArrowUp') {
 		if (indexNumber < 0) {
 			indexNumber = indexNumber + 1
-			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`); // Select <p> elements with tabindex
+			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
 			selectedElement.trigger("focus")
 		}
 		if (indexNumber > 0) {
 			indexNumber = indexNumber - 1
-			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`); // Select <p> elements with tabindex
+			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
 			selectedElement.trigger("focus")
 		}
 	} else if (e.key === 'ArrowDown') {
 		if (indexNumber < focusableElements.length - 2) {
 			indexNumber = indexNumber + 1
-			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`); // Select <p> elements with tabindex
-			console.log(selectedElement)
+			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
 			selectedElement.trigger("focus")
 		}
 	}
-	console.log(indexNumber)
 };
 
 function disableCurrentPage(): undefined {
