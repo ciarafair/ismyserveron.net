@@ -48,21 +48,17 @@ function pageTabIndex(page: string): number {
 	if (page == '/assets/resume.pdf') {
 		if (window.location.pathname == page) {return -1}
 		number = number + 1
-		console.log(`Setting index number to ${number}`)
 		return number - 1
 	} else if (page == '/about') {
 		if (window.location.pathname == page) {return -1}
-		console.log(`Setting index number to ${number}`)
 		number = number + 1
 		return number - 1
 	} else if (page == '/error') {
 		if (window.location.pathname == page) {return -1}
-		console.log(`Setting index number to ${number}`)
 		number = number + 1
 		return number - 1
 	} else if (page == '/') {
 		if (window.location.pathname == page) {return -1}
-		console.log(`Setting index number to ${number}`)
 		number = number + 1
 		return number - 1
 	}
