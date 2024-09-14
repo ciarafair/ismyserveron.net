@@ -108,3 +108,7 @@ a {
 	margin: 0;
 	z-index: 1;
 }
+
+.inactive {
+	display: none;
+}
