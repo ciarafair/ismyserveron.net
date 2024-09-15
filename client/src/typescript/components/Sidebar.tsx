@@ -136,11 +136,11 @@ function Sidebar(): React.ReactElement {
 						<div id='pathResume'>
 							<ResumeButton />
 						</div>
-						<div id='pathAbout'>
-							<AboutMeButton />
-						</div>
 						<div id='pathError'>
 							<ProjectsButton />
+						</div>
+						<div id='pathAbout'>
+							<AboutMeButton />
 						</div>
 						<div id='pathHome'>
 							<HomeButton />
