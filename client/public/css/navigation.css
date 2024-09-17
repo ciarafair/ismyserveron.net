@@ -26,7 +26,7 @@ nav {
 
 .menu [tabindex]:focus {
 	background-color: var(--red);
-	outline: none; /* Optionally remove the default outline */
+	outline: none;
 }
 
 .link:nth-child(1) {

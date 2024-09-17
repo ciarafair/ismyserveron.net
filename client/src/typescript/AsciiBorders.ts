@@ -1,14 +1,10 @@
 import $ from 'jquery';
 
 
-// Script based on script from https://jsfiddle.net/fleb/hzj7y2u4/
-
 const body: Element = document.body
 
 function applyAsciiBorder(selector: string, color: string, text: string) {
 	const $element: Element | undefined = body.querySelector(selector)
-
-	//console.log(`Creating ASCII borders.`)
 
 	text = text || '╔═╗║ ║╚═╝';
 	color = color || '#D4D4D4'
@@ -38,7 +34,6 @@ function applyAsciiBorder(selector: string, color: string, text: string) {
 
 	const url: string = canvas.toDataURL()
 
-	//console.log(`Applying ASCII borders to element: ${selector}.`)
 	$(`<style type="text/css"> ${selector} {border-width:${containerHight}px ${containerWidth}px; border-image:url("${url}") ${containerHight} ${containerWidth} repeat} </style>`).appendTo(body);
 }
 

@@ -9,11 +9,9 @@ html {
 }
 
 :root {
-	/* Steps for command prompt animation */
 	--animationSteps: 0;
 	--animationTime: 0;
 
-	/* Defining colours */
 	--red: #da0c00;
 	--orange: #CE9178;
 	--yellow: #f4eb34;
