@@ -1,8 +1,8 @@
 /*Credits: https://int10h.org/oldschool-pc-fonts/readme/#credits*/
 @font-face {
 	font-family: 'Web437 DOS/V re. ANK30';
-	font-display: optional;
+	font-display: swap;
 	font-stretch: normal;
 	font-style: normal;
-	src: url('web437_dosv_re_ank_30.woff') format('woff');
+	src: url('./web437_dosv_re_ank_30.woff') format('woff');
 }

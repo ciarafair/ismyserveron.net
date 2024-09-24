@@ -52,41 +52,65 @@
 	}
 
 	#menu1.ascii-box.no-title {
-		clip-path: inset(0 0 0 0);
+		clip-path: inset(calc(0.25rem / 2) 0 0 0);
+		border-top-width: 20px;
 	}
 
 	#error-box1.ascii-box.no-title {
-		clip-path: inset(0 0 0 0);
+		clip-path: inset(0.25rem 0 0 0);
+		border-top-width: 20px;
 	}
 
 	#menu1.title {
 		margin-top: -1.5rem;
 	}
 
+	#error-box1.title {
+		margin-top: -0.5rem;
+	}
+
 	#pathAbout {
 		padding-top: 15px;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
 	}
 
 	#pathError {
 		padding-top: 15px;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
 	}
 
 	#pathResume {
 		padding-top: 15px;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
 	}
 
 	#pathHome {
 		padding-top: 15px;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
 	}
 
 	.title {
 		font-size: 0.75rem;
 	}
 
+	.flex-row {
+		min-height: 10%;
+	}
+
+	.flex-column {
+		height: 100vh;
+	}
+
 	#menu1 {
 		flex-direction: row;
 		align-items: center;
 		justify-content:space-between;
+		padding-right: 0px;
+		padding-left: 0px;
 	}
 
 	.ascii-box {
@@ -106,12 +130,13 @@
 
 	main {
 		display: flex;
-		height: 100%;
 		position: relative;
 		width: 100%;
+		height: 100vh;
 	}
 
 	body {
 		margin: 0;
+		height: 100vh;
 	}
 }

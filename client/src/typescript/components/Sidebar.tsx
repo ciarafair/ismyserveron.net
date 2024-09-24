@@ -124,6 +124,10 @@ function Sidebar(): React.ReactElement {
       document.removeEventListener('keydown', handleKeyPress);
     };
   }, []);
+	document.addEventListener('DOMContentLoaded', function() {
+		disableCurrentPage()
+	});
+
 	return (
 		<>
 			<nav>
@@ -150,9 +154,5 @@ function Sidebar(): React.ReactElement {
 		</>
 	)
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-	disableCurrentPage()
-});
 
 export default Sidebar
