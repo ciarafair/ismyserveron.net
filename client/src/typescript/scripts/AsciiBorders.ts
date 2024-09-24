@@ -1,12 +1,13 @@
 import $ from 'jquery';
+import Bowser from "bowser"
 
 const body: Element = document.body;
 
 function applyAsciiBorder(selector: string, color: string, text: string) {
   $(window).on('load', function() {
+		const browser = Bowser.getParser(window.navigator.userAgent);
 		const isChrome = navigator.userAgent.indexOf("Chrome");  //The global chrome object, containing several properties including a documented chrome.webstore object
-		// @ts-expect-error - annoying Firefox InstallTrigger type
-		const isFirefox = typeof InstallTrigger !== 'undefined'; //Firefox: Firefox's API to install add-ons
+		const isFirefox = browser.parse().isBrowser('Firefox'); //Firefox: Firefox's API to install add-ons
 
 		if (isFirefox) {
 			const $element: Element | undefined = body.querySelector(selector)
