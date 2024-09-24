@@ -1,7 +1,6 @@
 import React from 'react'
 import Background from '../components/Background.tsx'
 import Sidebar from '../components/Sidebar.tsx'
-import applyTextBorder from '../AsciiBorders.ts'
 
 function About(): React.ReactElement {
 	return (
@@ -24,9 +23,5 @@ function About(): React.ReactElement {
 		</>
 	)
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-	applyTextBorder('#about-box1.ascii-box', '#D4D4D4', '╔═╗║ ║╚═╝')
-});
 
 export default About

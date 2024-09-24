@@ -13,7 +13,6 @@ import Error from './typescript/routes/Error'
 */
 
 function App(): React.ReactElement {
-
 	return (
 		<>
 			<Routes>

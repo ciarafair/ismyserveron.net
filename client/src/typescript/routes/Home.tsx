@@ -1,7 +1,6 @@
 import React from 'react'
 import Background from '../components/Background.tsx'
 import Sidebar from '../components/Sidebar.tsx'
-import applyTextBorder from '../AsciiBorders.ts'
 
 //TODO: implement arrow keys https://stackoverflow.com/questions/42036865/react-how-to-navigate-through-list-by-arrow-keys
 
@@ -52,11 +51,5 @@ function Home(): React.ReactElement {
 		</>
 	)
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-	applyTextBorder('#home-box1.ascii-box', '#D4D4D4', '╔═╗║ ║║ ║')
-	applyTextBorder('#home-box2.ascii-box', '#D4D4D4', '╠═╣║ ║║ ║')
-	applyTextBorder('#home-box3.ascii-box', '#D4D4D4', '╟─╢║ ║╚═╝')
-});
 
 export default Home
