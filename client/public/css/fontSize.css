@@ -28,3 +28,90 @@
 		font-size: 50px;
 	}
 }
+
+@media (max-width: 1000px) {
+	html {
+		font-size: 25px;
+	}
+
+	nav {
+		position: relative;
+		width: 100vw;
+		display: flex;
+		margin-left: 0%;
+	}
+
+	.menu {
+		width: 100%;
+		flex-direction: inherit;
+	}
+
+	.menu > div:nth-child(1) {
+		margin-top: 0.55rem;
+		border-top-width: 19.75px;
+	}
+
+	#menu1.ascii-box.no-title {
+		clip-path: inset(0 0 0 0);
+	}
+
+	#error-box1.ascii-box.no-title {
+		clip-path: inset(0 0 0 0);
+	}
+
+	#menu1.title {
+		margin-top: -1.5rem;
+	}
+
+	#pathAbout {
+		padding-top: 15px;
+	}
+
+	#pathError {
+		padding-top: 15px;
+	}
+
+	#pathResume {
+		padding-top: 15px;
+	}
+
+	#pathHome {
+		padding-top: 15px;
+	}
+
+	.title {
+		font-size: 0.75rem;
+	}
+
+	#menu1 {
+		flex-direction: row;
+		align-items: center;
+		justify-content:space-between;
+	}
+
+	.ascii-box {
+		font-size: 0.75rem;
+		max-width: 80%;
+	}
+
+	.link {
+		margin-top: 0.25rem;
+		font-size: 0.75rem;
+		width: 100%;
+	}
+
+	.link:nth-child(1){
+		margin-top: 0.25rem;
+	}
+
+	main {
+		display: flex;
+		height: 100%;
+		position: relative;
+		width: 100%;
+	}
+
+	body {
+		margin: 0;
+	}
+}

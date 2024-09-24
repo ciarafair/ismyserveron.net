@@ -6,6 +6,7 @@ function Error(): React.ReactElement {
 	return (
 		<>
 			<Background />
+			<Sidebar />
 			<main>
 				<div className='flex-row'>
 					<div className='ascii-box no-title' id='error-box1' >
@@ -16,7 +17,6 @@ function Error(): React.ReactElement {
 					</div>
 				</div>
 			</main>
-			<Sidebar />
 			<p className='copyright'>© Ciaran Fairbairn</p>
 			<div className='crt' />
 		</>
