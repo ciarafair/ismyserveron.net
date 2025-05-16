@@ -1,18 +1,18 @@
-@media (min-width: 100px) {
-	html {
-		font-size: 8px;
-	}
-}
-
-@media (min-width: 250px) {
-	html {
-		font-size: 15px;
-	}
-}
-
-@media (min-width: 700px) {
+@media (min-width: 200px) {
 	html {
 		font-size: 20px;
+	}
+}
+
+@media (min-width: 400px) {
+	html {
+		font-size: 28px;
+	}
+}
+
+@media (min-width: 800px) {
+	html {
+		font-size: 36px;
 	}
 }
 
@@ -23,10 +23,6 @@
 }
 
 @media (max-width: 1000px) {
-	html {
-		font-size: 42px;
-	}
-
 	nav {
 		position: relative;
 		width: 100vw;
