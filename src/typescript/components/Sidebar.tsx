@@ -8,20 +8,20 @@ const handleKeyPress = (e: KeyboardEvent) => {
 		document.querySelectorAll('.menu .link[tabindex]')
 	).filter((element) => !(element as HTMLElement).classList.contains('inactive'));
 
-	console.log(`Focusable Length: ${focusableElements.length - 1} Index Number: ${indexNumber}`)
+	// DEBUG console.log(`Focusable Length: ${focusableElements.length - 1} Index Number: ${indexNumber}`)
 	if (e.key === 'ArrowDown') {
 		if (indexNumber < (focusableElements.length - 1)) {
 			indexNumber = indexNumber + 1
 			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
 			selectedElement.trigger("focus")
-			console.log(`Index Number ${indexNumber} < ${(focusableElements.length - 1)}`)
+			// DEBUG console.log(`Index Number ${indexNumber} < ${(focusableElements.length - 1)}`)
 		}
 	} else if (e.key === 'ArrowUp') {
 		if (indexNumber <= 0) {
 			indexNumber = indexNumber + 1
 			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
 			selectedElement.trigger("focus")
-			console.log(`Index Number ${indexNumber} < 0`)
+			// DEBUG console.log(`Index Number ${indexNumber} < 0`)
 		}
 
 		if (indexNumber == (focusableElements.length - 1)) {
@@ -33,7 +33,7 @@ const handleKeyPress = (e: KeyboardEvent) => {
 			indexNumber = indexNumber - 1
 			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
 			selectedElement.trigger("focus")
-			console.log(`Index Number ${indexNumber} > 0`)
+			// DEBUG console.log(`Index Number ${indexNumber} > 0`)
 		}
 	}
 };
