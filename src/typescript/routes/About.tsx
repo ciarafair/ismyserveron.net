@@ -16,7 +16,7 @@ function About(): React.ReactElement {
 							</p>
 						</div>
 					</div>
-					</div>
+				</div>
 			</main>
 			<p className='copyright'>© Ciaran Fairbairn</p>
 			<div className='crt' />

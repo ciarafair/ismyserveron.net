@@ -3,7 +3,7 @@ import $ from 'jquery';
 const body: Element = document.body;
 
 function applyAsciiBorder(selector: string, color: string, text: string) {
-  $(window).on('load', function() {
+	$(window).on('load', function() {
 		const isChrome = navigator.userAgent.indexOf("Chrome");  //The global chrome object, containing several properties including a documented chrome.webstore object
 		// @ts-expect-error - annoying Firefox InstallTrigger type
 		const isFirefox = typeof InstallTrigger !== 'undefined'; //Firefox: Firefox's API to install add-ons
@@ -80,7 +80,7 @@ function applyAsciiBorder(selector: string, color: string, text: string) {
 
 				$(`<style type="text/css"> ${selector} {border-width:${containerHeight}px ${containerWidth}px; border-image:url("${url}") ${containerHeight} ${containerWidth} repeat} </style>`).appendTo(body);
 			})
-	}}
-  )};
+		}}
+	)};
 
 export default applyAsciiBorder;

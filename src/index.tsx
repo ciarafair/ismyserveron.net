@@ -8,7 +8,7 @@ import App from './App.tsx'
 const rootElement: Element = document.getElementById('root')
 
 ReactDOM.createRoot(rootElement).render(
-		<BrowserRouter>
-			<App />
-		</BrowserRouter>
+	<BrowserRouter>
+		<App />
+	</BrowserRouter>
 )

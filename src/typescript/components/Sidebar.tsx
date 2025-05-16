@@ -30,15 +30,15 @@ const handleKeyPress = (e: KeyboardEvent) => {
 function disableCurrentPage(): undefined {
 	let id: string = ''
 
-	if (window.location.pathname =='/') {
+	if (window.location.pathname == '/') {
 		id = '#pathHome'
 	}
 
-	else if (window.location.pathname =='/about') {
+	else if (window.location.pathname == '/about') {
 		id = '#pathAbout'
 	}
 
-	else if (window.location.pathname =='/error') {
+	else if (window.location.pathname == '/error') {
 		id = '#pathError'
 	}
 
@@ -52,19 +52,19 @@ function disableCurrentPage(): undefined {
 let number = 0
 function pageTabIndex(page: string): number {
 	if (page == '/assets/resume.pdf') {
-		if (window.location.pathname == page) {return -1}
+		if (window.location.pathname == page) { return -1 }
 		number = number + 1
 		return number - 1
 	} else if (page == '/about') {
-		if (window.location.pathname == page) {return -1}
+		if (window.location.pathname == page) { return -1 }
 		number = number + 1
 		return number - 1
 	} else if (page == '/error') {
-		if (window.location.pathname == page) {return -1}
+		if (window.location.pathname == page) { return -1 }
 		number = number + 1
 		return number - 1
 	} else if (page == '/') {
-		if (window.location.pathname == page) {return -1}
+		if (window.location.pathname == page) { return -1 }
 		number = number + 1
 		return number - 1
 	}
@@ -73,7 +73,7 @@ function pageTabIndex(page: string): number {
 
 function ResumeButton(): React.ReactElement {
 	const link: string = '/assets/resume.pdf'
-	return(
+	return (
 		<a className='SidebarButton' href={link}>
 			<p className='link' tabIndex={pageTabIndex(link)}>
 				&#32;Résumé
@@ -84,7 +84,7 @@ function ResumeButton(): React.ReactElement {
 
 function ProjectsButton(): React.ReactElement {
 	const link: string = '/error'
-	return(
+	return (
 		<a className='SidebarButton' href={link}>
 			<p className='link' tabIndex={pageTabIndex(link)}>
 				&#32;Projects
@@ -96,7 +96,7 @@ function ProjectsButton(): React.ReactElement {
 
 function AboutMeButton(): React.ReactElement {
 	const link: string = '/about'
-	return(
+	return (
 		<a className='SidebarButton' href={link}>
 			<p className='link' tabIndex={pageTabIndex(link)}>
 				&#32;About
@@ -107,7 +107,7 @@ function AboutMeButton(): React.ReactElement {
 
 function HomeButton(): React.ReactElement {
 	const link: string = '/'
-	return(
+	return (
 		<a className='SidebarButton' href={link}>
 			<p className='link' tabIndex={pageTabIndex(link)}>
 				Home
@@ -118,13 +118,13 @@ function HomeButton(): React.ReactElement {
 
 function Sidebar(): React.ReactElement {
 	React.useEffect(() => {
-    document.addEventListener('keydown', handleKeyPress);
+		document.addEventListener('keydown', handleKeyPress);
 
-    return () => {
-      document.removeEventListener('keydown', handleKeyPress);
-    };
-  }, []);
-	document.addEventListener('DOMContentLoaded', function() {
+		return () => {
+			document.removeEventListener('keydown', handleKeyPress);
+		};
+	}, []);
+	document.addEventListener('DOMContentLoaded', function () {
 		disableCurrentPage()
 	});
 
