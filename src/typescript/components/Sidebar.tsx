@@ -28,7 +28,7 @@ const handleKeyPress = (e: KeyboardEvent) => {
 			indexNumber = indexNumber - 1
 			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
 			selectedElement.trigger("focus")
-			console.log(`Index Number ${indexNumber} == ${(focusableElements.length - 1)}`)
+			// DEBUG console.log(`Index Number ${indexNumber} == ${(focusableElements.length - 1)}`)
 		} else if (indexNumber > 0) {
 			indexNumber = indexNumber - 1
 			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
