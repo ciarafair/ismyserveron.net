@@ -2,7 +2,6 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './typescript/routes/Home'
 import About from './typescript/routes/About.tsx'
-import Test from './typescript/routes/Test.tsx'
 import Error from './typescript/routes/Error.tsx'
 import applyTextBorder from './typescript/scripts/AsciiBorders.ts'
 
@@ -21,7 +20,6 @@ function App(): React.ReactElement {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
-				<Route path="/test" element={<Test />} />
 				<Route path="/error" element={<Error />} />
 				<Route path="*" element={<Error />} />
 			</Routes>
