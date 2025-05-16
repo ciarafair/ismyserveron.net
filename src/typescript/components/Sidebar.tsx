@@ -122,7 +122,7 @@ function AboutMeButton(): React.ReactElement {
 	)
 }
 
-function TestButton(): React.ReactElement {
+/* function TestButton(): React.ReactElement {
 	const link: string = '/test'
 	return (
 		<a className='SidebarButton' href={link}>
@@ -132,6 +132,7 @@ function TestButton(): React.ReactElement {
 		</a>
 	)
 }
+*/
 
 function HomeButton(): React.ReactElement {
 	const link: string = '/'
@@ -171,9 +172,6 @@ function Sidebar(): React.ReactElement {
 						</div>
 						<div id='pathAbout'>
 							<AboutMeButton />
-						</div>
-						<div id='pathTest'>
-							<TestButton />
 						</div>
 						<div id='pathHome'>
 							<HomeButton />
