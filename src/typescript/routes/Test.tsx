@@ -3,8 +3,8 @@ import applyTextBorder from '../../typescript/scripts/AsciiBorders.ts'
 import Background from '../components/Background.tsx'
 import Sidebar from '../components/Sidebar.tsx'
 
-function About(): React.ReactElement {
-	applyTextBorder('#about-box1.ascii-box', '#D4D4D4', '╔═╗║ ║╚═╝')
+function Test(): React.ReactElement {
+	applyTextBorder('#test-box1.ascii-box', '#D4D4D4', '╔═╗║ ║╚═╝')
 	return (
 		<>
 			<Background />
@@ -12,9 +12,9 @@ function About(): React.ReactElement {
 			<main>
 				<div className='flex-column'>
 					<div className='flex-row'>
-						<div className='ascii-box no-title' id='about-box1' >
+						<div className='ascii-box no-title' id='test-box1' >
 							<p className='info'>
-								Hi! My name is <a id='name'>Ciaran Fairbairn</a>. I&#39;m Canadian Australian, and do programming & UI/UX design in my free time.
+								Test
 							</p>
 						</div>
 					</div>
@@ -26,4 +26,4 @@ function About(): React.ReactElement {
 	)
 }
 
-export default About
+export default Test

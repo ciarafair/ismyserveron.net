@@ -1,8 +1,12 @@
 import React from 'react'
+import applyTextBorder from '../../typescript/scripts/AsciiBorders.ts'
 import Background from '../components/Background.tsx'
 import Sidebar from '../components/Sidebar.tsx'
 
 function Home(): React.ReactElement {
+	applyTextBorder('#home-box1.ascii-box', '#D4D4D4', '╔═╗║ ║║ ║')
+	applyTextBorder('#home-box2.ascii-box', '#D4D4D4', '╠═╣║ ║║ ║')
+	applyTextBorder('#home-box3.ascii-box', '#D4D4D4', '╟─╢║ ║╚═╝')
 	return (
 		<>
 			<Background />

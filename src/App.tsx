@@ -1,8 +1,9 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './typescript/routes/Home'
-import About from './typescript/routes/About'
-import Error from './typescript/routes/Error'
+import About from './typescript/routes/About.tsx'
+import Test from './typescript/routes/Test.tsx'
+import Error from './typescript/routes/Error.tsx'
 import applyTextBorder from './typescript/scripts/AsciiBorders.ts'
 
 /* Potential inspirations:
@@ -20,6 +21,8 @@ function App(): React.ReactElement {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
+				<Route path="/test" element={<Test />} />
+				<Route path="/error" element={<Error />} />
 				<Route path="*" element={<Error />} />
 			</Routes>
 		</>
@@ -37,17 +40,6 @@ export default App
 
 document.addEventListener('readystatechange', function () {
 	if (document.readyState === 'complete') {
-		if (window.location.pathname == '/') {
-			applyTextBorder('#home-box1.ascii-box', '#D4D4D4', '╔═╗║ ║║ ║')
-			applyTextBorder('#home-box2.ascii-box', '#D4D4D4', '╠═╣║ ║║ ║')
-			applyTextBorder('#home-box3.ascii-box', '#D4D4D4', '╟─╢║ ║╚═╝')
-		}
-		if (window.location.pathname == '/about') {
-			applyTextBorder('#about-box1.ascii-box', '#D4D4D4', '╔═╗║ ║╚═╝')
-		}
-		if (window.location.pathname == '/error') {
-			applyTextBorder('#error-box1.ascii-box', '#D4D4D4', '╔═╗║ ║╚═╝')
-		}
 		applyTextBorder('#menu1.ascii-box', '#D4D4D4', '╒═╕│ │╘═╛')
 	}
 });

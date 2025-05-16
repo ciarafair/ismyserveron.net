@@ -3,26 +3,37 @@ import $ from 'jquery';
 
 let indexNumber = -1
 const handleKeyPress = (e: KeyboardEvent) => {
+
 	const focusableElements = Array.from(
 		document.querySelectorAll('.menu .link[tabindex]')
 	).filter((element) => !(element as HTMLElement).classList.contains('inactive'));
 
-	if (e.key === 'ArrowUp') {
-		if (indexNumber < 0) {
+	console.log(`Focusable Length: ${focusableElements.length - 1} Index Number: ${indexNumber}`)
+	if (e.key === 'ArrowDown') {
+		if (indexNumber < (focusableElements.length - 1)) {
 			indexNumber = indexNumber + 1
 			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
 			selectedElement.trigger("focus")
+			console.log(`Index Number ${indexNumber} < ${(focusableElements.length - 1)}`)
 		}
-		if (indexNumber > 0) {
+	} else if (e.key === 'ArrowUp') {
+		if (indexNumber <= 0) {
+			indexNumber = indexNumber + 1
+			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
+			selectedElement.trigger("focus")
+			console.log(`Index Number ${indexNumber} < 0`)
+		}
+
+		if (indexNumber == (focusableElements.length - 1)) {
 			indexNumber = indexNumber - 1
 			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
 			selectedElement.trigger("focus")
-		}
-	} else if (e.key === 'ArrowDown') {
-		if (indexNumber < focusableElements.length - 2) {
-			indexNumber = indexNumber + 1
+			console.log(`Index Number ${indexNumber} == ${(focusableElements.length - 1)}`)
+		} else if (indexNumber > 0) {
+			indexNumber = indexNumber - 1
 			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
 			selectedElement.trigger("focus")
+			console.log(`Index Number ${indexNumber} > 0`)
 		}
 	}
 };
@@ -38,8 +49,12 @@ function disableCurrentPage(): undefined {
 		id = '#pathAbout'
 	}
 
-	else if (window.location.pathname == '/error') {
-		id = '#pathError'
+	else if (window.location.pathname == '/projects') {
+		id = '#pathProjects'
+	}
+
+	else if (window.location.pathname == '/test') {
+		id = '#pathTest'
 	}
 
 	const element: Element = document.body.querySelector(id)
@@ -59,7 +74,11 @@ function pageTabIndex(page: string): number {
 		if (window.location.pathname == page) { return -1 }
 		number = number + 1
 		return number - 1
-	} else if (page == '/error') {
+	} else if (page == '/projects') {
+		if (window.location.pathname == page) { return -1 }
+		number = number + 1
+		return number - 1
+	} else if (page == '/test') {
 		if (window.location.pathname == page) { return -1 }
 		number = number + 1
 		return number - 1
@@ -67,8 +86,7 @@ function pageTabIndex(page: string): number {
 		if (window.location.pathname == page) { return -1 }
 		number = number + 1
 		return number - 1
-	}
-	return -1
+	} else return number - 1
 }
 
 function ResumeButton(): React.ReactElement {
@@ -83,7 +101,7 @@ function ResumeButton(): React.ReactElement {
 }
 
 function ProjectsButton(): React.ReactElement {
-	const link: string = '/error'
+	const link: string = '/projects'
 	return (
 		<a className='SidebarButton' href={link}>
 			<p className='link' tabIndex={pageTabIndex(link)}>
@@ -93,13 +111,23 @@ function ProjectsButton(): React.ReactElement {
 	)
 }
 
-
 function AboutMeButton(): React.ReactElement {
 	const link: string = '/about'
 	return (
 		<a className='SidebarButton' href={link}>
 			<p className='link' tabIndex={pageTabIndex(link)}>
 				&#32;About
+			</p>
+		</a>
+	)
+}
+
+function TestButton(): React.ReactElement {
+	const link: string = '/test'
+	return (
+		<a className='SidebarButton' href={link}>
+			<p className='link' tabIndex={pageTabIndex(link)}>
+				&#32;Test
 			</p>
 		</a>
 	)
@@ -119,7 +147,6 @@ function HomeButton(): React.ReactElement {
 function Sidebar(): React.ReactElement {
 	React.useEffect(() => {
 		document.addEventListener('keydown', handleKeyPress);
-
 		return () => {
 			document.removeEventListener('keydown', handleKeyPress);
 		};
@@ -139,11 +166,14 @@ function Sidebar(): React.ReactElement {
 						<div id='pathResume'>
 							<ResumeButton />
 						</div>
-						<div id='pathError'>
+						<div id='pathProjects'>
 							<ProjectsButton />
 						</div>
 						<div id='pathAbout'>
 							<AboutMeButton />
+						</div>
+						<div id='pathTest'>
+							<TestButton />
 						</div>
 						<div id='pathHome'>
 							<HomeButton />

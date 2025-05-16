@@ -45,12 +45,15 @@
 	flex-direction: row;
 }
 
-
 #error-box1 {
 	background-color: var(--red);
 }
 
 #about-box1 {
+	background-color: var(--blue);
+}
+
+#test-box1 {
 	background-color: var(--blue);
 }
 
