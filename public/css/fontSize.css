@@ -1,36 +1,36 @@
 @media (min-width: 100px) {
 	html {
-		font-size: 8px;
+		font-size: 13px;
 	}
 }
 
 @media (min-width: 250px) {
 	html {
-		font-size: 15px;
+		font-size: 25px;
 	}
 }
 
 @media (min-width: 700px) {
 	html {
-		font-size: 20px;
+		font-size: 34px;
 	}
 }
 
 @media (min-width: 1000px) {
 	html {
-		font-size: 25px;
+		font-size: 42px;
 	}
 }
 
 @media (min-width: 1720px) {
 	html {
-		font-size: 50px;
+		font-size: 85px;
 	}
 }
 
 @media (max-width: 1000px) {
 	html {
-		font-size: 25px;
+		font-size: 42px;
 	}
 
 	nav {
@@ -93,7 +93,7 @@
 	}
 
 	.title {
-		font-size: 0.75rem * 70;
+		font-size: 0.75rem;
 	}
 
 	.flex-row {
@@ -110,17 +110,6 @@
 		justify-content: space-between;
 		padding-right: 0px;
 		padding-left: 0px;
-	}
-
-	.ascii-box {
-		font-size: 0.75rem * 70;
-		max-width: 80%;
-	}
-
-	.link {
-		margin-top: 0.25rem;
-		font-size: 0.75rem * 70;
-		width: 100%;
 	}
 
 	.link:nth-child(1) {

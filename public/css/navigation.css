@@ -6,12 +6,6 @@ nav {
 }
 
 .link {
-	text-align: center;
-	text-align: center;
-	z-index: 1;
-}
-
-.link {
 	font-family: 'Web437 Nix8810 M16';
 	font-weight: 100;
 	font-size: 0.5rem;
@@ -54,7 +48,7 @@ nav {
 	align-content: center;
 	display: flex;
 	width: 100%;
-	pointer-events:all;
+	pointer-events: all;
 	z-index: 10;
 }
 

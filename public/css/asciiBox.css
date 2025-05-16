@@ -8,7 +8,6 @@
 
 	font-family: 'Web437 DOS/V re. ANK30';
 	font-weight: 100;
-	font-size: 1rem;
 	line-height: 1;
 
 	min-width: 30%;
@@ -26,7 +25,7 @@
 	margin-top: -0.45rem;
 }
 
-.ascii-box.no-title{
+.ascii-box.no-title {
 	clip-path: inset(0.45rem 0 0 0);
 	margin-top: 0.45rem;
 }
