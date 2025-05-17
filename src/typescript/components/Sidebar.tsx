@@ -2,38 +2,31 @@ import React from 'react'
 import $ from 'jquery';
 
 let indexNumber = -1
+
 const handleKeyPress = (e: KeyboardEvent) => {
 
-	const focusableElements = Array.from(
-		document.querySelectorAll('.menu .link[tabindex]')
-	).filter((element) => !(element as HTMLElement).classList.contains('inactive'));
+	const elementList: NodeListOf<Element> = document.querySelectorAll('.link[tabindex]:not([tabindex="-1"])');
+	const focusableElements: Array<Element> = Array.prototype.slice.call(elementList).map(function (element) {
+		return element.value;
+	});
+	/*for (const node of elementList) {console.log(node);}*/
 
-	// DEBUG console.log(`Focusable Length: ${focusableElements.length - 1} Index Number: ${indexNumber}`)
-	if (e.key === 'ArrowDown') {
-		if (indexNumber < (focusableElements.length - 1)) {
-			indexNumber = indexNumber + 1
-			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
-			selectedElement.trigger("focus")
-			// DEBUG console.log(`Index Number ${indexNumber} < ${(focusableElements.length - 1)}`)
-		}
-	} else if (e.key === 'ArrowUp') {
-		if (indexNumber <= 0) {
-			indexNumber = indexNumber + 1
-			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
-			selectedElement.trigger("focus")
-			// DEBUG console.log(`Index Number ${indexNumber} < 0`)
-		}
+	if (e.key === 'ArrowUp') {
 
-		if (indexNumber == (focusableElements.length - 1)) {
+		if ((indexNumber) > 0) {
 			indexNumber = indexNumber - 1
 			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
 			selectedElement.trigger("focus")
-			// DEBUG console.log(`Index Number ${indexNumber} == ${(focusableElements.length - 1)}`)
-		} else if (indexNumber > 0) {
-			indexNumber = indexNumber - 1
+			/*console.log(`Focusable Length: ${focusableElements.length}\n Index Number: ${indexNumber + 1}`)*/
+		}
+	}
+
+	else if (e.key === 'ArrowDown') {
+		if (indexNumber < (focusableElements.length) && indexNumber != (focusableElements.length - 1)) {
+			indexNumber = indexNumber + 1
 			const selectedElement: JQuery<HTMLElement> = $(`[tabindex=${indexNumber}]`);
 			selectedElement.trigger("focus")
-			// DEBUG console.log(`Index Number ${indexNumber} > 0`)
+			/*console.log(`Focusable Length: ${focusableElements.length}\n Index Number: ${indexNumber + 1}`)*/
 		}
 	}
 };
@@ -75,10 +68,6 @@ function pageTabIndex(page: string): number {
 		number = number + 1
 		return number - 1
 	} else if (page == '/projects') {
-		if (window.location.pathname == page) { return -1 }
-		number = number + 1
-		return number - 1
-	} else if (page == '/test') {
 		if (window.location.pathname == page) { return -1 }
 		number = number + 1
 		return number - 1
