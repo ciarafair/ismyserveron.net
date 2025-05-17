@@ -4,7 +4,7 @@ import Background from '../components/Background.tsx'
 import Sidebar from '../components/Sidebar.tsx'
 
 function Error(): React.ReactElement {
-	applyTextBorder('#error-box1.ascii-box', '#D4D4D4', '╔═╗║ ║╚═╝')
+	applyTextBorder('#error-box1.ascii-box', '#D4D4D4', '┌─┐│ │└─┘')
 	return (
 		<>
 			<Background />

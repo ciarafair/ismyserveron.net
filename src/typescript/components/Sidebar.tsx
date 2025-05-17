@@ -1,4 +1,5 @@
 import React from 'react'
+import applyTextBorder from '../../typescript/scripts/AsciiBorders.ts'
 import $ from 'jquery';
 
 let indexNumber = -1
@@ -142,6 +143,7 @@ function Sidebar(): React.ReactElement {
 		};
 	}, []);
 	document.addEventListener('DOMContentLoaded', function () {
+		applyTextBorder('#menu1.ascii-box', '#D4D4D4', '┌─┐│ │└─┘')
 		disableCurrentPage()
 	});
 
