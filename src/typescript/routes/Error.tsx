@@ -1,7 +1,7 @@
 import React from 'react'
 import applyTextBorder from '../../typescript/scripts/AsciiBorders.ts'
 import Background from '../components/Background.tsx'
-import Sidebar from '../components/Sidebar.tsx'
+import { Sidebar } from '../components/Focusables.tsx'
 
 function Error(): React.ReactElement {
 	applyTextBorder('#error-box1.ascii-box', '#D4D4D4', '┌─┐│ │└─┘')

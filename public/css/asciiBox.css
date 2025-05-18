@@ -62,3 +62,9 @@
 	max-width: 75%;
 	color: #f4eb34;
 }
+
+#menu2 {
+	background-color: var(--blue);
+	max-width: 75%;
+	max-height: 75%;
+}

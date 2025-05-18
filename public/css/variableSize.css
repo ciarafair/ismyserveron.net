@@ -10,29 +10,36 @@
 	}
 }
 
-@media (min-width: 800px) {
-	html {
-		font-size: 36px;
-	}
-}
-
-@media (min-width: 1000px) {
-	html {
-		font-size: 42px;
-	}
-}
-
-@media (max-width: 1000px) {
-	nav {
-		position: relative;
-		width: 100vw;
+/* All screens under 768 pixels will have these effects */
+@media (max-width: 768px) {
+	:root {
 		display: flex;
+		flex-direction: column;
+	}
+
+	nav:nth-child(1) {
+		padding-left: 15%;
+	}
+
+	nav {
+		width: fit-content;
+	}
+
+	.icon {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+
+	.focusables {
+		width: 100%;
 		margin-left: 0%;
+		position: relative;
+		flex-direction: row;
+		display: flex;
 	}
 
 	.menu {
 		width: 100%;
-		flex-direction: inherit;
 	}
 
 	.menu>div:nth-child(1) {
@@ -110,8 +117,21 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		padding-right: 0px;
+		padding-right: 0.55rem;
 		padding-left: 0px;
+		width: fit-content;
+	}
+
+	#menu2 {
+		width: fit-content;
+		flex-direction: column;
+	}
+
+	#menu2.ascii-box.no-title {
+		background-color: transparent;
+		border-color: transparent;
+		border-image: none;
+		border: 0;
 	}
 
 	.link:nth-child(1) {
@@ -128,5 +148,16 @@
 	body {
 		margin: 0;
 		height: 100vh;
+	}
+}
+
+/* All screens above 768 pixels will have these effects */
+@media (min-width: 768px) {
+	html {
+		font-size: 42px;
+	}
+
+	.icon:nth-child(1) {
+		padding-right: 0.5rem;
 	}
 }
