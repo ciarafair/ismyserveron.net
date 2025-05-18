@@ -1,5 +1,17 @@
-/* All screens under 900 pixels will have these effects */
-@media (max-width: 900px) {
+@media (min-width: 200px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 400px) {
+	html {
+		font-size: 28px;
+	}
+}
+
+/* All screens under 768 pixels will have these effects */
+@media (max-width: 768px) {
 	:root {
 		display: flex;
 		flex-direction: column;
@@ -139,10 +151,10 @@
 	}
 }
 
-/* All screens above 900 pixels will have these effects */
-@media (min-width: 900px) {
+/* All screens above 768 pixels will have these effects */
+@media (min-width: 768px) {
 	html {
-		font-size: 26px;
+		font-size: 32px;
 	}
 
 	.icon:nth-child(1) {
@@ -150,7 +162,7 @@
 	}
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 768px) {
 	html {
 		font-size: 42px;
 	}
