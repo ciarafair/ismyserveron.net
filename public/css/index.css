@@ -118,11 +118,6 @@ a {
 	padding-bottom: 0.25rem;
 }
 
-#menu2 {
-	width: 100%;
-	flex-direction: row;
-}
-
 .flex-column {
 	display: flex;
 	flex-direction: column;
@@ -166,6 +161,11 @@ a {
 .menu [tabindex]:focus {
 	background-color: var(--red);
 	outline: none;
+}
+
+#menu2 {
+	width: 100%;
+	flex-direction: row;
 }
 
 .link:nth-child(1) {
