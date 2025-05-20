@@ -1,15 +1,4 @@
-html {
-	position: absolute;
-	min-width: 100vw;
-	min-height: 100vh;
-	background-color: var(--black);
-	overflow: hidden;
-}
-
 :root {
-	display: flex;
-	flex-direction: row;
-
 	--animationSteps: 0;
 	--animationTime: 0;
 
@@ -21,46 +10,80 @@ html {
 	--indigo: #646695;
 	--violet: #c586c0;
 	--white: #d4d4d4;
-	--grey: #aaaaaa;
+	--grey: #cfcdd0;
 	--black: #1e1e1e;
 	z-index: 1;
 }
 
-body {
-	overflow: hidden;
-	width: 100vw;
-	z-index: 1;
-	align-items: center;
-}
 
-nav {
-	position: relative;
-	width: 5rem;
-	display: flex;
-}
-
-.focusables {
-	z-index: 2;
-	width: 50%;
+html {
+	background-color: var(--black);
 	position: absolute;
-	margin-left: 1rem;
-	align-items: center;
+	overflow: hidden;
+	resize: none;
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-family: 'Web437 DOS/V re. ANK30';
+	font-weight: 100;
+	font-size: 1rem;
+	color: var(--white);
+	margin: 0;
+	margin-top: 0.25rem;
 }
 
 main {
-	width: 100vw;
-	display: flex;
-	position: absolute;
+	width: 100%;
+}
+
+#page {
+	padding: 0.5rem;
+}
+
+#setup {
+	font-family: 'Web437 Nix8810 M16';
+	font-size: 0.5rem;
+	color: var(--yellow);
+	margin-bottom: 0;
+}
+
+#controls {
+	font-family: 'Web437 Nix8810 M16';
+	width: 100%;
+	font-size: 0.5rem;
+	color: var(--yellow);
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+}
+
+#intro {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.column {
 	flex-direction: column;
+	display: flex;
+	position: relative;
 	z-index: 1;
 }
 
-.title {
-	position: absolute;
-	color: var(--yellow);
-	margin-top: -0.5rem;
-	font-family: 'Web437 Nix8810 M16';
-	font-size: 0.5rem;
+.row {
+	flex-direction: row;
+	position: relative;
+	display: flex;
+	z-index: 1;
 }
 
 .copyright {
@@ -74,6 +97,15 @@ main {
 	bottom: 2.5%;
 }
 
+.title {
+	position: absolute;
+	color: var(--yellow);
+	background-color: var(--blue);
+	margin-top: -0.5rem;
+	font-family: 'Web437 Nix8810 M16';
+	font-size: 0.5rem;
+}
+
 .info {
 	font-family: 'Web437 DOS/V re. ANK30';
 	font-weight: 100;
@@ -83,24 +115,6 @@ main {
 	z-index: 2;
 	padding-left: 5%;
 	padding-right: 5%;
-}
-
-#setup-utility.info {
-	font-family: 'Web437 Nix8810 M16';
-	font-size: 0.5rem;
-	color: var(--yellow);
-}
-
-#controls.info {
-	font-family: 'Web437 Nix8810 M16';
-	font-size: 0.5rem;
-	color: var(--yellow);
-	padding-left: 2.5%;
-	padding-right: 2.5%;
-}
-
-a {
-	text-decoration: none;
 }
 
 .pixel {
@@ -118,31 +132,18 @@ a {
 	padding-bottom: 0.25rem;
 }
 
-.flex-column {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	z-index: 1;
-	gap: 0;
-}
-
-.flex-row {
-	gap: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	pointer-events: none;
-	width: 100%;
-	text-align: center;
-	padding: 0;
-	margin: 0;
-	z-index: 1;
-}
-
 .inactive {
 	display: none;
+}
+
+.menu {
+	z-index: 1;
+	align-items: normal;
+}
+
+.menu [tabindex]:focus {
+	background-color: var(--red);
+	outline: none;
 }
 
 .link {
@@ -154,22 +155,8 @@ a {
 	width: fit-content;
 	z-index: 1;
 	text-align: left;
-	margin-top: 5%;
-	margin-bottom: 5%;
-}
-
-.menu [tabindex]:focus {
-	background-color: var(--red);
-	outline: none;
-}
-
-#menu2 {
-	width: 100%;
-	flex-direction: row;
-}
-
-.link:nth-child(1) {
-	margin-top: 15%;
+	margin-top: 0.25rem;
+	margin-bottom: 0;
 }
 
 .link:hover {
@@ -186,29 +173,4 @@ a {
 
 .link:active {
 	background-color: var(--red);
-}
-
-.SidebarButton {
-	display: flex;
-	width: 100%;
-	pointer-events: all;
-	z-index: 10;
-}
-
-.menu {
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-	opacity: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	pointer-events: none;
-	align-items: center;
-	z-index: 1;
-}
-
-.menu2 {
-	width: 100%;
-	flex-direction: row;
 }

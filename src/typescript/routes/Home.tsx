@@ -4,35 +4,34 @@ import Background from '../components/Background.tsx'
 import { ExternalLinks, Sidebar } from '../components/Focusables.tsx'
 
 function Home(): React.ReactElement {
-	applyTextBorder('#home-box1.ascii-box', '#D4D4D4', '┌─┐│ ││ │')
-	applyTextBorder('#home-box2.ascii-box', '#D4D4D4', '├─┤│ │└─┘')
-	applyTextBorder('#home-box3.ascii-box', '#D4D4D4', '├─┤│ │└─┘')
+
+	applyTextBorder('#one', '#D4D4D4', '╔═╗║ ║║ ║')
+	applyTextBorder('#two', '#D4D4D4', '╟─╢║ ║║ ║')
+	applyTextBorder('#three', '#D4D4D4', '╟─╢║ ║╚═╝')
+
 	return (
 		<>
 			<Background />
-			<div className='focusables'>
-				<Sidebar />
-				<ExternalLinks />
-			</div>
+			<div id='page' className='row adjustable'>
+				<nav className='column adjustable'>
+					<Sidebar />
+					<ExternalLinks />
+				</nav>
 
-			<main>
-				<div className='flex-column'>
-					<div className='flex-row'>
-						<div className='ascii-box no-title' id='home-box1' >
-							<p className='info' id='setup-utility'>
-								AMIBIOS NEW SETUP UTILITY - VERSION 3.31a
-							</p>
-						</div>
+				<main className='column'>
+					<div id='one' className='box top'>
+						<p id='setup'>
+							AMIBIOS NEW SETUP UTILITY - VERSION 3.31a
+						</p>
 					</div>
-					<div className='flex-row'>
-						<div className='ascii-box' id='home-box2' >
-							<p className='info'>
-								Hello world! This website serves as a portfolio for my work.
-							</p>
-						</div>
+					<div id='two' className='box middle'>
+						<p id='intro'>
+							Hello world! This website serves as a portfolio for my work.
+						</p>
+
 					</div>
-					<div className='flex-row'>
-						<div className='ascii-box' id='home-box3' >
+					<div id='three' className='box bottom'>
+						<div className='row'>
 							<p className='info' id='controls'>
 								↑↓←→: Focus Item
 							</p>
@@ -50,8 +49,8 @@ function Home(): React.ReactElement {
 							</p>
 						</div>
 					</div>
-				</div>
-			</main>
+				</main >
+			</div >
 			<p className='copyright'>© Ciaran Fairbairn</p>
 			<div className='crt' />
 		</>

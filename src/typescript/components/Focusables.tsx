@@ -3,7 +3,6 @@ import applyTextBorder from '../scripts/AsciiBorders.ts'
 import { CSSProperties } from "react";
 import $ from 'jquery';
 
-
 let indexNumber = -1
 
 const handleKeyPress = (e: KeyboardEvent) => {
@@ -240,19 +239,18 @@ export function Sidebar(): React.ReactElement {
 			document.removeEventListener('keydown', handleKeyPress);
 		};
 	}, []);
+
 	document.addEventListener('DOMContentLoaded', function () {
-		applyTextBorder('#menu1.ascii-box', '#D4D4D4', '┌─┐│ │└─┘')
+		applyTextBorder('#menu', '#D4D4D4', '┌─┐│ │└─┘')
 		disableCurrentPage()
 	});
 
 	return (
 		<>
-			<nav>
-				<div className='menu'>
-					<div className='ascii-box no-title' id='menu1' >
-						<p className='title' id='menu1'>
-							Menu
-						</p>
+			<div className='menu'>
+				<div id='menu' className='box default'  >
+					<p className='title'>Menu</p>
+					<div id='internal' className='column adjustable'>
 						<div id='pathResume'>
 							<ResumeButton />
 						</div>
@@ -267,21 +265,22 @@ export function Sidebar(): React.ReactElement {
 						</div>
 					</div>
 				</div>
-			</nav>
+			</div>
 		</>
 	)
 }
 
 export function ExternalLinks(): React.ReactElement {
 	document.addEventListener('DOMContentLoaded', function () {
-		applyTextBorder('#menu2.ascii-box', '#D4D4D4', '┌─┐│ │└─┘')
+		applyTextBorder('#external', '#D4D4D4', '┌─┐│ │└─┘')
 	});
 
 	return (
 		<>
-			<nav>
-				<div className='menu'>
-					<div className='ascii-box no-title' id='menu2'>
+			<div className='menu'>
+				<div id='external' className='box default'>
+					<p className='title hideable'>Links</p>
+					<div className='row adjustable'>
 						<div id='icon'>
 							<GithubButton />
 						</div>
@@ -290,7 +289,7 @@ export function ExternalLinks(): React.ReactElement {
 						</div>
 					</div>
 				</div>
-			</nav >
+			</div>
 		</>
 	)
 }

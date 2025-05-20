@@ -1,0 +1,57 @@
+@media (min-width: 200px) {
+	html {
+		font-size: 30px;
+	}
+}
+
+
+/* All screens under 768 pixels will have these effects */
+@media (max-width: 768px) {
+
+	.row.adjustable {
+		flex-direction: column;
+	}
+
+	.column.adjustable {
+		flex-direction: row;
+	}
+
+	.hideable {
+		display: none;
+	}
+
+	#external {
+		background-color: transparent;
+		border: 0;
+	}
+
+	#internal>*:not(.inactive).last-active {
+		margin-right: 0px;
+	}
+
+	#internal {
+		&>*:not(.inactive) {
+			margin-right: 12px;
+		}
+
+		&>*:not(.inactive):has(+ *:not(.inactive)) {
+			margin-right: 12px;
+		}
+
+		&>*:not(.inactive):not(:has(+ *:not(.inactive))) {
+			margin-right: 0;
+		}
+	}
+
+}
+
+/* All screens above 768 pixels will have these effects */
+@media (min-width: 768px) {
+	html {
+		font-size: 42px;
+	}
+
+	.icon:nth-child(1) {
+		padding-right: 0.5rem;
+	}
+}

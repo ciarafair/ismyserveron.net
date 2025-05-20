@@ -1,12 +1,12 @@
 .grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	width: 100%;
 	height: 100%;
-  pointer-events: none;
+	pointer-events: none;
 	background: url(/assets/grid.svg);
 	background-size: 2.5rem;
 	z-index: 0;
@@ -17,13 +17,13 @@
 		linear-gradient(to top, rgba(30, 30, 30, 0) 0%, rgba(30, 30, 30, 0.50) 50%, rgba(30, 30, 30, 0.50) 75%, rgba(30, 30, 30, 0.75) 80%, rgba(30, 30, 30, 1) 90%, rgba(30, 30, 30, 1) 100%),
 		linear-gradient(to bottom, rgba(30, 30, 30, 0.00) 0%, rgba(30, 30, 30, 0.50) 50%, rgba(30, 30, 30, 0.50) 75%, rgba(30, 30, 30, 0.75) 80%, rgba(30, 30, 30, 1) 90%, rgba(30, 30, 30, 1) 100%);
 	background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	pointer-events: none;
 	height: 100%;
 	width: 100%;
 	z-index: 0;
@@ -31,10 +31,10 @@
 }
 
 .top-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 15%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 15%;
 	width: 5rem;
 	height: 5rem;
 	user-select: none;
@@ -42,12 +42,19 @@
 }
 
 .bottom-left {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  opacity: 15%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: 15%;
 	width: 5rem;
 	height: 5rem;
 	user-select: none;
 	z-index: 0;
+}
+
+
+.background {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
 }

@@ -5,10 +5,12 @@ import circleDesign from '/assets/circleDesign.svg'
 function Background(): React.ReactElement {
 	return (
 		<>
-			<div className='grid' />
-			<div className="overlay" />
-			<img className="top-right" src={squareDesign} alt='Square design' />
-			<img className="bottom-left" src={circleDesign} alt='Circle design' />
+			<div className='background'>
+				<div className='grid' />
+				<div className="overlay" />
+				<img className="top-right" src={squareDesign} alt='Square design' />
+				<img className="bottom-left" src={circleDesign} alt='Circle design' />
+			</div>
 		</>
 	)
 }
