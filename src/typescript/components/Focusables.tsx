@@ -147,27 +147,26 @@ function GithubButton(): React.ReactElement {
 		width: '100%',
 		height: '100%',
 		position: 'relative',
-		transformOrigin: '0 0'
 	}
 
 	function styleProperties3(): CSSProperties {
 		let styleSettings: CSSProperties = {}
-		if (window.matchMedia('(max-width: 768)')) {
-			styleSettings = {
-				width: '1000%',
-				height: '1200%',
-				scale: '0.09',
-				transformOrigin: '0 0'
-			}
-		}
-		else {
+		if (window.matchMedia('(max-width: 768)').matches == true) {
 			styleSettings = {
 				width: '600%',
 				height: '575%',
 				scale: '0.09',
-				transformOrigin: '0 0'
+				transformOrigin: '0.125rem 0.125rem 0px',
 			}
 
+		}
+		else {
+			styleSettings = {
+				width: '900%',
+				height: '900%',
+				scale: '0.09',
+				transformOrigin: '0.125rem 0.125rem 0px'
+			}
 		}
 		return styleSettings
 	}
@@ -196,25 +195,25 @@ function LinkedInButton(): React.ReactElement {
 		width: '100%',
 		height: '100%',
 		position: 'absolute',
-		transformOrigin: '0 0'
 	}
 
 	function styleProperties3(): CSSProperties {
 		let styleSettings: CSSProperties = {}
-		if (window.matchMedia('(max-width: 768)')) {
-			styleSettings = {
-				width: '1000%',
-				height: '1200%',
-				scale: '0.09',
-				transformOrigin: '0 0'
-			}
-		}
-		else {
+		if (window.matchMedia('(max-width: 768)').matches == true) {
 			styleSettings = {
 				width: '600%',
 				height: '575%',
 				scale: '0.09',
-				transformOrigin: '0 0'
+				transformOrigin: '0.125rem 0.125rem 0px',
+			}
+		}
+		else {
+			styleSettings = {
+				width: '900%',
+				height: '900%',
+				scale: '0.09',
+				paddingLeft: '0.25rem',
+				transformOrigin: '0.125rem 0.125rem 0px'
 			}
 		}
 		return styleSettings
@@ -247,8 +246,8 @@ export function Sidebar(): React.ReactElement {
 
 	return (
 		<>
-			<div className='menu'>
-				<div id='menu' className='box default'  >
+			<div className='tempName'>
+				<div id='menu' className='tempName2IG box default '  >
 					<p className='title'>Menu</p>
 					<div id='internal' className='column adjustable'>
 						<div id='pathResume'>
@@ -277,7 +276,7 @@ export function ExternalLinks(): React.ReactElement {
 
 	return (
 		<>
-			<div className='menu'>
+			<div id='tempName3IG' className='menu'>
 				<div id='external' className='box default'>
 					<p className='title hideable'>Links</p>
 					<div className='row adjustable'>

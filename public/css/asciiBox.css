@@ -12,6 +12,7 @@
 	align-content: center;
 	text-align: center;
 	background-color: var(--blue);
+	height: fit-content;
 }
 
 .box.default {
@@ -29,13 +30,17 @@
 .box.middle {
 	clip-path: rect(0.25rem 100% 100% 0);
 	margin-bottom: -0.25rem;
+	height: 100%;
 }
 
 .box.bottom {
 	margin-top: -0.5rem;
-	clip-path: rect(0.25rem 100% 100% 0)
+	clip-path: rect(0.25rem 100% 100% 0);
+	margin-bottom: 1.5rem;
 }
 
 .error {
-	background-color: var(--red)
+	background-color: var(--red);
+	width: 5rem;
+	height: 5rem;
 }

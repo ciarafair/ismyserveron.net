@@ -28,7 +28,6 @@ function Home(): React.ReactElement {
 						<p id='intro'>
 							Hello world! This website serves as a portfolio for my work.
 						</p>
-
 					</div>
 					<div id='three' className='box bottom'>
 						<div className='row'>

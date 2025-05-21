@@ -16,33 +16,51 @@
 		flex-direction: row;
 	}
 
+	.box.bottom {
+		margin-bottom: 2rem;
+	}
+
 	.hideable {
 		display: none;
 	}
 
-	#external {
-		background-color: transparent;
-		border: 0;
+	.menu {
+		width: 100%;
 	}
 
-	#internal>*:not(.inactive).last-active {
-		margin-right: 0px;
+	.menu:nth-child(2) {
+		width: fit-content;
+		margin-bottom: 0;
 	}
 
-	#internal {
-		&>*:not(.inactive) {
-			margin-right: 12px;
-		}
-
-		&>*:not(.inactive):has(+ *:not(.inactive)) {
-			margin-right: 12px;
-		}
-
-		&>*:not(.inactive):not(:has(+ *:not(.inactive))) {
-			margin-right: 0;
-		}
+	.tempName {
+		width: 100%;
+		margin-bottom: 0px
 	}
 
+	.tempName2IG {
+		height: 0% !important;
+	}
+
+	#tempName3IG {
+		height: auto;
+	}
+
+	.column {
+
+		#external {
+			background-color: transparent;
+			border: 0;
+			width: 10%;
+		}
+
+		#internal {
+			padding-top: 0.25rem;
+			width: 100%;
+			height: auto;
+			justify-content: space-around;
+		}
+	}
 }
 
 /* All screens above 768 pixels will have these effects */
