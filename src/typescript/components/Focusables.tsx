@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import applyTextBorder from '../scripts/AsciiBorders.ts'
 import { CSSProperties } from "react";
 import $ from 'jquery';
@@ -71,6 +71,11 @@ function pageTabIndex(page: string): number {
 		if (window.location.pathname == page) { return -1 }
 		number = number + 1
 		//console.log(`Setting about option's index to ${number} `)
+		return number - 1
+	} else if (page == '/blog') {
+		if (window.location.pathname == page) { return -1 }
+		number = number + 1
+		//console.log(`Setting blog option's index to ${number} `)
 		return number - 1
 	} else if (page == '/projects') {
 		if (window.location.pathname == page) { return -1 }
@@ -166,6 +171,7 @@ function GithubButton(): React.ReactElement {
 	function styleProperties3(): CSSProperties {
 		let styleSettings: CSSProperties = {}
 		if (window.matchMedia('(max-width: 768)').matches == true) {
+			//console.log(`Setting the styles of LinkedInButton for mobile.`)
 			styleSettings = {
 				width: '600%',
 				height: '575%',
@@ -175,6 +181,7 @@ function GithubButton(): React.ReactElement {
 
 		}
 		else {
+			//console.log(`Setting the styles of LinkedInButton for desktop.`)
 			styleSettings = {
 				width: '900%',
 				height: '900%',
@@ -214,6 +221,7 @@ function LinkedInButton(): React.ReactElement {
 	function styleProperties3(): CSSProperties {
 		let styleSettings: CSSProperties = {}
 		if (window.matchMedia('(max-width: 768)').matches == true) {
+			//console.log(`Setting the styles of LinkedInButton for mobiles.`)
 			styleSettings = {
 				width: '600%',
 				height: '575%',
@@ -222,6 +230,7 @@ function LinkedInButton(): React.ReactElement {
 			}
 		}
 		else {
+			//console.log(`Setting the styles of LinkedInButton for desktop.`)
 			styleSettings = {
 				width: '900%',
 				height: '900%',
@@ -246,14 +255,14 @@ function LinkedInButton(): React.ReactElement {
 }
 
 export function Sidebar(): React.ReactElement {
-	React.useEffect(() => {
+	useEffect(() => {
+		disableCurrentPage()
+		applyTextBorder('#menu', '#D4D4D4', '┌─┐│ │└─┘')
 		document.addEventListener('keydown', handleKeyPress);
 		return () => {
 			document.removeEventListener('keydown', handleKeyPress);
 		};
 	}, []);
-	applyTextBorder('#menu', '#D4D4D4', '┌─┐│ │└─┘')
-	disableCurrentPage()
 
 	return (
 		<>
@@ -284,7 +293,9 @@ export function Sidebar(): React.ReactElement {
 }
 
 export function ExternalLinks(): React.ReactElement {
-	applyTextBorder('#external', '#D4D4D4', '┌─┐│ │└─┘')
+	useEffect(() => {
+		applyTextBorder('#external', '#D4D4D4', '┌─┐│ │└─┘')
+	}, [])
 	return (
 		<>
 			<div id='tempName3IG' className='menu'>

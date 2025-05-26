@@ -10,6 +10,9 @@ function App(): React.ReactElement {
 		<>
 			<Routes>
 				<Route path="/" element={<Home />} />
+				<Route path="/about" element={<Error />} />
+				<Route path="/blog" element={<Error />} />
+				<Route path="/projects" element={<Error />} />
 				<Route path="*" element={<Error />} />
 			</Routes>
 		</>
