@@ -1,7 +1,8 @@
 import $ from 'jquery';
 
 function applyAsciiBorder(selector: string, color: string, text: string) {
-	requestAnimationFrame(() => {
+	requestAnimationFrame(async () => {
+		await document.fonts.ready;
 		const $element: Element | null = document.body.querySelector(selector);
 		if (!$element || ($element as HTMLElement).dataset.asciiBorderApplied === 'true') return;
 

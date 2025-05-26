@@ -1,16 +1,18 @@
-import React, { useEffect } from 'react'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+import React from 'react'
 import applyTextBorder from '../../typescript/scripts/AsciiBorders.ts'
 import Background from '../components/Background.tsx'
 import { ExternalLinks, Sidebar } from '../components/Focusables.tsx'
 
-function Home(): React.ReactElement {
-	console.log("Home.tsx has loaded")
+function Home(this: any): React.ReactElement {
 
-	useEffect(() => {
+	document.addEventListener('load', this, true); {
+		console.log("Home.tsx has loaded.")
 		applyTextBorder('#one', '#D4D4D4', '╔═╗║ ║║ ║')
 		applyTextBorder('#two', '#D4D4D4', '╟─╢║ ║║ ║')
 		applyTextBorder('#three', '#D4D4D4', '╟─╢║ ║╚═╝')
-	}, [])
+	}
 
 	return (
 		<>

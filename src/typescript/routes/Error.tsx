@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+import React from 'react'
 import applyTextBorder from '../../typescript/scripts/AsciiBorders.ts'
 import Background from '../components/Background.tsx'
 import { Sidebar, ExternalLinks } from '../components/Focusables.tsx'
 
-function Error(): React.ReactElement {
-	console.log("Error.tsx has loaded")
-	useEffect(() => {
+function Error(this: any): React.ReactElement {
+
+	document.addEventListener('readystatechange', this, true); {
+		console.log("Error.tsx has loaded.")
 		applyTextBorder('#one.box', '#D4D4D4', '┌─┐│ │└─┘')
-	}, [])
+	}
 	return (
 		<>
 			<Background />

@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './typescript/routes/Home'
 import Error from './typescript/routes/Error'
 
-function App(): React.ReactElement {
-	console.log("App.tsx has loaded")
+function App(this: any): React.ReactElement {
 
 	return (
 		<>

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import React, { useEffect } from 'react'
 import applyTextBorder from '../scripts/AsciiBorders.ts'
 import { CSSProperties } from "react";
@@ -254,15 +256,21 @@ function LinkedInButton(): React.ReactElement {
 	)
 }
 
-export function Sidebar(): React.ReactElement {
+export function Sidebar(this: any): React.ReactElement {
 	useEffect(() => {
-		disableCurrentPage()
 		applyTextBorder('#menu', '#D4D4D4', '┌─┐│ │└─┘')
 		document.addEventListener('keydown', handleKeyPress);
 		return () => {
 			document.removeEventListener('keydown', handleKeyPress);
 		};
 	}, []);
+
+	document.addEventListener('load', this, true); {
+		console.log("Sidebar element from Focusables.tsx has loaded.")
+		disableCurrentPage()
+		applyTextBorder('#menu', '#D4D4D4', '┌─┐│ │└─┘')
+	}
+
 
 	return (
 		<>
@@ -292,10 +300,13 @@ export function Sidebar(): React.ReactElement {
 	)
 }
 
-export function ExternalLinks(): React.ReactElement {
-	useEffect(() => {
+export function ExternalLinks(this: any): React.ReactElement {
+
+	document.addEventListener('load', this, true); {
+		console.log("ExternalLinks element from Focusables.tsx has loaded.")
 		applyTextBorder('#external', '#D4D4D4', '┌─┐│ │└─┘')
-	}, [])
+	}
+
 	return (
 		<>
 			<div id='tempName3IG' className='menu'>
