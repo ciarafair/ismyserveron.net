@@ -28,18 +28,18 @@ function Home(this: any): React.ReactElement {
 				</nav>
 
 				<main className='column'>
-					<div id='one' className='box top'>
+					<div id='one' className='box top center'>
 						<p id='setup'>
 							AMIBIOS NEW SETUP UTILITY - VERSION 3.31a
 						</p>
 					</div>
-					<div id='two' className='box middle'>
+					<div id='two' className='box middle center'>
 						<p id='intro'>
 							Hello world! This website serves as a portfolio for my work.
 						</p>
 					</div>
-					<div id='three' className='box bottom'>
-						<div className='row'>
+					<div id='three' className='box bottom center'>
+						<div className='row' id='controls'>
 							<p className='info' id='controls'>
 								↑↓←→: Focus Item
 							</p>

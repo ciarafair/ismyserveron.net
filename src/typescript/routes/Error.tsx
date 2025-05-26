@@ -25,7 +25,7 @@ function Error(this: any): React.ReactElement {
 				</nav>
 
 				<main className='column'>
-					<div id='one' className='error box default'>
+					<div id='one' className='error box default center'>
 						<p className='error title'>404.txt</p>
 						<p>Page not found.</p>
 					</div>

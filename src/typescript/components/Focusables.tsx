@@ -48,6 +48,10 @@ function disableCurrentPage(): undefined {
 		id = '#pathAbout'
 	}
 
+	else if (window.location.pathname == '/logs') {
+		id = '#pathLogs'
+	}
+
 	else if (window.location.pathname == '/projects') {
 		id = '#pathProjects'
 	}
@@ -67,35 +71,35 @@ let number = 0
 function pageTabIndex(page: string): number {
 	if (page == '/assets/resume.pdf') {
 		number = number + 1
-		//console.log(`Setting resume option's index to ${number} `)
+		//console.log(`Setting the resume option's index to ${number} `)
 		return number - 1
 	} else if (page == '/about') {
 		if (window.location.pathname == page) { return -1 }
 		number = number + 1
-		//console.log(`Setting about option's index to ${number} `)
+		//console.log(`Setting the about option's index to ${number} `)
 		return number - 1
-	} else if (page == '/blog') {
+	} else if (page == '/logs') {
 		if (window.location.pathname == page) { return -1 }
 		number = number + 1
-		//console.log(`Setting blog option's index to ${number} `)
+		//console.log(`Setting the logs option's index to ${number} `)
 		return number - 1
 	} else if (page == '/projects') {
 		if (window.location.pathname == page) { return -1 }
 		number = number + 1
-		//console.log(`Setting projects option's index to ${number} `)
+		//console.log(`Setting the projects option's index to ${number} `)
 		return number - 1
 	} else if (page == '/') {
 		if (window.location.pathname == page) { return -1 }
 		number = number + 1
-		//console.log(`Setting home option's index to ${number} `)
+		//console.log(`Setting the home option's index to ${number} `)
 		return number - 1
 	} else if (page == 'https://www.linkedin.com/in/ciaran-fairbairn/') {
 		number = number + 1
-		//console.log(`Setting LinkedIn option's index to ${number} `)
+		//console.log(`Setting the LinkedIn option's index to ${number} `)
 		return number - 1
 	} else if (page == 'https://github.com/ciarafair') {
 		number = number + 1
-		//console.log(`Setting Github option's index to ${number} `)
+		//console.log(`Setting the Github option's index to ${number} `)
 		return number - 1
 	} else return number - 1
 }
@@ -133,12 +137,12 @@ function AboutMeButton(): React.ReactElement {
 	)
 }
 
-function BlogButton(): React.ReactElement {
-	const link: string = '/blog'
+function LogsButton(): React.ReactElement {
+	const link: string = '/logs'
 	return (
 		<a className='SidebarButton' href={link}>
 			<p className='link' tabIndex={pageTabIndex(link)}>
-				&#32;Blog
+				&#32;Logs
 			</p>
 		</a>
 	)
@@ -277,8 +281,8 @@ export function Sidebar(this: any): React.ReactElement {
 
 	return (
 		<>
-			<div className='tempName'>
-				<div id='menu' className='tempName2IG box default '  >
+			<div className='navBar1'>
+				<div id='menu' className='navBar2 box default '  >
 					<p className='title'>Menu</p>
 					<div id='internal' className='column adjustable'>
 						<div id='pathResume'>
@@ -290,8 +294,8 @@ export function Sidebar(this: any): React.ReactElement {
 						<div id='pathAbout'>
 							<AboutMeButton />
 						</div>
-						<div id='pathBlog'>
-							<BlogButton />
+						<div id='pathLogs'>
+							<LogsButton />
 						</div>
 						<div id='pathHome'>
 							<HomeButton />
@@ -315,7 +319,7 @@ export function ExternalLinks(this: any): React.ReactElement {
 
 	return (
 		<>
-			<div id='tempName3IG' className='menu'>
+			<div id='navBar3' className='menu'>
 				<div id='external' className='box default'>
 					<p className='title hideable'>Links</p>
 					<div className='row adjustable'>

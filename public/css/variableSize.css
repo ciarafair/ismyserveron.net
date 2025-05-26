@@ -33,21 +33,32 @@
 		margin-bottom: 0;
 	}
 
-	.tempName {
+	.navBar1 {
 		width: 100%;
 		margin-bottom: 0px
 	}
 
-	.tempName2IG {
+	.navBar2 {
 		height: 0% !important;
 	}
 
-	#tempName3IG {
+	#navBar3 {
 		height: auto;
 	}
 
-	.column {
+	.halfable {
+		width: 50%;
+	}
 
+	.box.left {
+		margin-right: -10%;
+	}
+
+	.box.right {
+		margin-left: -2.25%;
+	}
+
+	.column {
 		#external {
 			background-color: transparent;
 			border: 0;

@@ -13,6 +13,7 @@
 	text-align: center;
 	background-color: var(--blue);
 	height: fit-content;
+	display: flex;
 }
 
 .box.default {
@@ -20,16 +21,30 @@
 	clip-path: rect(0.5rem 100% 100% 0)
 }
 
+.box.center {
+	justify-content: center;
+	align-items: center;
+}
+
 .box.top {
 	margin-top: -0.5rem;
 	clip-path: rect(0.5rem 100% 100% -0.25rem);
 	margin-bottom: -0.25rem;
 	border-bottom: 0.25rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .box.middle {
 	clip-path: rect(0.25rem 100% 100% 0);
 	margin-bottom: -0.25rem;
+	height: 100%;
+}
+
+.box.topless {
+	clip-path: rect(0.25rem 100% 100% 0);
+	margin-bottom: 1.5rem;
 	height: 100%;
 }
 
@@ -39,8 +54,24 @@
 	margin-bottom: 1.5rem;
 }
 
+.box.left {
+	margin-right: -2.25%;
+}
+
+.box.right {
+	margin-left: -1.125%;
+}
+
+.row.boxes {
+	overflow: hidden;
+}
+
 .error {
 	background-color: var(--red);
 	width: 5rem;
 	height: 5rem;
+}
+
+.empty {
+	min-height: 0px;
 }
