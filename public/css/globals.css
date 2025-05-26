@@ -1,6 +1,3 @@
-@import "@webtui/css/utils/box.css";
-@layer base, utils, components;
-
 :root {
 	--animationSteps: 0;
 	--animationTime: 0;
