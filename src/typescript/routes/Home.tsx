@@ -4,6 +4,7 @@ import Background from '../components/Background.tsx'
 import { ExternalLinks, Sidebar } from '../components/Focusables.tsx'
 
 function Home(): React.ReactElement {
+	console.log("Home.tsx has loaded")
 
 	applyTextBorder('#one', '#D4D4D4', '╔═╗║ ║║ ║')
 	applyTextBorder('#two', '#D4D4D4', '╟─╢║ ║║ ║')

@@ -3,6 +3,8 @@ import applyTextBorder from '../scripts/AsciiBorders.ts'
 import { CSSProperties } from "react";
 import $ from 'jquery';
 
+console.log("Focusables.tsx has loaded")
+
 let indexNumber = -1
 
 const handleKeyPress = (e: KeyboardEvent) => {
@@ -55,7 +57,7 @@ function disableCurrentPage(): undefined {
 	const element: Element = document.body.querySelector(id)
 	if (element != null) {
 		element.classList.add('inactive')
-		//console.log(`Disabling element with an ID of #${element.id}`)
+		console.log(`Disabling element with an ID of #${element.id}`)
 	}
 }
 
@@ -250,11 +252,8 @@ export function Sidebar(): React.ReactElement {
 			document.removeEventListener('keydown', handleKeyPress);
 		};
 	}, []);
-
-	document.addEventListener('DOMContentLoaded', function () {
-		applyTextBorder('#menu', '#D4D4D4', '┌─┐│ │└─┘')
-		disableCurrentPage()
-	});
+	applyTextBorder('#menu', '#D4D4D4', '┌─┐│ │└─┘')
+	disableCurrentPage()
 
 	return (
 		<>
@@ -285,10 +284,7 @@ export function Sidebar(): React.ReactElement {
 }
 
 export function ExternalLinks(): React.ReactElement {
-	document.addEventListener('DOMContentLoaded', function () {
-		applyTextBorder('#external', '#D4D4D4', '┌─┐│ │└─┘')
-	});
-
+	applyTextBorder('#external', '#D4D4D4', '┌─┐│ │└─┘')
 	return (
 		<>
 			<div id='tempName3IG' className='menu'>

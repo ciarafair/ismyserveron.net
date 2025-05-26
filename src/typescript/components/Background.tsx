@@ -1,6 +1,7 @@
 import React from 'react'
 import squareDesign from '/assets/squareDesign.svg'
 import circleDesign from '/assets/circleDesign.svg'
+console.log("Background.tsx has loaded")
 
 function Background(): React.ReactElement {
 	return (

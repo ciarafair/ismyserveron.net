@@ -15,6 +15,8 @@ import App from './App.tsx'
 
 const rootElement: Element = document.getElementById('root')
 
+console.log("Index.tsx has loaded")
+
 ReactDOM.createRoot(rootElement).render(
 	<BrowserRouter>
 		<App />

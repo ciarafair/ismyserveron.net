@@ -4,6 +4,7 @@ import Home from './typescript/routes/Home'
 import Error from './typescript/routes/Error'
 
 function App(): React.ReactElement {
+	console.log("App.tsx has loaded")
 
 	return (
 		<>

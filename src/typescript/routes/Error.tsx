@@ -4,6 +4,7 @@ import Background from '../components/Background.tsx'
 import { Sidebar, ExternalLinks } from '../components/Focusables.tsx'
 
 function Error(): React.ReactElement {
+	console.log("Error.tsx has loaded")
 	applyTextBorder('#one.box', '#D4D4D4', '┌─┐│ │└─┘')
 	return (
 		<>

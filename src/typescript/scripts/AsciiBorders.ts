@@ -1,86 +1,53 @@
 import $ from 'jquery';
 
-const body: Element = document.body;
-
 function applyAsciiBorder(selector: string, color: string, text: string) {
-	$(window).on('load', function() {
-		const isChrome = navigator.userAgent.indexOf("Chrome");  //The global chrome object, containing several properties including a documented chrome.webstore object
-		// @ts-expect-error - annoying Firefox InstallTrigger type
-		const isFirefox = typeof InstallTrigger !== 'undefined'; //Firefox: Firefox's API to install add-ons
+	requestAnimationFrame(() => {
+		const $element: Element | null = document.body.querySelector(selector);
+		if (!$element || ($element as HTMLElement).dataset.asciiBorderApplied === 'true') return;
 
-		if (isFirefox) {
-			const $element: Element | undefined = body.querySelector(selector)
+		console.log(`Applying Ascii Border to the ${selector}`);
 
-			text = text || '╔═╗║ ║╚═╝';
-			color = color || '#D4D4D4'
-			const lines = text.match(/.../g);
+		text = text || '╔═╗║ ║╚═╝';
+		color = color || '#D4D4D4';
+		const lines = text.match(/.../g);
 
-			const $test_div = $('<div style="position: absolute; margin: 0; padding: 0; border: 0 none; opacity: 0; left: -9999em;">X</div>').appendTo($element)
+		const $test_div = $('<div style="position: absolute; margin: 0; padding: 0; border: 0 none; opacity: 0; left: -9999em;">X</div>').appendTo($element);
 
-			const containerWidth: number = $test_div.innerWidth();
-			const containerHight: number = $test_div.innerHeight();
-			const fontFamily: string = $test_div.css('font-family');
-			const fontSize: number = parseInt($test_div.css('font-size'));
-			const vpad: number = (containerHight - fontSize) / 2;
-			const calculatedWidth: number = containerWidth * 3
-			const calculatedHeight: number = containerHight * 3;
-			$test_div.remove();
+		const containerWidth: number = $test_div.innerWidth();
+		const containerHeight: number = $test_div.innerHeight();
+		const fontFamily: string = $test_div.css('font-family');
+		const fontSize: number = parseInt($test_div.css('font-size'));
+		const vpad: number = (containerHeight - fontSize) / 2;
+		const calculatedWidth: number = containerWidth * 3;
+		const calculatedHeight: number = containerHeight * 3;
+		$test_div.remove();
 
-			const canvas = document.createElement("canvas");
-			canvas.width = calculatedWidth;
-			canvas.height = calculatedHeight;
+		const canvas = document.createElement("canvas");
+		canvas.width = calculatedWidth;
+		canvas.height = calculatedHeight;
 
-			const context: CanvasRenderingContext2D = canvas.getContext("2d");
-			context.font = `${fontSize}px ${fontFamily}`;
-			context.fillStyle = color
-			context.fillText(lines[0], 0, fontSize + vpad);
-			context.fillText(lines[1], 0, fontSize + vpad + containerHight);
-			context.fillText(lines[2], 0, fontSize + vpad + containerHight*2);
+		const context: CanvasRenderingContext2D = canvas.getContext("2d");
+		context.font = `${fontSize}px ${fontFamily}`;
+		context.fillStyle = color;
+		context.fillText(lines[0], 0, fontSize + vpad);
+		context.fillText(lines[1], 0, fontSize + vpad + containerHeight);
+		context.fillText(lines[2], 0, fontSize + vpad + containerHeight * 2);
 
-			const url: string = canvas.toDataURL()
+		const url: string = canvas.toDataURL();
 
-			$(`<style type="text/css"> ${selector} {border-width:${containerHight}px ${containerWidth}px; border-image:url("${url}") ${containerHight} ${containerWidth} repeat} </style>`).appendTo(body);
+		// Only inject style once
+		const existingStyle = document.querySelector(`style[data-ascii-border="${selector}"]`);
+		if (!existingStyle) {
+			const styleTag = document.createElement('style');
+			styleTag.setAttribute('type', 'text/css');
+			styleTag.setAttribute('data-ascii-border', selector);
+			styleTag.textContent = `${selector} {border-width:${containerHeight}px ${containerWidth}px; border-image:url("${url}") ${containerHeight} ${containerWidth} repeat}`;
+			document.body.appendChild(styleTag);
 		}
 
-		if (isChrome && !isFirefox) {
-			console.log('Browser is chrome')
-			text = text || '╔═╗║ ║╚═╝';
-			color = color || '#D4D4D4';
-			const lines = text.match(/.../g);
-
-			const $test_div = $('<div style="position: absolute; margin: 0; padding: 0; border: 0 none; opacity: 0; left: -9999em;">X</div>').appendTo('body');
-
-			const containerWidth: number = $test_div.innerWidth();
-			const containerHeight: number = $test_div.innerHeight();
-
-			document.fonts.ready.then(() => {
-				const fontFamily: string = 'Web437 Nix8810 M16';
-				const fontSize: number = parseInt($test_div.css('font-size')) || 16;
-
-				console.log(`Font Size: ${fontSize}, Font Family: ${fontFamily}`);
-
-				const vpad: number = (containerHeight - fontSize) / 2;
-				const calculatedWidth: number = containerWidth * 3;
-				const calculatedHeight: number = containerHeight * 3;
-				$test_div.remove();
-
-				const canvas = document.createElement("canvas");
-				canvas.width = calculatedWidth;
-				canvas.height = calculatedHeight;
-
-				const context: CanvasRenderingContext2D = canvas.getContext("2d");
-
-				context.font = `${fontSize}px ${fontFamily}`;
-				context.fillStyle = color;
-				context.fillText(lines[0], 0, fontSize + vpad);
-				context.fillText(lines[1], 0, fontSize + vpad + containerHeight);
-				context.fillText(lines[2], 0, fontSize + vpad + containerHeight * 2);
-
-				const url: string = canvas.toDataURL();
-
-				$(`<style type="text/css"> ${selector} {border-width:${containerHeight}px ${containerWidth}px; border-image:url("${url}") ${containerHeight} ${containerWidth} repeat} </style>`).appendTo(body);
-			})
-		}}
-	)};
+		// Mark element as having border applied
+		($element as HTMLElement).dataset.asciiBorderApplied = 'true';
+	});
+}
 
 export default applyAsciiBorder;
