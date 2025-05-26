@@ -7,11 +7,15 @@ import { ExternalLinks, Sidebar } from '../components/Focusables.tsx'
 
 function Home(this: any): React.ReactElement {
 
-	document.addEventListener('load', this, true); {
-		console.log("Home.tsx has loaded.")
+	const applyBorders = () => {
 		applyTextBorder('#one', '#D4D4D4', '╔═╗║ ║║ ║')
 		applyTextBorder('#two', '#D4D4D4', '╟─╢║ ║║ ║')
 		applyTextBorder('#three', '#D4D4D4', '╟─╢║ ║╚═╝')
+	}
+
+	document.addEventListener('load', this, true); {
+		console.log("Home.tsx has loaded.")
+		applyBorders()
 	}
 
 	return (

@@ -7,9 +7,13 @@ import { Sidebar, ExternalLinks } from '../components/Focusables.tsx'
 
 function Error(this: any): React.ReactElement {
 
+	const applyBorders = () => {
+		applyTextBorder('#one.box', '#D4D4D4', '┌─┐│ │└─┘')
+	}
+
 	document.addEventListener('readystatechange', this, true); {
 		console.log("Error.tsx has loaded.")
-		applyTextBorder('#one.box', '#D4D4D4', '┌─┐│ │└─┘')
+		applyBorders()
 	}
 	return (
 		<>

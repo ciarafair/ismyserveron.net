@@ -258,19 +258,22 @@ function LinkedInButton(): React.ReactElement {
 
 export function Sidebar(this: any): React.ReactElement {
 	useEffect(() => {
-		applyTextBorder('#menu', '#D4D4D4', '┌─┐│ │└─┘')
-		document.addEventListener('keydown', handleKeyPress);
+		disableCurrentPage()
+
+		document.addEventListener('keydown', handleKeyPress, true);
 		return () => {
-			document.removeEventListener('keydown', handleKeyPress);
+			document.removeEventListener('keydown', handleKeyPress, true);
 		};
 	}, []);
 
-	document.addEventListener('load', this, true); {
-		console.log("Sidebar element from Focusables.tsx has loaded.")
-		disableCurrentPage()
+	const applyBorders = () => {
 		applyTextBorder('#menu', '#D4D4D4', '┌─┐│ │└─┘')
 	}
 
+	document.addEventListener('load', this, true); {
+		console.log("Sidebar element from Focusables.tsx has loaded.")
+		applyBorders()
+	}
 
 	return (
 		<>
@@ -301,10 +304,13 @@ export function Sidebar(this: any): React.ReactElement {
 }
 
 export function ExternalLinks(this: any): React.ReactElement {
+	const applyBorders = () => {
+		applyTextBorder('#external', '#D4D4D4', '┌─┐│ │└─┘')
+	}
 
 	document.addEventListener('load', this, true); {
 		console.log("ExternalLinks element from Focusables.tsx has loaded.")
-		applyTextBorder('#external', '#D4D4D4', '┌─┐│ │└─┘')
+		applyBorders()
 	}
 
 	return (
