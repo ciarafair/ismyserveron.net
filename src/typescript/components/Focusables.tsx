@@ -124,6 +124,18 @@ function AboutMeButton(): React.ReactElement {
 	)
 }
 
+function BlogButton(): React.ReactElement {
+	const link: string = '/blog'
+	return (
+		<a className='SidebarButton' href={link}>
+			<p className='link' tabIndex={pageTabIndex(link)}>
+				&#32;Blog
+			</p>
+		</a>
+	)
+}
+
+
 function HomeButton(): React.ReactElement {
 	const link: string = '/'
 	return (
@@ -258,6 +270,9 @@ export function Sidebar(): React.ReactElement {
 						</div>
 						<div id='pathAbout'>
 							<AboutMeButton />
+						</div>
+						<div id='pathBlog'>
+							<BlogButton />
 						</div>
 						<div id='pathHome'>
 							<HomeButton />
