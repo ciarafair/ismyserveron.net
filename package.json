@@ -10,6 +10,7 @@
 		"preview": "vite preview --host"
 	},
 	"dependencies": {
+		"@kitbag/events": "^0.2.0",
 		"@pixi/filter-pixelate": "^5.1.1",
 		"@webtui/css": "^0.0.5",
 		"axios": "^1.7.7",

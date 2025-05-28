@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import React, { useEffect } from 'react'
-import applyTextBorder from '../scripts/AsciiBorders.ts'
+import applyTextBorder from '../scripts/asciiBorder.ts'
 import { CSSProperties } from "react";
 import $ from 'jquery';
 
@@ -36,36 +36,6 @@ const handleKeyPress = (e: KeyboardEvent) => {
 		}
 	}
 };
-
-function disableCurrentPage(): undefined {
-	let id: string = ''
-
-	if (window.location.pathname == '/') {
-		id = '#pathHome'
-	}
-
-	else if (window.location.pathname == '/about') {
-		id = '#pathAbout'
-	}
-
-	else if (window.location.pathname == '/logs') {
-		id = '#pathLogs'
-	}
-
-	else if (window.location.pathname == '/projects') {
-		id = '#pathProjects'
-	}
-
-	else if (window.location.pathname == '/test') {
-		id = '#pathTest'
-	}
-
-	const element: Element = document.body.querySelector(id)
-	if (element != null) {
-		element.classList.add('inactive')
-		console.log(`Disabling element with an ID of #${element.id}`)
-	}
-}
 
 let number = 0
 function pageTabIndex(page: string): number {
@@ -262,8 +232,6 @@ function LinkedInButton(): React.ReactElement {
 
 export function Sidebar(this: any): React.ReactElement {
 	useEffect(() => {
-		disableCurrentPage()
-
 		document.addEventListener('keydown', handleKeyPress, true);
 		return () => {
 			document.removeEventListener('keydown', handleKeyPress, true);
@@ -275,7 +243,7 @@ export function Sidebar(this: any): React.ReactElement {
 	}
 
 	document.addEventListener('load', this, true); {
-		console.log("Sidebar element from Focusables.tsx has loaded.")
+		console.log("Sidebar from Focusables.tsx has loaded.")
 		applyBorders()
 	}
 
@@ -313,7 +281,7 @@ export function ExternalLinks(this: any): React.ReactElement {
 	}
 
 	document.addEventListener('load', this, true); {
-		console.log("ExternalLinks element from Focusables.tsx has loaded.")
+		console.log("ExternalLinks from Focusables.tsx has loaded.")
 		applyBorders()
 	}
 

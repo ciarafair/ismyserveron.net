@@ -64,6 +64,7 @@
 
 .row.boxes {
 	overflow: hidden;
+	height: 100%;
 }
 
 .error {

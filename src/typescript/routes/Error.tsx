@@ -1,20 +1,23 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import React from 'react'
-import applyTextBorder from '../../typescript/scripts/AsciiBorders.ts'
+import React, { useEffect } from 'react'
+import applyTextBorder from '../scripts/asciiBorder.ts'
 import Background from '../components/Background.tsx'
 import { Sidebar, ExternalLinks } from '../components/Focusables.tsx'
+import { emitter } from '../scripts/eventBus.ts'
 
 function Error(this: any): React.ReactElement {
-
 	const applyBorders = () => {
 		applyTextBorder('#one.box', '#D4D4D4', '┌─┐│ │└─┘')
 	}
 
-	document.addEventListener('readystatechange', this, true); {
-		console.log("Error.tsx has loaded.")
-		applyBorders()
-	}
+	useEffect(() => {
+		document.addEventListener('load', this, true); {
+			emitter.emit('routeLoaded', 'Error.tsx')
+			applyBorders()
+		}
+	}, []);
+
 	return (
 		<>
 			<Background />

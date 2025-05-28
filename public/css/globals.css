@@ -54,6 +54,16 @@ main {
 	width: 100%;
 }
 
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 #page {
 	padding: 0.5rem;
 	height: 100vh;
@@ -88,6 +98,10 @@ main {
 	width: 100%;
 	align-items: normal;
 	justify-content: normal;
+}
+
+.hidden {
+	display: none;
 }
 
 .navBar1 {
@@ -140,6 +154,7 @@ main {
 .scroll {
 	overflow: hidden;
 	height: auto;
+	width: 100%;
 }
 
 .indicator {
@@ -149,6 +164,10 @@ main {
 	left: 0;
 	width: 100%;
 	height: fit-content;
+}
+
+.top.indicator {
+	top: 0
 }
 
 .title {
@@ -229,6 +248,22 @@ main {
 	text-align: left;
 	margin-top: 0.25rem;
 	margin-bottom: 0;
+}
+
+button:hover {
+	background-color: var(--red);
+}
+
+button:target {
+	background-color: var(--red);
+}
+
+button:focus {
+	background-color: var(--red);
+}
+
+button:active {
+	background-color: var(--red);
 }
 
 .link:hover {

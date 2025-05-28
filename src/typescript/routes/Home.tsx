@@ -1,22 +1,24 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import React from 'react'
-import applyTextBorder from '../../typescript/scripts/AsciiBorders.ts'
+import React, { useEffect } from 'react'
+import applyTextBorder from '../scripts/asciiBorder.ts'
 import Background from '../components/Background.tsx'
 import { ExternalLinks, Sidebar } from '../components/Focusables.tsx'
+import { emitter } from '../scripts/eventBus.ts'
 
 function Home(this: any): React.ReactElement {
-
 	const applyBorders = () => {
 		applyTextBorder('#one', '#D4D4D4', '╔═╗║ ║║ ║')
 		applyTextBorder('#two', '#D4D4D4', '╟─╢║ ║║ ║')
 		applyTextBorder('#three', '#D4D4D4', '╟─╢║ ║╚═╝')
 	}
 
-	document.addEventListener('load', this, true); {
-		console.log("Home.tsx has loaded.")
-		applyBorders()
-	}
+	useEffect(() => {
+		document.addEventListener('load', this, true); {
+			emitter.emit('routeLoaded', 'Home.tsx')
+			applyBorders()
+		}
+	}, []);
 
 	return (
 		<>
