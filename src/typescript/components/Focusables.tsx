@@ -5,8 +5,6 @@ import applyTextBorder from '../scripts/asciiBorder.ts'
 import { CSSProperties } from "react";
 import $ from 'jquery';
 
-console.log("Focusables.tsx has loaded")
-
 let indexNumber = -1
 
 const handleKeyPress = (e: KeyboardEvent) => {

@@ -1,4 +1,4 @@
-import { disableCurrentPage } from "./DisableCurrentPage"
+import disableCurrentPage from './disableCurrentPage.ts'
 import { createEmitter } from '@kitbag/events' //https://events.kitbag.dev/getting-started.html
 
 type Events = {
@@ -11,3 +11,4 @@ emitter.on('routeLoaded', value => {
 	console.log(`${value} has loaded.`)
 	disableCurrentPage()
 })
+

@@ -1,4 +1,4 @@
-export function disableCurrentPage(): undefined {
+export default function disableCurrentPage(): undefined {
 	let id: string = ''
 
 	if (window.location.pathname == '/') {
