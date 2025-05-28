@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react'
 import applyTextBorder from '../scripts/asciiBorder.ts'
 import Background from '../components/Background.tsx'
-import { ExternalLinks, Sidebar } from '../components/Focusables.tsx'
+import { Sidebar } from '../components/Focusables.tsx'
 import { emitter } from '../scripts/eventBus.ts'
 
 function Home(this: any): React.ReactElement {
@@ -24,9 +24,8 @@ function Home(this: any): React.ReactElement {
 		<>
 			<Background />
 			<div id='page' className='row adjustable'>
-				<nav className='column adjustable'>
+				<nav className='column adjustable' id='collection'>
 					<Sidebar />
-					<ExternalLinks />
 				</nav>
 
 				<main className='column'>

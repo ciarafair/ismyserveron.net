@@ -72,6 +72,11 @@
 			justify-content: space-around;
 		}
 	}
+
+	nav {
+		width: 100% !important;
+	}
+
 }
 
 /* All screens above 768 pixels will have these effects */

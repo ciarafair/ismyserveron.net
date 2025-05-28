@@ -6,7 +6,7 @@ function applyAsciiBorder(selector: string, color: string, text: string) {
 		const $element: Element | null = document.body.querySelector(selector);
 		if (!$element || ($element as HTMLElement).dataset.asciiBorderApplied === 'true') return;
 
-		console.log(`Applying Ascii Border to the ${selector}`);
+		//console.log(`Applying Ascii Border to the ${selector}`);
 
 		text = text || '╔═╗║ ║╚═╝';
 		color = color || '#D4D4D4';

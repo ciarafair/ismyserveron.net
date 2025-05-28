@@ -9,7 +9,7 @@ import About from './typescript/routes/About'
 function App(this: any): React.ReactElement {
 	useEffect(() => {
 		document.addEventListener('load', this, true); {
-			console.log('App.tsx has loaded.')
+			//console.log('App.tsx has loaded.')
 		}
 	}, []);
 
