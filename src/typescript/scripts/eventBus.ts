@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import disableCurrentPage from './disableCurrentPage.ts'
 import { createEmitter } from '@kitbag/events' //https://events.kitbag.dev/getting-started.html
-import handleKeyPress from './handleKeypress.ts';
+import handleKeyPress from './handleKeyPress.ts';
 
 type Events = {
 	routeLoaded: string
