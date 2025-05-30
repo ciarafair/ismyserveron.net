@@ -36,7 +36,7 @@ function Home(this: any): React.ReactElement {
 					</div>
 					<div id='two' className='box middle center'>
 						<p id='intro'>
-							Hello world! This website serves as a portfolio for my work.
+							Hello world! My name is Ciaran Fairbairn
 						</p>
 					</div>
 					<div id='three' className='box bottom center'>

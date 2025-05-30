@@ -129,15 +129,15 @@ export function Sidebar(this: any): React.ReactElement {
 								</p>
 							</a>
 						</a>
-						<a id='pathProjects' className='link list1' tabIndex={-1} href={'/projects'}>
+						<a id='pathContact' className='link list1' tabIndex={-1} href={'/contact'}>
 							<a className='SidebarButton' >
 								<p>
-									&#32;Projects
+									&#32;Contact
 								</p>
 							</a>
 						</a>
 						<a id='pathAbout' className='link list1' tabIndex={-1} href={'/about'}>
-							<a className='SidebarButton' >
+							<a className='SidebarButton'>
 								<p>
 									&#32;About
 								</p>
@@ -159,7 +159,7 @@ export function Sidebar(this: any): React.ReactElement {
 						</a>
 					</div>
 				</div>
-			</div>
+			</div >
 			<div id='navBar3' className='menu'>
 				<div id='external' className='box default'>
 					<p className='title hideable'>Links</p>
