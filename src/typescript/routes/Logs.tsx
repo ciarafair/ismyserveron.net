@@ -50,10 +50,10 @@ function Logs(this: any): React.ReactElement {
 
 		if (axis === 'y') {
 			//console.log(element.scrollHeight > elementParent.clientHeight)
-			return element.scrollHeight > elementParent.clientHeight;
+			return element.scrollHeight >= elementParent.clientHeight;
 		} else {
 			//console.log(element.scrollWidth > elementParent.clientWidth)
-			return element.scrollWidth > elementParent.clientWidth;
+			return element.scrollWidth >= elementParent.clientWidth;
 		}
 	};
 
@@ -75,23 +75,14 @@ function Logs(this: any): React.ReactElement {
 		scrollContainer = document.querySelector('.scroll') as HTMLElement;
 		const indicators = document.querySelectorAll('.indicator');
 
+		if (!scrollContainer) return;
+
 		if (isScrollable(scrollContainer, 'y')) {
-
-			indicators.forEach(function (element) {
-				element.classList.remove("inactive")
-				console.log(element)
-			})
-			console.log(`Container is not scrollable: ${isScrollable(scrollContainer, 'y')}.`)
-		}
-		else {
-			if (indicators != null) {
-				indicators.forEach(function (element) {
-					element.classList.add("inactive")
-					console.log(element)
-				})
-
-				console.log(`Container is scrollable: ${isScrollable(scrollContainer, 'y')}.`)
-			}
+			indicators.forEach(el => el.classList.remove('inactive'));
+			console.log('Scroll enabled');
+		} else {
+			indicators.forEach(el => el.classList.add('inactive'));
+			console.log('Scroll disabled');
 		}
 	}
 
@@ -103,21 +94,11 @@ function Logs(this: any): React.ReactElement {
 	}
 
 	useEffect(() => {
-		const indicators = document.querySelectorAll('.indicator');
-		scrollContainer = document.querySelector('.scroll') as HTMLElement;
-
+		applyBorders()
 		document.addEventListener('load', this, true); {
 			emitter.emit('routeLoaded', 'Logs.tsx')
 			applyBorders()
-			if (!scrollContainer) return;
-
-			if (isScrollable(scrollContainer, 'y')) {
-				indicators.forEach(el => el.classList.remove('inactive'));
-				console.log('Scroll enabled');
-			} else {
-				indicators.forEach(el => el.classList.add('inactive'));
-				console.log('Scroll disabled');
-			}
+			handleHide()
 		}
 	}, [content]);
 
