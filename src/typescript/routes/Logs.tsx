@@ -57,6 +57,8 @@ function Logs(this: any): React.ReactElement {
 		}
 	};
 
+
+	//! FIX HANDLESCROLL
 	const handleScroll = (direction: string) => {
 		const lineHeight = parseFloat(getComputedStyle(scrollContainer).lineHeight) * 3;
 
@@ -109,9 +111,11 @@ function Logs(this: any): React.ReactElement {
 					<Sidebar />
 					<section className='column'>
 						<div id='logs1' className='box top'>
-							<p id='setup'>
-								Event Logs
-							</p>
+							<div >
+								<p id='setup'>
+									Event Logs
+								</p>
+							</div>
 						</div>
 						<div className='row boxes'>
 							<div className='column quarter'>

@@ -60,6 +60,7 @@
 
 .row.boxes {
 	height: 100%;
+	flex: 0.985;
 }
 
 .error {

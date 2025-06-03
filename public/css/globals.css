@@ -91,15 +91,19 @@ section {
 }
 
 #hero1 {
-	flex: 0.125;
+	flex: 0.0125;
 }
 
 #hero2 {
-	flex: 0.75;
+	flex: 0.985;
 }
 
 #hero3 {
-	flex: 0.125;
+	flex: 0.0125;
+}
+
+#logs1 {
+	flex: 0.0125;
 }
 
 #setup {
@@ -161,7 +165,7 @@ section {
 }
 
 .scroll {
-	margin-top: 0.5rem;
+	margin-top: 0.25rem;
 	margin-bottom: 0.25rem;
 	overflow: hidden;
 	height: 100%;
@@ -175,11 +179,9 @@ section {
 }
 
 .indicator {
-	position: absolute;
-	background-color: var(--cyan);
+	position: relative;
 	color: var(--white);
 	width: 100% !important;
-	height: 0.5rem;
 	text-align: center !important;
 	margin-top: 0 !important;
 	left: 0;
@@ -187,19 +189,13 @@ section {
 
 .indicatorText {
 	margin: 0;
+	height: 0.5rem;
+	background-color: var(--cyan);
 }
 
 .collection {
 	display: flex;
 	flex-direction: row;
-}
-
-.bottom.indicator {
-	bottom: -0.5rem
-}
-
-.top.indicator {
-	top: -0.25rem
 }
 
 .title {
