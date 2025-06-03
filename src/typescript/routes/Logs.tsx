@@ -87,10 +87,9 @@ function Logs(this: any): React.ReactElement {
 	}
 
 	const applyBorders = () => {
-		applyTextBorder('#one', '#D4D4D4', '╔═╗║ ║║ ║')
-		applyTextBorder('#two', '#D4D4D4', '╟─╢║ ║║ ║')
-		applyTextBorder('#three', '#D4D4D4', '╟─│║ ║╚═╧')
-		applyTextBorder('#four', '#D4D4D4', '┬─╢│ ║╧═╝')
+		applyTextBorder('#logs1', '#D4D4D4', '╔═╗║ ║║ ║')
+		applyTextBorder('#logs2', '#D4D4D4', '╟─┬║ │╚═╧')
+		applyTextBorder('#logs3', '#D4D4D4', '──╢  ║══╝')
 	}
 
 	useEffect(() => {
@@ -105,48 +104,49 @@ function Logs(this: any): React.ReactElement {
 	return (
 		<>
 			<Background />
-			<div id='page' className='row adjustable'>
-				<nav className='column adjustable' id='collection'>
+			<main>
+				<div className='row adjustable'>
 					<Sidebar />
-				</nav>
-
-				<main className='column'>
-					<div id='one' className='box top'>
-						<p id='setup'>
-							Event Logs
-						</p>
-					</div>
-					<div className='row boxes'>
-						<div className='column halfable quarter'>
-							<div id='three' className='box left topless'>
-								<div className='column' id='collection'>
-									<LogsButtonOne />
-									<LogsButtonTwo />
+					<section className='column'>
+						<div id='logs1' className='box top'>
+							<p id='setup'>
+								Event Logs
+							</p>
+						</div>
+						<div className='row boxes'>
+							<div className='column quarter'>
+								<div id='logs2' className='box left topless'>
+									<div className='column' id='collection'>
+										<LogsButtonOne />
+										<LogsButtonTwo />
+									</div>
+								</div>
+							</div>
+							<div className='column threequarters'>
+								<div id='logs3' className='box right topless'>
+									<div className='column'>
+										<a className='link list2 top indicator' onClick={() => handleScroll('up')}>
+											<p className='indicatorText'>
+												▲
+											</p>
+										</a>
+										<div className='scroll'>
+											<p className='text-block'>
+												{content}
+											</p>
+										</div>
+										<a className='link list2 bottom indicator' onClick={() => handleScroll('down')}>
+											<p className='indicatorText'>
+												▼
+											</p>
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div className='column halfable threequarters'>
-							<div id='four' className='box right topless'>
-								<div className='column'>
-									<p className='scroll'>
-										{content}
-									</p>
-									<a>
-										<p className='link list2 top indicator' onClick={() => handleScroll('up')}>
-											▲
-										</p>
-									</a>
-									<a>
-										<p className='link list2 bottom indicator' onClick={() => handleScroll('down')}>
-											▼
-										</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</main >
-			</div >
+					</section>
+				</div >
+			</main >
 			<p className='copyright'>© Ciaran Fairbairn</p>
 			<div className='crt' />
 		</>

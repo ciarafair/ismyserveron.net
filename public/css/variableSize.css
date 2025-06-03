@@ -8,16 +8,24 @@
 /* All screens under 768 pixels will have these effects */
 @media (max-width: 768px) {
 
+	main {
+		padding-bottom: 1.5rem;
+	}
+
 	.row.adjustable {
 		flex-direction: column;
+	}
+
+	.link {
+		margin-top: 0px;
 	}
 
 	.column.adjustable {
 		flex-direction: row;
 	}
 
-	.box.bottom {
-		margin-bottom: 2rem;
+	.navButtonText {
+		margin-top: 0
 	}
 
 	.hideable {
@@ -33,42 +41,21 @@
 		margin-bottom: 0;
 	}
 
-	.navBar1 {
-		width: 100%;
-		margin-bottom: 0px
-	}
-
-	.navBar2 {
-		height: 0% !important;
-	}
-
-	#navBar3 {
-		height: auto;
-	}
-
-	.halfable {
-		width: 50%;
-	}
-
 	.box.left {
 		margin-right: -10%;
 	}
 
-	.box.right {
-		margin-left: -2.25%;
+	.quarter {
+		flex: 0.325;
+	}
+
+	.threequarters {
+		flex: 0.675;
 	}
 
 	.column {
-		#external {
-			background-color: transparent;
-			border: 0;
-			width: 10%;
-		}
-
 		#internal {
-			padding-top: 0.25rem;
 			width: 100%;
-			height: auto;
 			justify-content: space-around;
 		}
 	}

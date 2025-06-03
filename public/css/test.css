@@ -1,0 +1,47 @@
+.testbox {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.testborder {
+	box-sizing: border-box;
+	position: relative;
+	padding: 1rem;
+}
+
+#test1 {
+	background: red;
+}
+
+#test2 {
+	background: orange;
+}
+
+#test3 {
+	background: yellow;
+}
+
+#test4 {
+	background: green;
+}
+
+#test5 {
+	background: blue;
+}
+
+#test6 {
+	background: indigo;
+}
+
+#test7 {
+	background: violet;
+}
+
+#test8 {
+	background: red;
+}
+
+#test9 {
+	background: orange;
+}

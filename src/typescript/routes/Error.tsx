@@ -21,18 +21,17 @@ function Error(this: any): React.ReactElement {
 	return (
 		<>
 			<Background />
-			<div id='page' className='row adjustable'>
-				<nav className='column adjustable' id='collection'>
+			<main>
+				<div className='row adjustable'>
 					<Sidebar />
-				</nav>
-
-				<main className='column'>
-					<div id='one' className='error box default center'>
-						<p className='error title'>404.txt</p>
-						<p>Page not found.</p>
-					</div>
-				</main >
-			</div >
+					<section className='column'>
+						<div id='one' className='error box default center'>
+							<p className='error title'>404.txt</p>
+							<p>Page not found.</p>
+						</div>
+					</section>
+				</div>
+			</main >
 			<p className='copyright'>© Ciaran Fairbairn</p>
 			<div className='crt' />
 		</>

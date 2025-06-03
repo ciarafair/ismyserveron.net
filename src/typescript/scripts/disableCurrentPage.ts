@@ -9,12 +9,16 @@ export default function disableCurrentPage(): undefined {
 		id = '#pathContact'
 	}
 
-	else if (window.location.pathname == '/') {
-		id = '#pathHome'
-	}
-
 	else if (window.location.pathname == '/logs') {
 		id = '#pathLogs'
+	}
+
+	else if (window.location.pathname == '/testing') {
+		id = '#pathTesting'
+	}
+
+	else if (window.location.pathname == '/') {
+		id = '#pathHome'
 	}
 
 	const element: Element = document.body.querySelector(id)

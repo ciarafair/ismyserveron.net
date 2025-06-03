@@ -1,9 +1,7 @@
 .box {
 	border-style: solid;
 	border-color: #fff;
-
-	min-width: 1rem;
-	min-height: 1rem;
+	box-sizing: border-box;
 
 	font-family: 'Web437 DOS/V re. ANK30';
 	font-weight: 100;
@@ -14,11 +12,9 @@
 	background-color: var(--blue);
 	height: fit-content;
 	display: flex;
-}
 
-.box.default {
-	margin-top: -0.5rem;
-	clip-path: rect(0.5rem 100% 100% 0)
+	height: 100%;
+	width: 100%;
 }
 
 .box.center {
@@ -26,32 +22,31 @@
 	align-items: center;
 }
 
+.box.topless {
+	clip-path: rect(0.25rem 100% 100% 0);
+	height: 100%;
+}
+
 .box.top {
-	margin-top: -0.5rem;
-	clip-path: rect(0.5rem 100% 100% -0.25rem);
 	margin-bottom: -0.25rem;
 	border-bottom: 0.25rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex: 0.5;
 }
 
 .box.middle {
 	clip-path: rect(0.25rem 100% 100% 0);
 	margin-bottom: -0.25rem;
 	height: 100%;
-}
-
-.box.topless {
-	clip-path: rect(0.25rem 100% 100% 0);
-	margin-bottom: 1.5rem;
-	height: 100%;
+	flex: 1;
 }
 
 .box.bottom {
 	margin-top: -0.5rem;
 	clip-path: rect(0.25rem 100% 100% 0);
-	margin-bottom: 1.5rem;
+	flex: 0.5;
 }
 
 .box.left {
@@ -59,18 +54,16 @@
 }
 
 .box.right {
-	margin-left: -1.125%;
+	margin-left: 0;
+	border-left: 0;
 }
 
 .row.boxes {
-	overflow: hidden;
 	height: 100%;
 }
 
 .error {
 	background-color: var(--red);
-	width: 5rem;
-	height: 5rem;
 }
 
 .empty {
