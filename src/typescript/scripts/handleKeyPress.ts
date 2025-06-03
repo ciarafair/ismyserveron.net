@@ -40,6 +40,16 @@ function setElementList() {
 }
 
 export default function handleKeyPress(value: KeyboardEvent) {
+// Don't process if the user is typing in a form field or editable content
+	const activeElement = document.activeElement
+	const isTyping = (
+		activeElement?.tagName === 'INPUT' ||
+		activeElement?.tagName === 'TEXTAREA' ||
+		(activeElement instanceof HTMLElement && activeElement.isContentEditable)
+	)
+
+	if (isTyping) return
+
 	// Refresh element lists
 	elementListOne = document.querySelectorAll('.list1')
 	elementListTwo = document.querySelectorAll('.list2')

@@ -10,6 +10,7 @@ export default defineConfig([
 	{ files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"], languageOptions: { globals: globals.browser } },
 	tseslint.configs.recommended,
 	pluginReact.configs.flat.recommended,
+
 	{
 		rules: {
 			"function-call-argument-newline": "off",
@@ -23,6 +24,9 @@ export default defineConfig([
 			"spaced-comment": "off",
 			"indent": ["error", "tab"],
 			"no-trailing-spaces": "error"
-		}
+		},
+		env: {
+			"node": true,
+		},
 	}
 ]);
