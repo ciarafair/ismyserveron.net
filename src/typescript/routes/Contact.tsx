@@ -6,6 +6,9 @@ import Background from '../components/Background.tsx'
 import { Sidebar } from '../components/Focusables.tsx'
 import { emitter } from '../scripts/eventBus.ts'
 
+//TODO: Set up system to ensure that the email is indeed an email
+// TODO: Set up aesthetic interface so that the contact form is a popup, and the background text is maybe an animation of a console being used
+//! FIX LIVE VERSIONS ACCESS KEY
 
 function Contact(this: any): React.ReactElement {
 	const [result, setResult] = React.useState("");
