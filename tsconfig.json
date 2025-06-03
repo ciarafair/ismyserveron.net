@@ -1,5 +1,7 @@
 {
 	"compilerOptions": {
+		"checkJs": true,
+		"verbatimModuleSyntax": true,
 		"useDefineForClassFields": true,
 		"target": "ES2022",
 		"lib": [

@@ -58,7 +58,7 @@ function Logs(this: any): React.ReactElement {
 	};
 
 
-	//! FIX HANDLESCROLL
+	//TODO: FIX HANDLESCROLL
 	const handleScroll = (direction: string) => {
 		const lineHeight = parseFloat(getComputedStyle(scrollContainer).lineHeight) * 3;
 
