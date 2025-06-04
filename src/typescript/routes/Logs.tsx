@@ -19,7 +19,7 @@ function Logs(this: any): React.ReactElement {
 
 	function LogsButtonOne(): React.ReactElement {
 		return (
-			<div className='link list2' onClick={() => handleClick(optionOneContent)}>
+			<div className='link list2 point' onClick={() => handleClick(optionOneContent)}>
 				<p className='navButtonText'>
 					Option One
 				</p>
@@ -29,7 +29,7 @@ function Logs(this: any): React.ReactElement {
 
 	function LogsButtonTwo(): React.ReactElement {
 		return (
-			<div className='link list2' onClick={() => handleClick(optionTwoContent)}>
+			<div className='link list2 point' onClick={() => handleClick(optionTwoContent)}>
 				<p className='navButtonText'>
 					Option Two
 				</p>
@@ -60,33 +60,29 @@ function Logs(this: any): React.ReactElement {
 
 	//TODO: fix issue where indicators do not work until selecting the second option and returning back to the first option
 	const handleScroll = (direction: string) => {
-		const lineHeight = parseFloat(getComputedStyle(scrollContainer).lineHeight) * 3;
+		const container = document.querySelector('.scroll') as HTMLElement;
+		if (!container) return;
 
-		if (direction === 'down') {
-			//console.log('Scrolling down.');
-			scrollContainer.scrollBy({ top: lineHeight, behavior: 'smooth' });
-		} else if (direction === 'up') {
-			//console.log('Scrolling up.');
-			scrollContainer.scrollBy({ top: -lineHeight, behavior: 'smooth' });
-		}
-	}
+		const lineHeight = parseFloat(getComputedStyle(container).lineHeight) * 3;
+		container.scrollBy({ top: direction === 'down' ? lineHeight : -lineHeight, behavior: 'smooth' });
+	};
+
 
 	const handleHide = () => {
-		if (!scrollContainer) return;
-
-		scrollContainer = document.querySelector('.scroll') as HTMLElement;
+		const container = document.querySelector('.scroll') as HTMLElement;
 		const indicators = document.querySelectorAll('.indicator');
 
-		if (!scrollContainer) return;
+		if (!container) return;
 
-		if (isScrollable(scrollContainer, 'y')) {
+		if (isScrollable(container, 'y')) {
 			indicators.forEach(el => el.classList.remove('inactive'));
 			console.log('Scroll enabled');
 		} else {
 			indicators.forEach(el => el.classList.add('inactive'));
 			console.log('Scroll disabled');
 		}
-	}
+	};
+
 
 	const applyBorders = () => {
 		applyTextBorder('#logs1', '#D4D4D4', '╔═╗║ ║║ ║')
@@ -95,12 +91,16 @@ function Logs(this: any): React.ReactElement {
 	}
 
 	useEffect(() => {
-		applyBorders()
-		document.addEventListener('load', this, true); {
-			emitter.emit('routeLoaded', 'Logs.tsx')
-			applyBorders()
-			handleHide()
-		}
+		applyBorders();
+
+		setTimeout(() => {
+			const container = document.querySelector('.scroll') as HTMLElement;
+			if (container) {
+				scrollContainer = container;
+				handleHide();
+			}
+			emitter.emit('routeLoaded', 'Logs.tsx');
+		}, 100);
 	}, [content]);
 
 	return (
@@ -130,7 +130,7 @@ function Logs(this: any): React.ReactElement {
 								<div id='logs3' className='box right topless'>
 									<div className='column'>
 										<a className='top indicator'>
-											<p className='link list3 indicatorText' onClick={() => handleScroll('up')}>
+											<p className='link list3 indicatorText highlight' onClick={() => handleScroll('up')}>
 												▲
 											</p>
 										</a>
@@ -139,8 +139,8 @@ function Logs(this: any): React.ReactElement {
 												{content}
 											</p>
 										</div>
-										<a className='bottom indicator'>
-											<p className='link list3 indicatorText' onClick={() => handleScroll('down')}>
+										<a className='bottom indicator '>
+											<p className='link list3 indicatorText highlight' onClick={() => handleScroll('down')}>
 												▼
 											</p>
 										</a>

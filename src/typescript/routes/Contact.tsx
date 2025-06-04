@@ -59,9 +59,9 @@ function Form({ setOutput }: { setOutput: (value: string) => void }): React.Reac
 				Get in touch
 			</p>
 			<div className='column form-container'>
-				<input id='contactTwo' type='text' name='name' placeholder='Name' className='contact-input link list2' autoComplete='false' required />
-				<input id='contactThree' type='text' name='email' placeholder='E-mail' className='contact-input link list2' autoComplete='false' required />
-				<textarea id='contactFour' name='message' placeholder='Message' className='contact-input message link list2' autoComplete='false' required />
+				<input id='contactTwo' type='text' name='name' placeholder='Name' className='contact-input link list2 highlight' autoComplete='false' required />
+				<input id='contactThree' type='text' name='email' placeholder='E-mail' className='contact-input link list2 highlight' autoComplete='false' required />
+				<textarea id='contactFour' name='message' placeholder='Message' className='contact-input message link list2 highlight' autoComplete='false' required />
 				<button className='submit link list2'>Submit</button>
 			</div>
 		</form >

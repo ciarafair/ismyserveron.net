@@ -316,23 +316,6 @@ form {
 	margin-bottom: 1.5rem;
 }
 
-.menu [tabindex]:focus {
-	background-color: var(--red);
-	color: var(--yellow) !important;
-	outline: none;
-}
-
-.indicatorText:focus {
-	background-color: var(--red);
-	color: var(--yellow) !important;
-	outline: none;
-}
-
-.indicatorText:hover {
-	background-color: var(--red);
-	color: var(--yellow) !important;
-	outline: none;
-}
 
 .link {
 	font-weight: 100;
@@ -342,13 +325,32 @@ form {
 	color: var(--white);
 }
 
-.link:focus {
+.point:hover,
+.point:focus {
+	outline: none;
+	display: inline-flex;
+	text-align: center;
+	align-items: center;
+}
+
+.point:hover::before,
+.point:focus::before {
+	position: relative;
+	font-family: 'Web437 Nix8810 M16';
+	outline: none;
+	content: '►';
+	padding-right: 0.25rem;
+	margin-top: 0.25rem;
+}
+
+.highlight:focus {
 	background-color: var(--red);
 	color: var(--yellow) !important;
 	outline: none;
 }
 
-.link:hover {
+
+.highlight:hover {
 	background-color: var(--red);
 	color: var(--yellow) !important;
 	outline: none;
