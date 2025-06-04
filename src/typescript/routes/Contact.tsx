@@ -17,7 +17,7 @@ function Contact(this: any): React.ReactElement {
 		setResult("Sending....");
 		const formData = new FormData(event.target);
 
-		let apiKey = import.meta.env.VITE_WEB3FORM_ACCESS_KEY
+		let apiKey = '7f128a9c-b66f-435f-9e52-4211cf3176dc'
 		formData.append("access_key", apiKey);
 
 		const response = await fetch("https://api.web3forms.com/submit", {
