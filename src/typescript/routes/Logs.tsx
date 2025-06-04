@@ -21,7 +21,7 @@ function Logs(this: any): React.ReactElement {
 	function LogsButtonOne(): React.ReactElement {
 		return (
 			<div className='link list2' tabIndex={-1} onClick={() => handleClick(optionOneContent)}>
-				<p>
+				<p className='navButtonText'>
 					Option One
 				</p>
 			</div>
@@ -31,7 +31,7 @@ function Logs(this: any): React.ReactElement {
 	function LogsButtonTwo(): React.ReactElement {
 		return (
 			<div className='link list2' tabIndex={-1} onClick={() => handleClick(optionTwoContent)}>
-				<p>
+				<p className='navButtonText'>
 					Option Two
 				</p>
 			</div>
