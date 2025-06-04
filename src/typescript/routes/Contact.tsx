@@ -119,9 +119,9 @@ function Contact(this: any): React.ReactElement {
 						<Form setOutput={setFormOutput} />
 					</div>
 					<div className='popup hidden'>
-						<p>Popup</p>
-						<p>Output: {formOutput}</p>
-						<button onClick={hidePopup}>Close</button>
+						<p className='general-text'>Popup</p>
+						<p className='general-text'>Output: {formOutput}</p>
+						<button className='submit link' onClick={hidePopup}>Close</button>
 					</div>
 				</section>
 			</main >

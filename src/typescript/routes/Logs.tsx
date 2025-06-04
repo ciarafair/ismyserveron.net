@@ -1,4 +1,3 @@
-//TODO: Impliment log system that uses console.log, use this section for creative writing projects
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import React, { useEffect, useState } from 'react'
@@ -59,7 +58,7 @@ function Logs(this: any): React.ReactElement {
 	};
 
 
-	//TODO: fix issue where you must select a new option before being able to scroll.
+	//TODO: fix issue where indicators do not work until selecting the second option and returning back to the first option
 	const handleScroll = (direction: string) => {
 		const lineHeight = parseFloat(getComputedStyle(scrollContainer).lineHeight) * 3;
 

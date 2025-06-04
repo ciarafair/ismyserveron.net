@@ -226,8 +226,8 @@ form {
 .indicatorText {
 	margin: 0;
 	height: 0.5rem;
-	background-color: var(--cyan);
-	color: var(--white);
+	background-color: var(--grey);
+	color: var(--blue) !important;
 	user-select: none;
 	width: 100% !important;
 }

@@ -6,6 +6,7 @@ let focusableElements: Array<Element> = []
 let columnNumber = 1
 let tabNumber = 0
 
+//TODO: find way to make it so that list3 is not accessable when the indicators for Logs.tsx are not visible.
 function getAllLists(): NodeListOf<Element>[] {
 	let output: NodeListOf<Element>[] = []
 	let array = [
