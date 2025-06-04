@@ -158,8 +158,8 @@ section {
 	color: var(--white);
 	z-index: 1;
 	position: fixed;
-	left: 1.5%;
-	bottom: 2.5%;
+	left: 1.25rem;
+	bottom: 0.5rem;
 }
 
 .scroll {
