@@ -5,6 +5,7 @@ import applyTextBorder from '../scripts/asciiBorder.ts'
 import Background from '../components/Background.tsx'
 import { Sidebar } from '../components/Focusables.tsx'
 import { emitter } from '../scripts/eventBus.ts'
+import Copyright from '../components/Copyright.tsx'
 
 function Error(this: any): React.ReactElement {
 	const applyBorders = () => {
@@ -32,7 +33,7 @@ function Error(this: any): React.ReactElement {
 					</section>
 				</div>
 			</main >
-			<p className='copyright'>© Ciaran Fairbairn</p>
+			<Copyright />
 			<div className='crt' />
 		</>
 	)

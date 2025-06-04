@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import Background from '../components/Background.tsx'
 import applyTextBorder from '../scripts/asciiBorder.ts'
 import { Sidebar } from '../components/Focusables.tsx'
+import Copyright from '../components/Copyright.tsx'
 
 function Testing(this: any): React.ReactElement {
 	const applyBorders = () => {
@@ -52,6 +53,7 @@ function Testing(this: any): React.ReactElement {
 					</section>
 				</div>
 			</main >
+			<Copyright />
 		</>
 	)
 }

@@ -2,3 +2,4 @@
 
 //https://www.demon142.net/ has an interesting section about frameworks and tools etc
 
+//Skills section similar to https://daniel-michael.com/ would be cool
