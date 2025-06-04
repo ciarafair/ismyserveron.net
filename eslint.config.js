@@ -25,8 +25,5 @@ export default defineConfig([
 			"indent": ["error", "tab"],
 			"no-trailing-spaces": "error"
 		},
-		env: {
-			"node": true,
-		},
 	}
 ]);
