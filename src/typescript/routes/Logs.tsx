@@ -20,7 +20,7 @@ function Logs(this: any): React.ReactElement {
 
 	function LogsButtonOne(): React.ReactElement {
 		return (
-			<div className='link list2' tabIndex={-1} onClick={() => handleClick(optionOneContent)}>
+			<div className='link list2' onClick={() => handleClick(optionOneContent)}>
 				<p className='navButtonText'>
 					Option One
 				</p>
@@ -30,7 +30,7 @@ function Logs(this: any): React.ReactElement {
 
 	function LogsButtonTwo(): React.ReactElement {
 		return (
-			<div className='link list2' tabIndex={-1} onClick={() => handleClick(optionTwoContent)}>
+			<div className='link list2' onClick={() => handleClick(optionTwoContent)}>
 				<p className='navButtonText'>
 					Option Two
 				</p>
@@ -130,8 +130,8 @@ function Logs(this: any): React.ReactElement {
 							<div className='column threequarters'>
 								<div id='logs3' className='box right topless'>
 									<div className='column'>
-										<a className='link list2 top indicator' onClick={() => handleScroll('up')}>
-											<p className='indicatorText'>
+										<a className='top indicator'>
+											<p className='link list3 indicatorText' onClick={() => handleScroll('up')}>
 												▲
 											</p>
 										</a>
@@ -140,8 +140,8 @@ function Logs(this: any): React.ReactElement {
 												{content}
 											</p>
 										</div>
-										<a className='link list2 bottom indicator' onClick={() => handleScroll('down')}>
-											<p className='indicatorText'>
+										<a className='bottom indicator'>
+											<p className='link list3 indicatorText' onClick={() => handleScroll('down')}>
 												▼
 											</p>
 										</a>

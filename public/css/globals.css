@@ -33,7 +33,6 @@ a {
 p {
 	font-family: 'Web437 Nix8810 M16';
 	font-size: 0.5rem;
-	color: var(--white);
 	margin: 0;
 }
 
@@ -72,7 +71,6 @@ nav {
 
 .navButtonText {
 	margin-top: 0.25rem;
-
 }
 
 section {
@@ -89,6 +87,7 @@ form {
 	height: 100%;
 	align-items: center;
 	align-content: center;
+	caret-shape: block;
 }
 
 #root {
@@ -133,6 +132,7 @@ form {
 	font-family: 'Web437 DOS/V re. ANK30';
 	font-weight: 100;
 	font-size: 1rem;
+	color: var(--white);
 }
 
 .hidden {
@@ -162,6 +162,8 @@ form {
 .contact-input {
 	font-family: 'Web437 Nix8810 M16';
 	width: 12rem !important;
+	background-color: var(--grey);
+	color: var(--blue) !important;
 }
 
 .message {
@@ -173,11 +175,11 @@ form {
 }
 
 .quarter {
-	flex: 0.1;
+	flex: 0.1125;
 }
 
 .threequarters {
-	flex: 0.9;
+	flex: 0.8925;
 }
 
 .popup {
@@ -209,6 +211,8 @@ form {
 	text-align: left;
 	position: absolute;
 	margin: 0;
+	color: var(--white);
+
 }
 
 .indicator {
@@ -225,6 +229,7 @@ form {
 	background-color: var(--cyan);
 	color: var(--white);
 	user-select: none;
+	width: 100% !important;
 }
 
 .submit {
@@ -260,7 +265,7 @@ form {
 }
 
 .general-text {
-	color: var(--yellow);
+	color: var(--white);
 	font-family: 'Web437 Nix8810 M16';
 	font-size: 0.5rem;
 }
@@ -313,23 +318,20 @@ form {
 
 .menu [tabindex]:focus {
 	background-color: var(--red);
+	color: var(--yellow) !important;
 	outline: none;
 }
 
-.indicator:focus {
+.indicatorText:focus {
 	background-color: var(--red);
+	color: var(--yellow) !important;
+	outline: none;
 }
 
-.indicator:hover {
+.indicatorText:hover {
 	background-color: var(--red);
-}
-
-.indicator:target {
-	background-color: var(--red);
-}
-
-.indicator:active {
-	background-color: var(--red);
+	color: var(--yellow) !important;
+	outline: none;
 }
 
 .link {
@@ -337,20 +339,17 @@ form {
 	font-size: 0.5rem;
 	width: fit-content;
 	z-index: 1;
-}
-
-.link:hover {
-	background-color: var(--red);
-}
-
-.link:target {
-	background-color: var(--red);
+	color: var(--white);
 }
 
 .link:focus {
 	background-color: var(--red);
+	color: var(--yellow) !important;
+	outline: none;
 }
 
-.link:active {
+.link:hover {
 	background-color: var(--red);
+	color: var(--yellow) !important;
+	outline: none;
 }

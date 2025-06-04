@@ -28,7 +28,7 @@ function Error(this: any): React.ReactElement {
 					<section className='column'>
 						<div id='one' className='error box default center'>
 							<p className='error title'>404.txt</p>
-							<p>Page not found.</p>
+							<p className='general-text'>Page not found.</p>
 						</div>
 					</section>
 				</div>

@@ -55,16 +55,16 @@ function Form({ setOutput }: { setOutput: (value: string) => void }): React.Reac
 
 	return (
 		<form action='' onSubmit={onSubmit}>
-			<p id='general-text'>
+			<p className='general-text'>
 				Get in touch
 			</p>
 			<div className='column form-container'>
-				<input type='text' name='name' placeholder='Name' className='contact-input link list2' autoComplete='false' required />
-				<input type='text' name='email' placeholder='E-mail' className='contact-input link list2' autoComplete='false' required />
-				<textarea name='message' placeholder='Message' className='contact-input message link list2' autoComplete='false' required />
+				<input id='contactTwo' type='text' name='name' placeholder='Name' className='contact-input link list2' autoComplete='false' required />
+				<input id='contactThree' type='text' name='email' placeholder='E-mail' className='contact-input link list2' autoComplete='false' required />
+				<textarea id='contactFour' name='message' placeholder='Message' className='contact-input message link list2' autoComplete='false' required />
 				<button className='submit link list2'>Submit</button>
 			</div>
-		</form>
+		</form >
 	)
 }
 
@@ -97,6 +97,9 @@ function Contact(this: any): React.ReactElement {
 	const [formOutput, setFormOutput] = React.useState<string | null>(null);
 	const applyBorders = () => {
 		applyTextBorder('#contactOne', '#D4D4D4', '╔═╗║ ║╚═╝')
+		applyTextBorder('#contactTwo', '#D4D4D4', '╔═╗║ ║╚═╝')
+		applyTextBorder('#contactThree', '#D4D4D4', '╔═╗║ ║╚═╝')
+		applyTextBorder('#contactFour', '#D4D4D4', '╔═╗║ ║╚═╝')
 	}
 
 	useEffect(() => {
