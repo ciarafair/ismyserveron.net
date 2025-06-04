@@ -136,7 +136,7 @@ form {
 }
 
 .hidden {
-	display: none;
+	display: none !important;
 }
 
 .column {
@@ -183,9 +183,54 @@ form {
 }
 
 .popup {
-	position: fixed;
-	inset: 0;
+	height: fit-content;
+	width: fit-content;
+	padding: 0.5rem;
+	align-self: center;
+	display: flex;
+	align-items: center;
+	pointer-events: all;
+}
+
+.popup-container {
+	justify-content: space-around;
+	position: absolute;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.popup-box {
+	background-color: var(--red);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+.popup-text {
+	position: relative;
+	color: var(--white);
+	top: 0.5rem;
+}
+
+.popup-button {
+	position: relative;
+	font-family: 'Web437 Nix8810 M16';
+	color: var(--white);
+	top: 0.5rem;
+}
+
+.popup-shadow {
 	background-color: var(--black);
+	position: absolute;
+	right: -0.25rem;
+	bottom: -0.75rem;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
 }
 
 .copyright {

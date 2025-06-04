@@ -20,12 +20,12 @@ function Form({ setOutput }: { setOutput: (value: string) => void }): React.Reac
 			console.log("Output updated:", data);
 			setOutput(data);
 			output = data
-			showPopup()
 		}
 	}, [data]);
 
 	const onSubmit = async (event: any) => {
 		event.preventDefault();
+		showPopup()
 		setData("Sending....");
 
 		const formData = new FormData(event.target);
@@ -59,33 +59,53 @@ function Form({ setOutput }: { setOutput: (value: string) => void }): React.Reac
 				Get in touch
 			</p>
 			<div className='column form-container'>
-				<input id='contactTwo' type='text' name='name' placeholder='Name' className='contact-input link list2 highlight' autoComplete='false' required />
-				<input id='contactThree' type='text' name='email' placeholder='E-mail' className='contact-input link list2 highlight' autoComplete='false' required />
-				<textarea id='contactFour' name='message' placeholder='Message' className='contact-input message link list2 highlight' autoComplete='false' required />
-				<button className='submit link list2'>Submit</button>
+				<input type='text' name='name' placeholder='Name' className='contact-input link list2 highlight' autoComplete='false' required />
+				<input type='text' name='email' placeholder='E-mail' className='contact-input link list2 highlight' autoComplete='false' required />
+				<textarea name='message' placeholder='Message' className='contact-input message link list2 highlight' autoComplete='false' required />
+				<button type='submit' className='submit link list2 highlight'>Submit</button>
 			</div>
 		</form >
 	)
 }
 
 function showPopup() {
+	console.log(`Enabling popup.`)
 	const element: Element = document.querySelector('.popup');
-	const elementList = document.getElementsByTagName('input');
+	const inputList = document.getElementsByTagName('input');
+	const textareaList = document.getElementsByTagName('textarea');
 
-	if (element == null) { return }
+	if (element == null) {
+		console.log(`Popup element was null.`)
+		return
+	}
 
-	if (output == null) { return }
+	if (output == null) {
+		console.log(`Popup output was null.`)
+		return
+	}
 
-	for (var ii = 0; ii < elementList.length; ii++) {
-		if (elementList[ii].type == "text") {
-			elementList[ii].value = "";
+	for (var ii = 0; ii < inputList.length; ii++) {
+		if (inputList[ii].type == "text") {
+			inputList[ii].value = "";
+		}
+	}
+	for (var ii = 0; ii < textareaList.length; ii++) {
+		if (textareaList[ii].type == "text") {
+			textareaList[ii].value = "";
 		}
 	}
 	output = null
 	element.classList.remove('hidden')
 }
 
+function showPopupDev() {
+	const inputs: Element = document.querySelector('.popup');
+
+	inputs.classList.remove('hidden')
+}
+
 function hidePopup() {
+	console.log(`Disabling popup.`)
 	const element: Element = document.querySelector('.popup');
 	if (element == null) {
 		return
@@ -97,9 +117,7 @@ function Contact(this: any): React.ReactElement {
 	const [formOutput, setFormOutput] = React.useState<string | null>(null);
 	const applyBorders = () => {
 		applyTextBorder('#contactOne', '#D4D4D4', '╔═╗║ ║╚═╝')
-		applyTextBorder('#contactTwo', '#D4D4D4', '╔═╗║ ║╚═╝')
-		applyTextBorder('#contactThree', '#D4D4D4', '╔═╗║ ║╚═╝')
-		applyTextBorder('#contactFour', '#D4D4D4', '╔═╗║ ║╚═╝')
+		applyTextBorder('#contactTwo', '#D4D4D4', '┌─┐│ │└─┘')
 	}
 
 	useEffect(() => {
@@ -108,6 +126,7 @@ function Contact(this: any): React.ReactElement {
 			applyBorders()
 		}
 	}, []);
+
 
 	return (
 		<>
@@ -118,9 +137,13 @@ function Contact(this: any): React.ReactElement {
 					<div id='contactOne' className='box default'>
 						<Form setOutput={setFormOutput} />
 					</div>
-					<div className='popup hidden'>
-						<p className='general-text'>Output: {formOutput}</p>
-						<button className='submit link' onClick={hidePopup}>Close</button>
+					<div className='popup-container'>
+						<div className='popup column hidden'>
+							<div className='popup-shadow' />
+							<div className='popup-box' />
+							<p className='popup-text'>{formOutput}</p>
+							<button className='popup-button link highlight' onClick={hidePopup}>[Enter] to continue or [escape] to cancel</button>
+						</div>
 					</div>
 				</section>
 			</main >
