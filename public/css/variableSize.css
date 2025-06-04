@@ -64,6 +64,10 @@
 		width: 100% !important;
 	}
 
+	.contact-input {
+		width: 9rem !important;
+	}
+
 }
 
 /* All screens above 768 pixels will have these effects */

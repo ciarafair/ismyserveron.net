@@ -47,8 +47,10 @@ export default function handleKeyPress(value: KeyboardEvent) {
 		activeElement?.tagName === 'TEXTAREA' ||
 		(activeElement instanceof HTMLElement && activeElement.isContentEditable)
 	)
+	const isArrowKey = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(value.key);
 
-	if (isTyping) return
+
+	if (isTyping && !isArrowKey) return
 
 	// Refresh element lists
 	elementListOne = document.querySelectorAll('.list1')

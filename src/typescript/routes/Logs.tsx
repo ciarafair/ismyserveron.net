@@ -59,7 +59,7 @@ function Logs(this: any): React.ReactElement {
 	};
 
 
-	//TODO: FIX HANDLESCROLL
+	//TODO: fix issue where you must select a new option before being able to scroll.
 	const handleScroll = (direction: string) => {
 		const lineHeight = parseFloat(getComputedStyle(scrollContainer).lineHeight) * 3;
 
