@@ -7,8 +7,6 @@ import { Sidebar } from '../components/Focusables.tsx'
 import { emitter } from '../scripts/eventBus.ts'
 import Copyright from '../components/Copyright.tsx'
 
-//TODO: Set up aesthetic interface so that the contact form is a popup, and the background text is maybe an animation of a console being used
-
 let output: string = null
 
 function Form({ setOutput }: { setOutput: (value: string) => void }): React.ReactElement {

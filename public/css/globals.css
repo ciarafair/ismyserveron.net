@@ -87,7 +87,6 @@ form {
 	height: 100%;
 	align-items: center;
 	align-content: center;
-	caret-shape: block;
 }
 
 #root {
@@ -267,6 +266,7 @@ form {
 	overflow: hidden;
 	height: 100%;
 	position: relative;
+	padding: 0.5rem;
 }
 
 .text-block {
@@ -287,10 +287,12 @@ form {
 
 .top.indicator {
 	margin-bottom: 0.25rem !important;
+	margin-top: -0.5rem !important;
 }
 
 .bottom.indicator {
 	margin-top: 0.25rem !important;
+	margin-bottom: -0.5rem !important;
 }
 
 .indicatorText {
@@ -392,7 +394,72 @@ form {
 	font-size: 0.5rem;
 	width: fit-content;
 	z-index: 1;
+}
+
+.about-heading {
+	font-size: 0.75rem;
+}
+
+.about-heading::before {
+	content: '┌ ';
+}
+
+.about-subheading {
+	font-size: 0.5rem;
+	color: var(--yellow);
+}
+
+.about-subheading::before {
+	font-size: 0.75rem;
 	color: var(--white);
+	content: '│ ';
+}
+
+.about-paragraph {
+	display: flex;
+	align-items: stretch;
+	position: relative;
+	/* Needed for absolute positioning inside */
+	padding-left: 0.75rem;
+	padding-bottom: 0.75rem;
+}
+
+.about-paragraph::before {
+	content: '└';
+	font-size: 0.75rem;
+	color: var(--white);
+	position: absolute;
+	left: 0;
+	top: 0;
+
+}
+
+/*! TEMP  */
+.list1 {
+	color: var(--white) !important;
+}
+
+/*! TEMP  */
+.list2 {
+	color: var(--white) !important;
+}
+
+
+/*! TEMP  */
+.list2.contact-input {
+	color: var(--blue) !important;
+}
+
+a:link {
+	color: var(--cyan);
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a:visited {
+	color: var(--red);
+	background-color: transparent;
+	text-decoration: none;
 }
 
 .point:hover,
