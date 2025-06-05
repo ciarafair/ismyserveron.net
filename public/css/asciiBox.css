@@ -10,7 +10,6 @@
 	align-content: center;
 	text-align: center;
 	background-color: var(--blue);
-	height: fit-content;
 	display: flex;
 
 	height: 100%;
@@ -28,12 +27,11 @@
 }
 
 .box.top {
-	margin-bottom: -0.25rem;
-	border-bottom: 0.25rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex: 0.5;
+	margin-bottom: -0.25rem;
 }
 
 .box.middle {
@@ -60,7 +58,6 @@
 
 .row.boxes {
 	height: 100%;
-	flex: 0.985;
 }
 
 .error {

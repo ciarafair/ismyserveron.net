@@ -109,7 +109,7 @@ form {
 	flex: 0.0125;
 }
 
-#logs1 {
+#about1 {
 	flex: 0.0125;
 }
 
@@ -127,6 +127,17 @@ form {
 	justify-content: space-around;
 	width: 100%;
 }
+
+.intro-background {
+	font-family: 'Web437 Nix8810 M16';
+	font-weight: 100;
+	font-size: 0.5rem;
+	color: var(--white);
+	position: absolute;
+	user-select: none;
+	top: 0;
+}
+
 
 #intro {
 	font-family: 'Web437 DOS/V re. ANK30';
@@ -190,6 +201,13 @@ form {
 	display: flex;
 	align-items: center;
 	pointer-events: all;
+	justify-content: space-around;
+}
+
+.popup-text-container {
+	justify-content: space-around;
+	display: flex;
+	flex-direction: column;
 }
 
 .popup-container {
@@ -213,21 +231,20 @@ form {
 .popup-text {
 	position: relative;
 	color: var(--white);
-	top: 0.5rem;
 }
 
 .popup-button {
 	position: relative;
 	font-family: 'Web437 Nix8810 M16';
 	color: var(--white);
-	top: 0.5rem;
+	top: 0.25rem;
 }
 
 .popup-shadow {
 	background-color: var(--black);
 	position: absolute;
 	right: -0.25rem;
-	bottom: -0.75rem;
+	bottom: -0.25rem;
 	height: 100%;
 	width: 100%;
 	z-index: -1;
@@ -245,8 +262,6 @@ form {
 }
 
 .scroll {
-	margin-top: 0.25rem;
-	margin-bottom: 0.25rem;
 	overflow: hidden;
 	height: 100%;
 	position: relative;
@@ -266,6 +281,14 @@ form {
 	text-align: center !important;
 	margin-top: 0 !important;
 	left: 0;
+}
+
+.top.indicator {
+	margin-bottom: 0.25rem !important;
+}
+
+.bottom.indicator {
+	margin-top: 0.25rem !important;
 }
 
 .indicatorText {

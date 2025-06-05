@@ -68,6 +68,10 @@
 		width: 9rem !important;
 	}
 
+	#intro {
+		font-size: 0.5rem;
+	}
+
 }
 
 /* All screens above 768 pixels will have these effects */

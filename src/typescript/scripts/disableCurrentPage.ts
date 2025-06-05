@@ -9,10 +9,6 @@ export default function disableCurrentPage(): undefined {
 		id = '#pathContact'
 	}
 
-	else if (window.location.pathname == '/logs') {
-		id = '#pathLogs'
-	}
-
 	else if (window.location.pathname == '/testing') {
 		id = '#pathTesting'
 	}

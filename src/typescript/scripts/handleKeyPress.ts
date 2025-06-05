@@ -8,8 +8,8 @@ let tabNumber = 0
 
 //TODO: find way to make it so that list3 is not accessable when the indicators for Logs.tsx are not visible.
 function getAllLists(): NodeListOf<Element>[] {
-	let output: NodeListOf<Element>[] = []
-	let array = [
+	const output: NodeListOf<Element>[] = []
+	const array = [
 		document.querySelectorAll('.list1:not(.inactive)'),
 		document.querySelectorAll('.list2:not(.inactive)'),
 		document.querySelectorAll('.list3:not(.inactive)')
@@ -70,17 +70,17 @@ export default function handleKeyPress(value: KeyboardEvent) {
 	} else if (value.key === 'ArrowDown') {
 		if (tabNumber < focusableElements.length - 1) tabNumber++
 	} else if (value.key === 'ArrowLeft') {
-	if (allLists.length > 1 && columnNumber > 1) {
-		columnNumber--
-		tabNumber = 0
-		setElementList(allLists)
-	}
-} else if (value.key === 'ArrowRight') {
-	if (allLists.length > 1 && columnNumber < allLists.length) {
-		columnNumber++
-		tabNumber = 0
-		setElementList(allLists)
-	}
+		if (allLists.length > 1 && columnNumber > 1) {
+			columnNumber--
+			tabNumber = 0
+			setElementList(allLists)
+		}
+	} else if (value.key === 'ArrowRight') {
+		if (allLists.length > 1 && columnNumber < allLists.length) {
+			columnNumber++
+			tabNumber = 0
+			setElementList(allLists)
+		}
 	} else if (value.key === 'Enter') {
 		selectedElement?.trigger('click')
 		const href = selectedElement?.attr('href')

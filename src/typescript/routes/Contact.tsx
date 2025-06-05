@@ -56,7 +56,7 @@ function Form({ setOutput }: { setOutput: (value: string) => void }): React.Reac
 	return (
 		<form action='' onSubmit={onSubmit}>
 			<p className='general-text'>
-				Get in touch
+				Send me an email!
 			</p>
 			<div className='column form-container'>
 				<input type='text' name='name' placeholder='Name' className='contact-input link list2 highlight' autoComplete='false' required />
@@ -84,12 +84,12 @@ function showPopup() {
 		return
 	}
 
-	for (var ii = 0; ii < inputList.length; ii++) {
+	for (let ii = 0; ii < inputList.length; ii++) {
 		if (inputList[ii].type == "text") {
 			inputList[ii].value = "";
 		}
 	}
-	for (var ii = 0; ii < textareaList.length; ii++) {
+	for (let ii = 0; ii < textareaList.length; ii++) {
 		if (textareaList[ii].type == "text") {
 			textareaList[ii].value = "";
 		}
@@ -98,11 +98,11 @@ function showPopup() {
 	element.classList.remove('hidden')
 }
 
-function showPopupDev() {
+/*function showPopupDev() {
 	const inputs: Element = document.querySelector('.popup');
 
 	inputs.classList.remove('hidden')
-}
+}*/
 
 function hidePopup() {
 	console.log(`Disabling popup.`)
@@ -141,8 +141,10 @@ function Contact(this: any): React.ReactElement {
 						<div className='popup column hidden'>
 							<div className='popup-shadow' />
 							<div className='popup-box' />
-							<p className='popup-text'>{formOutput}</p>
-							<button className='popup-button link highlight' onClick={hidePopup}>[Enter] to continue or [escape] to cancel</button>
+							<div className='popup-text-container'>
+								<p className='popup-text'>{formOutput}</p>
+								<button className='popup-button link highlight' onClick={hidePopup}>[Enter] to continue or [escape] to cancel</button>
+							</div>
 						</div>
 					</div>
 				</section>
