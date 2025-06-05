@@ -12,6 +12,6 @@ export const emitter = createEmitter<Events>()
 window.addEventListener('keydown', handleKeyPress)
 
 emitter.on('routeLoaded', _value => {
-	//console.log(`${value} has loaded.`)
+	console.log(`${_value} has loaded.`)
 	disableCurrentPage()
 })

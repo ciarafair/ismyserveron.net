@@ -20,7 +20,7 @@ function About(this: any): React.ReactElement {
 			<div className='scroll'>
 				<div className='text-block'>
 					<p>
-						This website is built using <a href='https://react.dev/'>React</a>, <a href='https://vite.dev/'>Vite</a> for frontend development as well as <a href='https://www.cloudflare.com/en-au/'>Cloudflare</a> for the backend.
+						This website is built using <a href='https://react.dev/'>React</a>, <a href='https://vite.dev/'>Vite</a> for frontend development as well as <a href='https://www.cloudflare.com/en-au/'>Cloudflare </a> for the backend.
 					</p>
 				</div>
 			</div>
