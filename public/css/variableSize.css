@@ -16,6 +16,15 @@
 		flex-direction: column;
 	}
 
+
+	.nav-spacer {
+		display: none;
+	}
+
+	.external-link {
+		display: none;
+	}
+
 	.link {
 		margin-top: 0px;
 	}

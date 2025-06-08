@@ -431,7 +431,15 @@ form {
 	position: absolute;
 	left: 0;
 	top: 0;
+}
 
+.no-before::before {
+	content: ' ';
+	font-size: 0.75rem;
+	color: var(--white);
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 /*! TEMP  */
@@ -452,14 +460,17 @@ form {
 
 a:link {
 	color: var(--cyan);
-	background-color: transparent;
 	text-decoration: none;
 }
 
 a:visited {
 	color: var(--red);
-	background-color: transparent;
 	text-decoration: none;
+
+}
+
+.nav-spacer {
+	margin: 0.25rem;
 }
 
 .point:hover,

@@ -35,9 +35,20 @@ export function Sidebar(this: any): React.ReactElement {
 								&#32;Home
 							</p>
 						</a>
+						<br className='nav-spacer' />
 						<a id='pathResume' className='link list1 point' href={'/assets/resume.pdf'}>
 							<p className='navButtonText'>
 								&#32;Résumé
+							</p>
+						</a>
+						<a id='pathGithub' className='link list1 point external-link' href={'https://github.com/ciarafair'}>
+							<p className='navButtonText'>
+								&#32;Github
+							</p>
+						</a>
+						<a id='pathLinkedIn' className='link list1 point external-link' href={'https://www.linkedin.com/in/ciaran-fairbairn/'}>
+							<p className='navButtonText'>
+								&#32;LinkedIn
 							</p>
 						</a>
 					</div>
