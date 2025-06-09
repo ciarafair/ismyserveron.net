@@ -88,9 +88,9 @@ function About(this: any): React.ReactElement {
 		if (container.scrollHeight <= container.clientHeight) {
 			// No scrolling needed
 			indicators.forEach(el => el.classList.add('inactive'));
-			console.log('Scroll disabled');
+			//console.log('Scroll disabled');
 		} else {
-			console.log('Scroll enabled');
+			//console.log('Scroll enabled');
 			document.querySelector('.top.indicator')?.classList.toggle('inactive', atTop);
 			document.querySelector('.bottom.indicator')?.classList.toggle('inactive', atBottom);
 		}
