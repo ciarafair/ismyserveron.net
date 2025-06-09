@@ -81,6 +81,56 @@
 		font-size: 0.5rem;
 	}
 
+	.about-heading {
+		border-top: dashed 0.05rem var(--white);
+		padding-top: 0.5rem;
+		font-size: 0.5rem;
+		margin-right: 0.75rem;
+	}
+
+	.about-heading:nth-child(1) {
+		border-top: 0;
+		padding-top: 0;
+	}
+
+	.about-subheading {
+		padding-bottom: 0.5rem;
+		font-size: 0.35rem;
+	}
+
+	.about-paragraph {
+		padding-left: 0;
+		font-size: 0.45rem;
+		padding-right: 0.75rem;
+	}
+
+	.about-paragraph::before {
+		content: '';
+		padding-left: 0;
+	}
+
+	.no-before::before {
+		content: '';
+		padding-left: 0;
+	}
+
+	.about-heading::before {
+		content: '';
+	}
+
+	.about-subheading::before {
+		padding-bottom: 0.25rem !important;
+		content: '';
+	}
+
+	.list2 {
+		padding-top: 0.5rem;
+	}
+
+	.list2:nth-child(1) {
+		padding-top: 0rem;
+	}
+
 }
 
 /* All screens above 768 pixels will have these effects */
