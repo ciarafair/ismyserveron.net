@@ -12,7 +12,7 @@ export default function General(): React.ReactElement {
 					Hi there, my name is Ciaran&#59;
 				</p>
 
-				<p className="about-paragraph no-before">
+				<p className="about-paragraph">
 					I am currently studying for the Cisco Certified Network Professional certification and in
 					my free time enjoy completing Hack The Box challenges. I work as a cashier at Grill&apos;d Kenmore. I have a deep interest
 					in computers and programming! I&apos;m hoping to get into a technology or technology adjacent field and am specifically
