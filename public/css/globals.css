@@ -398,11 +398,13 @@ form {
 
 .about-heading {
 	font-size: 0.75rem;
+	padding-bottom: 0.25rem;
 }
 
 .about-subheading {
 	font-size: 0.5rem;
 	color: var(--yellow);
+	padding-bottom: 0.5rem;
 }
 
 .paragraph-decor {
