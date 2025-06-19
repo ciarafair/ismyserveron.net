@@ -9,12 +9,9 @@ export default function General(): React.ReactElement {
 				</p>
 
 				<p className='about-subheading'>
-					This is just some general information about me.
-				</p>
-
-				<p className="about-paragraph">
 					Hi there, my name is Ciaran&#59;
 				</p>
+
 				<p className="about-paragraph no-before">
 					I am currently studying for the Cisco Certified Network Professional certification and in
 					my free time enjoy completing Hack The Box challenges. I work as a cashier at Grill&apos;d Kenmore. I have a deep interest
