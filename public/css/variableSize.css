@@ -102,6 +102,7 @@
 		padding-left: 0;
 		font-size: 0.45rem;
 		padding-right: 0.75rem;
+		padding-right: 0;
 	}
 
 	.about-paragraph::before {
@@ -109,18 +110,8 @@
 		padding-left: 0;
 	}
 
-	.no-before::before {
-		content: '';
-		padding-left: 0;
-	}
-
-	.about-heading::before {
-		content: '';
-	}
-
-	.about-subheading::before {
-		padding-bottom: 0.25rem !important;
-		content: '';
+	.paragraph-decor {
+		display: none;
 	}
 
 	.list2 {
