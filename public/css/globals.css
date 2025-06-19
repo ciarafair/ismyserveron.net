@@ -271,7 +271,7 @@ form {
 
 .text-block {
 	text-align: left;
-	position: absolute;
+	position: relative;
 	margin: 0;
 	color: var(--white);
 
@@ -400,47 +400,49 @@ form {
 	font-size: 0.75rem;
 }
 
-.about-heading::before {
-	content: '┌ ';
-}
-
 .about-subheading {
 	font-size: 0.5rem;
 	color: var(--yellow);
 }
 
-.about-subheading::before {
-	font-size: 0.75rem;
+.paragraph-decor {
+	position: relative;
+	width: 0.75rem;
+	display: flex;
+	height: fit-content;
+}
+
+.decor-content {
+	font-family: 'Web437 Nix8810 M16';
+	font-size: 0.5rem;
 	color: var(--white);
-	content: '│ ';
+}
+
+.decor-content.top,
+.decor-content.bottom {
+	height: auto;
+}
+
+.decor-content.middle {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .about-paragraph {
 	display: flex;
 	align-items: stretch;
 	position: relative;
-	/* Needed for absolute positioning inside */
-	padding-left: 0.75rem;
-	padding-bottom: 0.75rem;
 	padding-right: 0.75rem;
 }
 
-.about-paragraph::before {
-	content: '└';
-	font-size: 0.75rem;
-	color: var(--white);
-	position: absolute;
-	left: 0;
-	top: 0;
+.padded-paragraph {
+	padding-bottom: 0.75rem;
 }
 
-.no-before::before {
-	content: ' ';
-	font-size: 0.75rem;
-	color: var(--white);
-	position: absolute;
-	left: 0;
-	top: 0;
+.fit-content {
+	height: fit-content;
 }
 
 /*! TEMP  */
